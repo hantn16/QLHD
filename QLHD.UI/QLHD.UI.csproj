@@ -93,5 +93,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLHD.Data\QLHD.Data.csproj">
+      <Project>{735c55f7-c465-4ffb-b8c0-3e2a5c9fd223}</Project>
+      <Name>QLHD.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLHD.Model\QLHD.Model.csproj">
+      <Project>{526a2dec-8de1-4931-b779-24e5fcc07a37}</Project>
+      <Name>QLHD.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLHD.Service\QLHD.Service.csproj">
+      <Project>{d8d29f13-bb6c-4727-87aa-f175ebea4ae2}</Project>
+      <Name>QLHD.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
