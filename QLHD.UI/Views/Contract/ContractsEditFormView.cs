@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace QLHD.UI.Views.Contract
 {
-    [DevExpress.Utils.MVVM.UI.ViewType("ContractCollectionView")]
-    public partial class ContractsView : UserControl
+    public partial class ContractsEditFormView : UserControl
     {
-        public ContractsView()
+        public ContractsEditFormView()
         {
             InitializeComponent();
         }

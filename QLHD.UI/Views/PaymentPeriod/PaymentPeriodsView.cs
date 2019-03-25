@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Utils.MVVM.UI;
 
-namespace QLHD.UI.Views.Contract
+namespace QLHD.UI.Views.PaymentPeriod
 {
-    [DevExpress.Utils.MVVM.UI.ViewType("ContractCollectionView")]
-    public partial class ContractsView : UserControl
+    [ViewType("PaymentPeriodCollectionView")]
+    public partial class PaymentPeriodsView : UserControl
     {
-        public ContractsView()
+        public PaymentPeriodsView()
         {
             InitializeComponent();
         }

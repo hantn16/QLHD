@@ -84,12 +84,6 @@
     <Compile Include="Common\EntitiesViewModel.cs" />
     <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
     <Compile Include="Common\SingleObjectViewModel.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLHDDbContextDataModel\IQLHDDbContextUnitOfWork.cs" />
@@ -108,15 +102,72 @@
     <Compile Include="ViewModels\QLHDDbContextViewModel.cs" />
     <Compile Include="ViewModels\Work\WorkCollectionViewModel.cs" />
     <Compile Include="ViewModels\Work\WorkViewModel.cs" />
+    <Compile Include="Views\Contractor\ContractorsEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Contractor\ContractorsEditFormView.Designer.cs">
+      <DependentUpon>ContractorsEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contractor\ContractorsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Contractor\ContractorsView.Designer.cs">
+      <DependentUpon>ContractorsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contract\ContractsEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Contract\ContractsEditFormView.Designer.cs">
+      <DependentUpon>ContractsEditFormView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Contract\ContractsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Contract\ContractsView.Designer.cs">
       <DependentUpon>ContractsView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Views\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentPeriod\PaymentPeriodsEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentPeriod\PaymentPeriodsEditFormView.Designer.cs">
+      <DependentUpon>PaymentPeriodsEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentPeriod\PaymentPeriodsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentPeriod\PaymentPeriodsView.Designer.cs">
+      <DependentUpon>PaymentPeriodsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Project\ProjectsEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Project\ProjectsEditFormView.Designer.cs">
+      <DependentUpon>ProjectsEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Project\ProjectsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Project\ProjectsView.Designer.cs">
+      <DependentUpon>ProjectsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Work\WorksEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Work\WorksEditFormView.Designer.cs">
+      <DependentUpon>WorksEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Work\WorksView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Work\WorksView.Designer.cs">
+      <DependentUpon>WorksView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,9 +178,45 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Contractor\ContractorsEditFormView.resx">
+      <DependentUpon>ContractorsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Contractor\ContractorsView.resx">
+      <DependentUpon>ContractorsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Contract\ContractsEditFormView.resx">
+      <DependentUpon>ContractsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Contract\ContractsView.resx">
       <DependentUpon>ContractsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentPeriod\PaymentPeriodsEditFormView.resx">
+      <DependentUpon>PaymentPeriodsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentPeriod\PaymentPeriodsView.resx">
+      <DependentUpon>PaymentPeriodsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Project\ProjectsEditFormView.resx">
+      <DependentUpon>ProjectsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Project\ProjectsView.resx">
+      <DependentUpon>ProjectsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Work\WorksEditFormView.resx">
+      <DependentUpon>WorksEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Work\WorksView.resx">
+      <DependentUpon>WorksView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\QLHD.Model.Models.Contract.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.Contractor.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.PaymentPeriod.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.Project.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.Work.datasource" />
+    <None Include="Properties\DataSources\QLHD.UI.ViewModels.ContractViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,17 +239,12 @@
       <Project>{526a2dec-8de1-4931-b779-24e5fcc07a37}</Project>
       <Name>QLHD.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QLHD.Service\QLHD.Service.csproj">
-      <Project>{d8d29f13-bb6c-4727-87aa-f175ebea4ae2}</Project>
-      <Name>QLHD.Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\ContractApendix\" />
-    <Folder Include="Views\Contractor\" />
-    <Folder Include="Views\PaymentPeriod\" />
-    <Folder Include="Views\Project\" />
-    <Folder Include="Views\Work\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

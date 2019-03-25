@@ -1,6 +1,6 @@
-﻿namespace QLHD.UI.Views.Contract
+﻿namespace QLHD.UI.Views.PaymentPeriod
 {
-    partial class ContractsView
+    partial class PaymentPeriodsView
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,16 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
-            this.bbiSendRefreshCollectionsMessage = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -57,11 +56,44 @@
             this.bbiRefresh});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 7;
-            this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(450, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(530, 141);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 141);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = this.ribbonControl1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(530, 219);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // mvvmContext1
+            // 
+            this.mvvmContext1.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.PaymentPeriodCollectionViewModel), "New", this.bbiNew),
+            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(QLHD.UI.ViewModels.PaymentPeriodCollectionViewModel), "Edit", "SelectedEntity", this.bbiEdit),
+            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(QLHD.UI.ViewModels.PaymentPeriodCollectionViewModel), "Delete", "SelectedEntity", this.bbiDelete),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.PaymentPeriodCollectionViewModel), "Refresh", this.bbiRefresh)});
+            this.mvvmContext1.ContainerControl = this;
+            this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.PaymentPeriodCollectionViewModel);
             // 
             // bbiNew
             // 
@@ -69,6 +101,14 @@
             this.bbiNew.Id = 1;
             this.bbiNew.ImageOptions.ImageUri.Uri = "New";
             this.bbiNew.Name = "bbiNew";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiNew);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // bbiEdit
             // 
@@ -91,63 +131,14 @@
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
             // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiNew);
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiEdit);
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiDelete);
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiRefresh);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 141);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbonControl1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(450, 235);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // mvvmContext1
-            // 
-            this.mvvmContext1.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ContractCollectionViewModel), "New", this.bbiNew),
-            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(QLHD.UI.ViewModels.ContractCollectionViewModel), "Edit", "SelectedEntity", this.bbiEdit),
-            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(QLHD.UI.ViewModels.ContractCollectionViewModel), "Delete", "SelectedEntity", this.bbiDelete),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ContractCollectionViewModel), "Refresh", this.bbiRefresh)});
-            this.mvvmContext1.ContainerControl = this;
-            this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.ContractCollectionViewModel);
-            // 
-            // bbiSendRefreshCollectionsMessage
-            // 
-            this.bbiSendRefreshCollectionsMessage.Caption = "SendRefreshCollectionsMessage";
-            this.bbiSendRefreshCollectionsMessage.Id = 5;
-            this.bbiSendRefreshCollectionsMessage.ImageOptions.ImageUri.Uri = "SendRefreshCollectionsMessage";
-            this.bbiSendRefreshCollectionsMessage.Name = "bbiSendRefreshCollectionsMessage";
-            // 
-            // ContractsView
+            // PaymentPeriodsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "ContractsView";
-            this.Size = new System.Drawing.Size(450, 376);
+            this.Name = "PaymentPeriodsView";
+            this.Size = new System.Drawing.Size(530, 360);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -161,14 +152,13 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
         private DevExpress.XtraBars.BarButtonItem bbiNew;
         private DevExpress.XtraBars.BarButtonItem bbiEdit;
         private DevExpress.XtraBars.BarButtonItem bbiDelete;
         private DevExpress.XtraBars.BarButtonItem bbiRefresh;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem bbiSendRefreshCollectionsMessage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
     }
 }

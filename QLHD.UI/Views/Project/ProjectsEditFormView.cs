@@ -8,12 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLHD.UI.Views.Contract
+namespace QLHD.UI.Views.Project
 {
-    [DevExpress.Utils.MVVM.UI.ViewType("ContractCollectionView")]
-    public partial class ContractsView : UserControl
+    public partial class ProjectsEditFormView : UserControl
     {
-        public ContractsView()
+        public ProjectsEditFormView()
         {
             InitializeComponent();
         }

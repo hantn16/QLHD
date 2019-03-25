@@ -35,14 +35,14 @@ namespace QLHD.UI.ViewModels {
         }
 
         protected override QLHDDbContextModuleDescription[] CreateModules() {
-			return new QLHDDbContextModuleDescription[] {
-                new QLHDDbContextModuleDescription( "Contract Apendixes", "ContractApendixCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.ContractApendixes)),
+			return new QLHDDbContextModuleDescription[] {              
                 new QLHDDbContextModuleDescription( "Contracts", "ContractCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Contracts)),
                 new QLHDDbContextModuleDescription( "Contractors", "ContractorCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Contractors)),
+                new QLHDDbContextModuleDescription( "Projects", "ProjectCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Projects)),
                 new QLHDDbContextModuleDescription( "Payment Periods", "PaymentPeriodCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.PaymentPeriods)),
                 new QLHDDbContextModuleDescription( "Works", "WorkCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Works)),
-                new QLHDDbContextModuleDescription( "Projects", "ProjectCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Projects)),
-			};
+                new QLHDDbContextModuleDescription( "Contract Apendixes", "ContractApendixCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.ContractApendixes)),
+            };
         }
                 	}
 
