@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLHD.Model.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace QLHD.Model.Models
 {
     [Table("Contract")]
-    public class Contract
+    public class Contract : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

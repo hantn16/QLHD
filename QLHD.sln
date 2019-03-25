@@ -3,13 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHD.UI", "QLHD.UI\QLHD.UI.csproj", "{8277AFFF-3E66-4B8D-B717-BDE324BF8056}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D8D29F13-BB6C-4727-87AA-F175EBEA4AE2} = {D8D29F13-BB6C-4727-87AA-F175EBEA4AE2}
-		{526A2DEC-8DE1-4931-B779-24E5FCC07A37} = {526A2DEC-8DE1-4931-B779-24E5FCC07A37}
-		{735C55F7-C465-4FFB-B8C0-3E2A5C9FD223} = {735C55F7-C465-4FFB-B8C0-3E2A5C9FD223}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHD.Model", "QLHD.Model\QLHD.Model.csproj", "{526A2DEC-8DE1-4931-B779-24E5FCC07A37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHD.Data", "QLHD.Data\QLHD.Data.csproj", "{735C55F7-C465-4FFB-B8C0-3E2A5C9FD223}"
@@ -23,16 +16,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHD.Service", "QLHD.Servic
 		{735C55F7-C465-4FFB-B8C0-3E2A5C9FD223} = {735C55F7-C465-4FFB-B8C0-3E2A5C9FD223}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHD.UI", "QLHD.UI\QLHD.UI.csproj", "{7C6B264D-0645-4A4D-81FB-9261D372A28A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8277AFFF-3E66-4B8D-B717-BDE324BF8056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8277AFFF-3E66-4B8D-B717-BDE324BF8056}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8277AFFF-3E66-4B8D-B717-BDE324BF8056}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8277AFFF-3E66-4B8D-B717-BDE324BF8056}.Release|Any CPU.Build.0 = Release|Any CPU
 		{526A2DEC-8DE1-4931-B779-24E5FCC07A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{526A2DEC-8DE1-4931-B779-24E5FCC07A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{526A2DEC-8DE1-4931-B779-24E5FCC07A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +36,10 @@ Global
 		{D8D29F13-BB6C-4727-87AA-F175EBEA4AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8D29F13-BB6C-4727-87AA-F175EBEA4AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8D29F13-BB6C-4727-87AA-F175EBEA4AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6B264D-0645-4A4D-81FB-9261D372A28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6B264D-0645-4A4D-81FB-9261D372A28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6B264D-0645-4A4D-81FB-9261D372A28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6B264D-0645-4A4D-81FB-9261D372A28A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
