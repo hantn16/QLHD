@@ -16,13 +16,17 @@ namespace QLHD.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Display(Name = "Thứ Tự")]
         public int Order { get; set; }
 
+        [Display(Name = "Tên Phụ Lục")]
         public string Description { get; set; }
 
+        [Display(Name = "Mã Hợp Đồng")]
         [ForeignKey("Contract")]
         public int ContractId { get; set; }
 
+        [Display(Name = "Hợp Đồng")]
         public virtual Contract Contract { get; set; }
     }
 }

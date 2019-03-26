@@ -21,18 +21,37 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-            Project project = new Project()
-            {
-                Id = 1,
-                Code = "DuAn01",
-                Name = "Xây dựng lại chung cư lô 4, lô 5 đường Trần Hưng Đạo",
-                CreatedAt = DateTime.Now,
-                CreatedBy = "admin",
-                StartDate = new DateTime(2016,9,6)
-            };
-            context.Projects.Add(project);
+            Project[] projects = InitProject();
+            context.Projects.AddRange(projects);
             context.SaveChanges();
             
         }
+        Project[] InitProject()
+        {
+            Project[] projects = new Project[]
+            {
+                new Project()
+                {
+                    Code = "DuAn01",
+                    Name = "Xây dựng lại chung cư lô 4, lô 5 đường Trần Hưng Đạo",
+                    IsActive = true,
+                    CreatedAt = DateTime.Now,
+                    CreatedBy = "admin",
+                    StartDate = new DateTime(2016,9,6)
+                },
+                new Project()
+                {
+                    Code = "DuAn02",
+                    Name = "Khu đô thị tại phường Cao Thắng, Hà Khánh, Hà Lầm",
+                    IsActive = true,
+                    CreatedAt = DateTime.Now,
+                    CreatedBy = "admin",
+                    StartDate = new DateTime(2016,9,6)
+                }
+            };
+            return projects;
+        }
+
+
     }
 }

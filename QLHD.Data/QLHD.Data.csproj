@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201903210954325_Initial.Designer.cs">
       <DependentUpon>201903210954325_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903260300528_1stAddDisplayName.cs" />
+    <Compile Include="Migrations\201903260300528_1stAddDisplayName.Designer.cs">
+      <DependentUpon>201903260300528_1stAddDisplayName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLHDDbContext.cs" />
@@ -76,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903210954325_Initial.resx">
       <DependentUpon>201903210954325_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903260300528_1stAddDisplayName.resx">
+      <DependentUpon>201903260300528_1stAddDisplayName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
