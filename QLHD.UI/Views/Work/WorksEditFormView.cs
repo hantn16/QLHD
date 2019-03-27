@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.ViewModels;
+using QLHD.Model.Models;
 
 namespace QLHD.UI.Views.Work
 {
@@ -18,9 +19,22 @@ namespace QLHD.UI.Views.Work
         public WorksEditFormView()
         {
             InitializeComponent();
+            if (!DesignMode)
+                InitialBindings();
+            InitCostTypeList();
+
+        }
+
+        private void InitCostTypeList()
+        {
+            CostTypeComboBoxEdit.Properties.Items.AddRange(Enum.GetValues(typeof(CostType)));
+        }
+
+        private void InitialBindings()
+        {
             var fluent = mvvmContext1.OfType<WorkViewModel>();
-            fluent.SetObjectDataSourceBinding(
-                workBindingSource, x => x.Entity, x => x.Update());
+            fluent.SetObjectDataSourceBinding(workBindingSource, x => x.Entity, x => x.Update());
+            fluent.SetBinding(projectBindingSource, pbs => pbs.DataSource, x => x.LookUpProjects.Entities);
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLHD.UI.Views.Work
 {
@@ -18,6 +19,23 @@ namespace QLHD.UI.Views.Work
         public WorksView()
         {
             InitializeComponent();
+            InitBindings();
+            CustomizeGridView();
+        }
+
+        void CustomizeGridView()
+        {
+            GridView gv = (GridView)gridControl1.MainView;
+            gv.OptionsBehavior.Editable = false;
+            List<String> listHideColumnName = new List<string> { "Project","Contracts"};
+            foreach (string item in listHideColumnName)
+            {
+                gv.Columns[item].Visible = false;
+            }
+        }
+
+        private void InitBindings()
+        {
             var fluent = mvvmContext1.OfType<WorkCollectionViewModel>();
             fluent.SetBinding(gridView1, gView => gView.LoadingPanelVisible, x => x.IsLoading);
             fluent.SetBinding(gridControl1, gControl => gControl.DataSource, x => x.Entities);

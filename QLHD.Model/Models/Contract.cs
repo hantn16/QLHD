@@ -52,7 +52,7 @@ namespace QLHD.Model.Models
         [Display(Name = "GTHĐ Hiện Tại")]
         public virtual double ContractValue {
             get {
-                return ContractOriginValue + ContractApendixes.Sum(x => x.Order);
+                return ContractOriginValue + (ContractApendixes==null? 0 : ContractApendixes.Sum(x => x.Order));
             }
         }
 

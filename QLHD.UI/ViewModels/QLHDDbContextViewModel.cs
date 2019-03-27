@@ -30,9 +30,9 @@ namespace QLHD.UI.ViewModels {
         /// Initializes a new instance of the QLHDDbContextViewModel class.
         /// This constructor is declared protected to avoid undesired instantiation of the QLHDDbContextViewModel type without the POCO proxy factory.
         /// </summary>
-        protected QLHDDbContextViewModel()
-		    : base(UnitOfWorkSource.GetUnitOfWorkFactory()) {
-        }
+      //  protected QLHDDbContextViewModel()
+		    //: base(UnitOfWorkSource.GetUnitOfWorkFactory()) {
+      //  }
 
         protected override QLHDDbContextModuleDescription[] CreateModules() {
 			return new QLHDDbContextModuleDescription[] {              

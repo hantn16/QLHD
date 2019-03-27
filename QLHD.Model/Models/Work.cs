@@ -17,10 +17,10 @@ namespace QLHD.Model.Models
         public int Id { get; set; }
 
         [Display(Name = "Tên Hạng Mục")]
-        public int Name { get; set; }
+        public string Name { get; set; }
 
         [Display(Name = "Loại Chi Phí")]
-        public int CostType { get; set; }
+        public CostType CostType { get; set; }
 
         [Display(Name = "Mã Dự Án")]
         public int ProjectId { get; set; }
@@ -34,5 +34,15 @@ namespace QLHD.Model.Models
 
         [Display(Name = "Danh Sách Hợp Đồng")]
         public virtual ICollection<Contract> Contracts { get; set; }
+    }
+    public enum CostType
+    {
+        Construction =1,
+        Equipment = 2,
+        ProjectManagement = 3,
+        Clearance = 4,
+        Sale = 6,
+        ConsultancyAndDesign = 5,
+        Other = 7
     }
 }

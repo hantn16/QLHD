@@ -22,9 +22,17 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
             Project[] projects = InitProject();
-            context.Projects.AddRange(projects);
+            if (context.Projects.Count()==0)
+            {
+                context.Projects.AddRange(projects);
+            }           
+            User[] users = InitUser();
+            if (context.Users.Count() == 0)
+            {
+                context.Users.AddRange(users);
+            }        
             context.SaveChanges();
-            
+
         }
         Project[] InitProject()
         {
@@ -51,7 +59,18 @@
             };
             return projects;
         }
-
-
+        User[] InitUser()
+        {
+            User[] users = new User[] {
+                new User(){Login = "Admin",Password = GetHash("admin")},
+                new User(){Login = "Guest",Password = GetHash(null)},
+                new User(){Login = "hantn",Password = GetHash("anhhan")},
+            };
+            return users;
+        }
+        private string GetHash(string password)
+        {
+            return password;
+        }
     }
 }

@@ -97,11 +97,13 @@
     <Compile Include="ViewModels\Contractor\ContractorViewModel.cs" />
     <Compile Include="ViewModels\Contract\ContractCollectionViewModel.cs" />
     <Compile Include="ViewModels\Contract\ContractViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\PaymentPeriod\PaymentPeriodCollectionViewModel.cs" />
     <Compile Include="ViewModels\PaymentPeriod\PaymentPeriodViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectCollectionViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectViewModel.cs" />
     <Compile Include="ViewModels\QLHDDbContextViewModel.cs" />
+    <Compile Include="ViewModels\QLHDDbContextViewModel.partial.cs" />
     <Compile Include="ViewModels\Work\WorkCollectionViewModel.cs" />
     <Compile Include="ViewModels\Work\WorkViewModel.cs" />
     <Compile Include="Views\Contractor\ContractorsEditFormView.cs">
@@ -127,6 +129,12 @@
     </Compile>
     <Compile Include="Views\Contract\ContractsView.Designer.cs">
       <DependentUpon>ContractsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
@@ -192,6 +200,9 @@
     <EmbeddedResource Include="Views\Contract\ContractsView.resx">
       <DependentUpon>ContractsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +229,7 @@
     <None Include="Properties\DataSources\QLHD.Model.Models.Contractor.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.PaymentPeriod.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Project.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.User.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Work.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -244,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\ContractApendix\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

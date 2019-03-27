@@ -30,7 +30,7 @@ namespace QLHD.Data
         public virtual DbSet<PaymentPeriod> PaymentPeriods { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Work> Works { get; set; }
-
+        public virtual DbSet<User> Users { get; set; }
 
     }
 

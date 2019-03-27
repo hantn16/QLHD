@@ -17,6 +17,7 @@ namespace QLHD.UI.Views
         public MainView()
         {
             InitializeComponent();
+            this.Opacity = 0;
             if (!DesignMode)
                 InitializeNavigation();
             ribbonControl1.Merge += ribbonControl1_Merge;
@@ -34,20 +35,27 @@ namespace QLHD.UI.Views
             fluentAPI.BindCommand(biPaymentPeriods, (x, m) => x.Show(m), x => x.Modules[3]);
             fluentAPI.BindCommand(biWorks, (x, m) => x.Show(m), x => x.Modules[4]);
             //
-            //fluentAPI.BindCommand(biLogout, x => x.Logout());
+            fluentAPI.BindCommand(biLogout, x => x.Logout());
             //
             fluentAPI.WithEvent(this, "Load")
                 .EventToCommand(x => x.OnLoaded(null), x => x.DefaultModule);
-            //fluentAPI.WithEvent<FormClosingEventArgs>(this, "FormClosing")
-            //    .EventToCommand(x => x.OnClosing(null), new Func<CancelEventArgs, object>((args) => args));
-            //fluentAPI.SetTrigger(x => x.State, (state) =>
-            //{
-            //    if (state == AppState.Authorized)
-            //        Opacity = 1; /*Show Main Form*/
-            //    if (state == AppState.ExitQueued)
-            //        Close(); // exit the app;
-            //});
-            //Messenger.Default.Register<string>(this, OnUserNameMessage);
+            fluentAPI.WithEvent<FormClosingEventArgs>(this, "FormClosing")
+                .EventToCommand(x => x.OnClosing(null), new Func<CancelEventArgs, object>((args) => args));
+            fluentAPI.SetTrigger(x => x.State, (state) =>
+            {
+                if (state == AppState.Authorized)
+                    Opacity = 1; /*Show Main Form*/
+                if (state == AppState.ExitQueued)
+                    Close(); // exit the app;
+            });
+            Messenger.Default.Register<string>(this, OnUserNameMessage);
+        }
+        void OnUserNameMessage(string userName)
+        {
+            if (string.IsNullOrEmpty(userName))
+                this.Text = "Ứng dụng quản lý hóa đơn";
+            else
+                this.Text = "Ứng dụng quản lý hóa đơn - (" + userName + ")";
         }
     }
 }

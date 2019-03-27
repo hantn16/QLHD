@@ -39,8 +39,11 @@
             this.biProjects = new DevExpress.XtraBars.BarButtonItem();
             this.biPaymentPeriods = new DevExpress.XtraBars.BarButtonItem();
             this.biWorks = new DevExpress.XtraBars.BarButtonItem();
+            this.biLogout = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.biSettings = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
@@ -75,9 +78,11 @@
             this.biContractors,
             this.biProjects,
             this.biPaymentPeriods,
-            this.biWorks});
+            this.biWorks,
+            this.biLogout,
+            this.biSettings});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 12;
+            this.ribbonControl1.MaxItemId = 14;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -129,10 +134,20 @@
             this.biWorks.Name = "biWorks";
             this.biWorks.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // biLogout
+            // 
+            this.biLogout.Caption = "Logout";
+            this.biLogout.Id = 12;
+            this.biLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biLogout.ImageOptions.Image")));
+            this.biLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biLogout.ImageOptions.LargeImage")));
+            this.biLogout.Name = "biLogout";
+            this.biLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "ListEntities";
             // 
@@ -144,6 +159,23 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.biPaymentPeriods);
             this.ribbonPageGroup1.ItemLinks.Add(this.biWorks);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Danh mục";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.biLogout);
+            this.ribbonPageGroup2.ItemLinks.Add(this.biSettings);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Hệ thống";
+            // 
+            // biSettings
+            // 
+            this.biSettings.Caption = "Settings";
+            this.biSettings.Id = 13;
+            this.biSettings.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.biSettings.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.biSettings.Name = "biSettings";
+            this.biSettings.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // MainView
             // 
@@ -152,7 +184,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
@@ -175,5 +209,8 @@
         private DevExpress.XtraBars.BarButtonItem biPaymentPeriods;
         private DevExpress.XtraBars.BarButtonItem biWorks;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem biLogout;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem biSettings;
     }
 }

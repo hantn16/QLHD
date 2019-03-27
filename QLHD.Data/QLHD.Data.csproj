@@ -57,6 +57,14 @@
     <Compile Include="Migrations\201903260300528_1stAddDisplayName.Designer.cs">
       <DependentUpon>201903260300528_1stAddDisplayName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903260838337_2ndAddUserModel.cs" />
+    <Compile Include="Migrations\201903260838337_2ndAddUserModel.Designer.cs">
+      <DependentUpon>201903260838337_2ndAddUserModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903270207165_3rdModifyWorkModel.cs" />
+    <Compile Include="Migrations\201903270207165_3rdModifyWorkModel.Designer.cs">
+      <DependentUpon>201903270207165_3rdModifyWorkModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLHDDbContext.cs" />
@@ -83,6 +91,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903260300528_1stAddDisplayName.resx">
       <DependentUpon>201903260300528_1stAddDisplayName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903260838337_2ndAddUserModel.resx">
+      <DependentUpon>201903260838337_2ndAddUserModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903270207165_3rdModifyWorkModel.resx">
+      <DependentUpon>201903270207165_3rdModifyWorkModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
