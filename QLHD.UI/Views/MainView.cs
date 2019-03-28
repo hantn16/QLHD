@@ -53,9 +53,9 @@ namespace QLHD.UI.Views
         void OnUserNameMessage(string userName)
         {
             if (string.IsNullOrEmpty(userName))
-                this.Text = "Ứng dụng quản lý hóa đơn";
+                this.Text = "Ứng dụng quản lý hợp đồng";
             else
-                this.Text = "Ứng dụng quản lý hóa đơn - (" + userName + ")";
+                this.Text = "Ứng dụng quản lý hợp đồng - (" + userName + ")";
         }
     }
 }

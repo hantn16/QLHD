@@ -225,6 +225,7 @@
             this.IdTextEdit.Size = new System.Drawing.Size(393, 20);
             this.IdTextEdit.StyleController = this.dataLayoutControl1;
             this.IdTextEdit.TabIndex = 4;
+            this.IdTextEdit.ReadOnly = true;
             // 
             // contractorBindingSource
             // 
