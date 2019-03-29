@@ -18,9 +18,17 @@ namespace QLHD.UI.Views.Contract
         public ContractsEditFormView()
         {
             InitializeComponent();
+            if (!DesignMode)
+                InitialBindings();
+
+        }
+
+        private void InitialBindings()
+        {
             var fluent = mvvmContext1.OfType<ContractViewModel>();
             fluent.SetObjectDataSourceBinding(
                 contractBindingSource, x => x.Entity, x => x.Update());
+
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DevExpress.Mvvm;
+using QLHD.UI.Common;
 using QLHD.UI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,7 @@ namespace QLHD.UI.Views
                 this.Text = "Ứng dụng quản lý hợp đồng";
             else
                 this.Text = "Ứng dụng quản lý hợp đồng - (" + userName + ")";
+            ConstantVariable.CurrentUserName = userName;
         }
     }
 }

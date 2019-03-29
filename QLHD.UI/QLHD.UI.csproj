@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\CollectionViewModel.cs" />
+    <Compile Include="Common\ConstantVariable.cs" />
     <Compile Include="Common\EntitiesViewModel.cs" />
     <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
     <Compile Include="Common\SingleObjectViewModel.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\Contractor\ContractorsEditFormView.resx">
       <DependentUpon>ContractorsEditFormView.cs</DependentUpon>

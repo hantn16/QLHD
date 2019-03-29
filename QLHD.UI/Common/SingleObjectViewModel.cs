@@ -11,6 +11,7 @@ using DevExpress.Mvvm.DataAnnotations;
 using DevExpress.Mvvm.ViewModel;
 using DevExpress.Mvvm.DataModel;
 using System.Reflection;
+using QLHD.Model.Models;
 
 namespace QLHD.UI.Common {
     /// <summary>
@@ -50,12 +51,12 @@ namespace QLHD.UI.Common {
         void SetAuditablePropertiesForCreate(object obj)
         {
             SetTimeForObject(obj, "CreatedAt", DateTime.Now);
-            SetPersonForObject(obj, "CreatedBy", "admin");
+            SetPersonForObject(obj, "CreatedBy", ConstantVariable.CurrentUserName);
         }
         void SetAuditablePropertiesForModify(object obj)
         {
             SetTimeForObject(obj, "ModifiedAt", DateTime.Now);
-            SetPersonForObject(obj, "ModifiedBy", "admin");
+            SetPersonForObject(obj, "ModifiedBy", ConstantVariable.CurrentUserName);
         }
         void SetTimeForObject(object obj, string propName, DateTime dateTime)
         {
@@ -74,6 +75,11 @@ namespace QLHD.UI.Common {
             {
                 propInfo.SetValue(obj, personName);
             }
+        }
+        public string currentUser { get; set; }
+        void SetCurrentUser(string username)
+        {
+            currentUser = username;            
         }
     }
 }

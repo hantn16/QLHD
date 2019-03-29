@@ -1,5 +1,6 @@
 ﻿using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
+using QLHD.Model.Models;
 using QLHD.UI.QLHDDbContextDataModel;
 using System;
 using System.Collections.Generic;
@@ -67,7 +68,9 @@ namespace QLHD.UI.ViewModels
             else
             {
                 if (loginViewModel.IsCurrentUserCredentialsValid)
+                {
                     State = AppState.Authorized;
+                }
                 else
                     Login();
             }
