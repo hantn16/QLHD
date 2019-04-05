@@ -28,7 +28,8 @@ namespace QLHD.UI.Views.Contract
             var fluent = mvvmContext1.OfType<ContractViewModel>();
             fluent.SetObjectDataSourceBinding(
                 contractBindingSource, x => x.Entity, x => x.Update());
-
+            fluent.SetBinding(workBindingSource, x => x.DataSource, y => y.LookUpWorks.Entities);
+            fluent.SetBinding(contractorBindingSource, x => x.DataSource, y => y.LookUpContractors.Entities);
         }
     }
 }

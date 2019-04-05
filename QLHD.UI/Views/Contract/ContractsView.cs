@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
+using QLHD.Model.Models;
 
 namespace QLHD.UI.Views.Contract
 {
@@ -24,6 +25,16 @@ namespace QLHD.UI.Views.Contract
             fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity, args => args.Row as QLHD.Model.Models.Contract,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+        }
+
+        private void gridView1_CustomColumnDisplayText(object sender, CustomColumnDisplayTextEventArgs e)
+        {
+            if (e.Column.FieldName == "Work")
+            {
+                QLHD.Model.Models.Work work = (QLHD.Model.Models.Work)e.Value;
+                e.DisplayText = work.Name;
+            }
+                
         }
     }
 }
