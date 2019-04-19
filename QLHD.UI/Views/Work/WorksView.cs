@@ -28,7 +28,7 @@ namespace QLHD.UI.Views.Work
         void CustomizeGridView()
         {
             GridView gv = (GridView)gridControl1.MainView;
-            GridControlConfig.SetColumnsHide(gv, new List<string> { "ProjectId", "Contracts", "ParentWorkId", "ChildWorks" });
+            GridControlConfig.SetColumnsHide(gv, new List<string> { "ProjectId", "Contracts", "ParentWorkId", "ChildWorks","CostTypeId" });
             //gv.BestFitColumns();
         }
 
