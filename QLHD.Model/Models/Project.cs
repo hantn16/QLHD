@@ -10,10 +10,12 @@ using System.Threading.Tasks;
 namespace QLHD.Model.Models
 {
     [Table("Project")]
+    [DisplayColumn("Name")]
     public class Project : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(AutoGenerateField = false)]
         public int Id { get; set; }
 
         [MaxLength(8)]
@@ -37,6 +39,11 @@ namespace QLHD.Model.Models
             get {
                 return Works.SelectMany(x => x.Contracts);
             }
+        }
+
+        public override string ToString()
+        {
+            return Code + " - " + Name;
         }
 
     }

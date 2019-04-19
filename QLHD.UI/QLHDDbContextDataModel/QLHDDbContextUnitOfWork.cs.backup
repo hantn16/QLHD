@@ -40,19 +40,5 @@ namespace QLHD.UI.QLHDDbContextDataModel {
         IRepository<Project, int> IQLHDDbContextUnitOfWork.Projects {
             get { return GetRepository(x => x.Set<Project>(), (Project x) => x.Id); }
         }
-
-        IRepository<User, int> IQLHDDbContextUnitOfWork.Users {
-            get { return GetRepository(x => x.Set<User>(), (User x) => x.Id); }
-        }
-
-        IRepository<CostType, int> IQLHDDbContextUnitOfWork.CostTypes
-        {
-            get { return GetRepository(x => x.Set<CostType>(), (CostType x) => x.Id); }
-        }
-
-        IRepository<PaymentType, int> IQLHDDbContextUnitOfWork.PaymentTypes
-        {
-            get { return GetRepository(x => x.Set<PaymentType>(), (PaymentType x) => x.Id); }
-        }
     }
 }

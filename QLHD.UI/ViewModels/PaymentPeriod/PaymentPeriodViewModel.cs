@@ -46,6 +46,13 @@ namespace QLHD.UI.ViewModels {
                     getRepositoryFunc: x => x.Contracts);
             }
         }
+        public System.Array LookUpPaymentTypes
+        {
+            get
+            {
+                return Enum.GetValues(typeof(PaymentType));
+            }
+        }
 
     }
 }

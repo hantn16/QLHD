@@ -9,23 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.ViewModels;
+using DevExpress.Utils.MVVM.Services;
+using DevExpress.XtraEditors;
 
 namespace QLHD.UI.Views.Contract
 {
     [ViewType("ContractView")]
-    public partial class ContractsEditFormView : UserControl
+    public partial class ContractsEditFormView : XtraUserControl
     {
         public ContractsEditFormView()
         {
             InitializeComponent();
             if (!DesignMode)
                 InitialBindings();
-
+            
         }
 
         private void InitialBindings()
         {
             var fluent = mvvmContext1.OfType<ContractViewModel>();
+
             fluent.SetObjectDataSourceBinding(
                 contractBindingSource, x => x.Entity, x => x.Update());
             fluent.SetBinding(workBindingSource, x => x.DataSource, y => y.LookUpWorks.Entities);

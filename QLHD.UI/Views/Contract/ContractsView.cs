@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraEditors.Repository;
 using QLHD.Model.Models;
+using QLHD.UI.Views.Commons;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLHD.UI.Views.Contract
 {
@@ -19,22 +22,25 @@ namespace QLHD.UI.Views.Contract
         public ContractsView()
         {
             InitializeComponent();
+            InitBindings();
+            CustomizeGridControl();
+
+        }
+
+        private void CustomizeGridControl()
+        {
+            GridControlConfig.SetColumnsHide((GridView)gridControl1.MainView, 
+                new List<string> { "WorkId", "ContractorId", "ContractApendixes", "PaymentPeriods" });
+        }
+
+        private void InitBindings()
+        {
             var fluent = mvvmContext1.OfType<ContractCollectionViewModel>();
             fluent.SetBinding(gridView1, gView => gView.LoadingPanelVisible, x => x.IsLoading);
             fluent.SetBinding(gridControl1, gControl => gControl.DataSource, x => x.Entities);
             fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity, args => args.Row as QLHD.Model.Models.Contract,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
-        }
-
-        private void gridView1_CustomColumnDisplayText(object sender, CustomColumnDisplayTextEventArgs e)
-        {
-            if (e.Column.FieldName == "Work")
-            {
-                QLHD.Model.Models.Work work = (QLHD.Model.Models.Work)e.Value;
-                e.DisplayText = work.Name;
-            }
-                
         }
     }
 }

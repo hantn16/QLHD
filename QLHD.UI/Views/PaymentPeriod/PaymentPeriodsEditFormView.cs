@@ -21,6 +21,7 @@ namespace QLHD.UI.Views.PaymentPeriod
             var fluent = mvvmContext1.OfType<PaymentPeriodViewModel>();
             fluent.SetObjectDataSourceBinding(
                 paymentPeriodBindingSource, x => x.Entity, x => x.Update());
+            fluent.SetBinding(contractBindingSource, x => x.DataSource, y => y.LookUpContracts.Entities);
         }
     }
 }

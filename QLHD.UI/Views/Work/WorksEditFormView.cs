@@ -27,7 +27,7 @@ namespace QLHD.UI.Views.Work
 
         private void InitCostTypeList()
         {
-            CostTypeComboBoxEdit.Properties.Items.AddRange(Enum.GetValues(typeof(CostType)));
+            //CostTypeComboBoxEdit.Properties.Items.AddRange(Enum.GetValues(typeof(CostType)));
         }
 
         private void InitialBindings()
@@ -35,6 +35,8 @@ namespace QLHD.UI.Views.Work
             var fluent = mvvmContext1.OfType<WorkViewModel>();
             fluent.SetObjectDataSourceBinding(workBindingSource, x => x.Entity, x => x.Update());
             fluent.SetBinding(projectBindingSource, pbs => pbs.DataSource, x => x.LookUpProjects.Entities);
+            fluent.SetBinding(workBindingSource1, pbs => pbs.DataSource, x => x.LookUpWorks.Entities);
+            fluent.SetBinding(costTypeBindingSource, bs => bs.DataSource, x => x.LookUpCostTypes.Entities);
         }
     }
 }

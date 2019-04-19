@@ -10,6 +10,7 @@ using DevExpress.Mvvm.ViewModel;
 using QLHD.UI.QLHDDbContextDataModel;
 using QLHD.UI.Common;
 using QLHD.Model.Models;
+using QLHD.Data;
 
 namespace QLHD.UI.ViewModels {
 
@@ -32,7 +33,7 @@ namespace QLHD.UI.ViewModels {
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
         protected WorkViewModel(IUnitOfWorkFactory<IQLHDDbContextUnitOfWork> unitOfWorkFactory = null)
-            : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.Works, x => x.CreatedBy) {
+            : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.Works, x => x.Name) {
                 }
 
 
@@ -47,6 +48,16 @@ namespace QLHD.UI.ViewModels {
             }
         }
         /// <summary>
+        /// The view model that contains a look-up collection of Works for the corresponding navigation property in the view.
+        /// </summary>
+        public IEntitiesViewModel<Work> LookUpWorks {
+            get {
+                return GetLookUpEntitiesViewModel(
+                    propertyExpression: (WorkViewModel x) => x.LookUpWorks,
+                    getRepositoryFunc: x => x.Works);
+            }
+        }
+        /// <summary>
         /// The view model that contains a look-up collection of Projects for the corresponding navigation property in the view.
         /// </summary>
         public IEntitiesViewModel<Project> LookUpProjects {
@@ -57,6 +68,18 @@ namespace QLHD.UI.ViewModels {
             }
         }
 
+        /// <summary>
+        /// The view model that contains a look-up collection of CostTypes for the corresponding navigation property in the view.
+        /// </summary>
+        public IEntitiesViewModel<CostType> LookUpCostTypes
+        {
+            get
+            {
+                return GetLookUpEntitiesViewModel(
+                    propertyExpression: (WorkViewModel x) => x.LookUpCostTypes,
+                    getRepositoryFunc: x => x.CostTypes);
+            }
+        }
 
         /// <summary>
         /// The view model for the WorkContracts detail collection.
@@ -70,5 +93,29 @@ namespace QLHD.UI.ViewModels {
                     navigationExpression: x => x.Work);
             }
         }
+
+        /// <summary>
+        /// The view model for the WorkChildWorks detail collection.
+        /// </summary>
+        public CollectionViewModelBase<Work, Work, int, IQLHDDbContextUnitOfWork> WorkChildWorksDetails {
+            get {
+                return GetDetailsCollectionViewModel(
+                    propertyExpression: (WorkViewModel x) => x.WorkChildWorksDetails,
+                    getRepositoryFunc: x => x.Works,
+                    foreignKeyExpression: x => x.ParentWorkId,
+                    navigationExpression: x => x.ParentWork);
+            }
+        }
+
+        //protected override void OnBeforeEntitySaved(int primaryKey, Work entity, bool isNewEntity)
+        //{
+        //    QLHDDbContext context = new QLHDDbContext();
+        //    Work parent = context.Works.First(x => x.Id == entity.ParentWorkId);
+        //    if (parent != null)
+        //    {
+        //        entity.ParentWork = parent;
+        //    }
+        //    base.OnBeforeEntitySaved(primaryKey, entity, isNewEntity);
+        //}
     }
 }

@@ -68,6 +68,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -105,8 +106,11 @@
     <Compile Include="ViewModels\Project\ProjectViewModel.cs" />
     <Compile Include="ViewModels\QLHDDbContextViewModel.cs" />
     <Compile Include="ViewModels\QLHDDbContextViewModel.partial.cs" />
+    <Compile Include="ViewModels\User\UserCollectionViewModel.cs" />
+    <Compile Include="ViewModels\User\UserViewModel.cs" />
     <Compile Include="ViewModels\Work\WorkCollectionViewModel.cs" />
     <Compile Include="ViewModels\Work\WorkViewModel.cs" />
+    <Compile Include="Views\Commons\GridControlConfig.cs" />
     <Compile Include="Views\Contractor\ContractorsEditFormView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,6 +233,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Contract.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Contractor.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.CostType.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.PaymentPeriod.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Project.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.User.datasource" />

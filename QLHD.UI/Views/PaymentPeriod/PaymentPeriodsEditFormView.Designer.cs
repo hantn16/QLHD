@@ -30,10 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
-            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
@@ -41,36 +38,36 @@
             this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.paymentPeriodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.IdTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForId = new DevExpress.XtraLayout.LayoutControlItem();
             this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
             this.DescriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForDescription = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ContractIdTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ContractIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.ItemForContractId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ContractTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForContract = new DevExpress.XtraLayout.LayoutControlItem();
             this.OrderTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForOrder = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TypeImageComboBoxEdit = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.TypeLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.ItemForType = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ValueRequestedSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ValueRequestedTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForValueRequested = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ValuePaidSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ValuePaidTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForValuePaid = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ValueCompletedSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ValueCompletedTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForValueCompleted = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ValueInInvoiceSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ValueInInvoiceTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForValueInInvoice = new DevExpress.XtraLayout.LayoutControlItem();
-            this.VatInInvoiceSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.VatInInvoiceTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForVatInInvoice = new DevExpress.XtraLayout.LayoutControlItem();
             this.IsActiveCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.ItemForIsActive = new DevExpress.XtraLayout.LayoutControlItem();
+            this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -78,32 +75,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentPeriodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DescriptionTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDescription)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractIdTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContractId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForContract)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypeImageComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypeLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValueRequestedSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValueRequestedTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValueRequested)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValuePaidSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValuePaidTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValuePaid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValueCompletedSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValueCompletedTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValueCompleted)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValueInInvoiceSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValueInInvoiceTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValueInInvoice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VatInInvoiceSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VatInInvoiceTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForVatInInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mvvmContext1
@@ -120,51 +114,12 @@
             this.mvvmContext1.ContainerControl = this;
             this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.PaymentPeriodViewModel);
             // 
-            // ribbonControl1
-            // 
-            this.ribbonControl1.ExpandCollapseItem.Id = 0;
-            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl1.ExpandCollapseItem,
-            this.bbiSave,
-            this.bbiSaveAndClose,
-            this.bbiSaveAndNew,
-            this.bbiReset,
-            this.bbiSaveLayout,
-            this.bbiResetLayout,
-            this.bbiDelete,
-            this.bbiClose});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 9;
-            this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(818, 141);
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
             // bbiSave
             // 
             this.bbiSave.Caption = "Save";
             this.bbiSave.Id = 1;
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
             this.bbiSave.Name = "bbiSave";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSave);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSaveAndClose);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSaveAndNew);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiReset);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSaveLayout);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiResetLayout);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiClose);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // bbiSaveAndClose
             // 
@@ -215,21 +170,57 @@
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
             this.bbiClose.Name = "bbiClose";
             // 
+            // ribbonControl1
+            // 
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
+            this.bbiSave,
+            this.bbiSaveAndClose,
+            this.bbiSaveAndNew,
+            this.bbiReset,
+            this.bbiSaveLayout,
+            this.bbiResetLayout,
+            this.bbiDelete,
+            this.bbiClose});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1});
+            this.ribbonControl1.Size = new System.Drawing.Size(818, 141);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSave);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSaveAndClose);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSaveAndNew);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiReset);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiSaveLayout);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiResetLayout);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiClose);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            // 
             // dataLayoutControl1
             // 
-            this.dataLayoutControl1.AllowGeneratingCollectionProperties = DevExpress.Utils.DefaultBoolean.False;
-            this.dataLayoutControl1.Controls.Add(this.IdTextEdit);
             this.dataLayoutControl1.Controls.Add(this.NameTextEdit);
             this.dataLayoutControl1.Controls.Add(this.DescriptionTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.ContractIdTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.ContractTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.ContractIdLookUpEdit);
             this.dataLayoutControl1.Controls.Add(this.OrderTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.TypeImageComboBoxEdit);
-            this.dataLayoutControl1.Controls.Add(this.ValueRequestedSpinEdit);
-            this.dataLayoutControl1.Controls.Add(this.ValuePaidSpinEdit);
-            this.dataLayoutControl1.Controls.Add(this.ValueCompletedSpinEdit);
-            this.dataLayoutControl1.Controls.Add(this.ValueInInvoiceSpinEdit);
-            this.dataLayoutControl1.Controls.Add(this.VatInInvoiceSpinEdit);
+            this.dataLayoutControl1.Controls.Add(this.TypeLookUpEdit);
+            this.dataLayoutControl1.Controls.Add(this.ValueRequestedTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.ValuePaidTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.ValueCompletedTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.ValueInInvoiceTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.VatInInvoiceTextEdit);
             this.dataLayoutControl1.Controls.Add(this.IsActiveCheckEdit);
             this.dataLayoutControl1.DataSource = this.paymentPeriodBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -237,7 +228,7 @@
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
             this.dataLayoutControl1.Size = new System.Drawing.Size(818, 270);
-            this.dataLayoutControl1.TabIndex = 1;
+            this.dataLayoutControl1.TabIndex = 3;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
             // layoutControlGroup1
@@ -248,7 +239,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(801, 331);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(801, 283);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // paymentPeriodBindingSource
@@ -260,11 +251,9 @@
             this.layoutControlGroup2.AllowDrawBackground = false;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForId,
             this.ItemForName,
             this.ItemForDescription,
             this.ItemForContractId,
-            this.ItemForContract,
             this.ItemForOrder,
             this.ItemForType,
             this.ItemForValueRequested,
@@ -275,118 +264,86 @@
             this.ItemForIsActive});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(781, 311);
-            // 
-            // IdTextEdit
-            // 
-            this.IdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IdTextEdit.Location = new System.Drawing.Point(97, 12);
-            this.IdTextEdit.MenuManager = this.ribbonControl1;
-            this.IdTextEdit.Name = "IdTextEdit";
-            this.IdTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.IdTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.IdTextEdit.Properties.Mask.EditMask = "N0";
-            this.IdTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.IdTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.IdTextEdit.Size = new System.Drawing.Size(692, 20);
-            this.IdTextEdit.StyleController = this.dataLayoutControl1;
-            this.IdTextEdit.TabIndex = 4;
-            this.IdTextEdit.ReadOnly = true;
-            // 
-            // ItemForId
-            // 
-            this.ItemForId.Control = this.IdTextEdit;
-            this.ItemForId.Location = new System.Drawing.Point(0, 0);
-            this.ItemForId.Name = "ItemForId";
-            this.ItemForId.Size = new System.Drawing.Size(781, 24);
-            this.ItemForId.Text = "Id";
-            this.ItemForId.TextSize = new System.Drawing.Size(81, 13);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(781, 263);
             // 
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(97, 36);
+            this.NameTextEdit.Location = new System.Drawing.Point(111, 12);
             this.NameTextEdit.MenuManager = this.ribbonControl1;
             this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(692, 20);
+            this.NameTextEdit.Size = new System.Drawing.Size(678, 20);
             this.NameTextEdit.StyleController = this.dataLayoutControl1;
-            this.NameTextEdit.TabIndex = 5;
+            this.NameTextEdit.TabIndex = 4;
             // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
-            this.ItemForName.Location = new System.Drawing.Point(0, 24);
+            this.ItemForName.Location = new System.Drawing.Point(0, 0);
             this.ItemForName.Name = "ItemForName";
             this.ItemForName.Size = new System.Drawing.Size(781, 24);
-            this.ItemForName.Text = "Name";
-            this.ItemForName.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForName.TextSize = new System.Drawing.Size(95, 13);
             // 
             // DescriptionTextEdit
             // 
             this.DescriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "Description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DescriptionTextEdit.Location = new System.Drawing.Point(97, 60);
+            this.DescriptionTextEdit.Location = new System.Drawing.Point(111, 36);
             this.DescriptionTextEdit.MenuManager = this.ribbonControl1;
             this.DescriptionTextEdit.Name = "DescriptionTextEdit";
-            this.DescriptionTextEdit.Size = new System.Drawing.Size(692, 20);
+            this.DescriptionTextEdit.Size = new System.Drawing.Size(678, 20);
             this.DescriptionTextEdit.StyleController = this.dataLayoutControl1;
-            this.DescriptionTextEdit.TabIndex = 6;
+            this.DescriptionTextEdit.TabIndex = 5;
             // 
             // ItemForDescription
             // 
             this.ItemForDescription.Control = this.DescriptionTextEdit;
-            this.ItemForDescription.Location = new System.Drawing.Point(0, 48);
+            this.ItemForDescription.Location = new System.Drawing.Point(0, 24);
             this.ItemForDescription.Name = "ItemForDescription";
             this.ItemForDescription.Size = new System.Drawing.Size(781, 24);
-            this.ItemForDescription.Text = "Description";
-            this.ItemForDescription.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForDescription.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // ContractIdTextEdit
+            // ContractIdLookUpEdit
             // 
-            this.ContractIdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ContractId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ContractIdTextEdit.Location = new System.Drawing.Point(97, 84);
-            this.ContractIdTextEdit.MenuManager = this.ribbonControl1;
-            this.ContractIdTextEdit.Name = "ContractIdTextEdit";
-            this.ContractIdTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ContractIdTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ContractIdTextEdit.Properties.Mask.EditMask = "N0";
-            this.ContractIdTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.ContractIdTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.ContractIdTextEdit.Size = new System.Drawing.Size(692, 20);
-            this.ContractIdTextEdit.StyleController = this.dataLayoutControl1;
-            this.ContractIdTextEdit.TabIndex = 7;
+            this.ContractIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ContractId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ContractIdLookUpEdit.Location = new System.Drawing.Point(111, 60);
+            this.ContractIdLookUpEdit.MenuManager = this.ribbonControl1;
+            this.ContractIdLookUpEdit.Name = "ContractIdLookUpEdit";
+            this.ContractIdLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.ContractIdLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.ContractIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ContractIdLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Hợp Đồng", 92, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SigningDate", "Ngày ký", 49, DevExpress.Utils.FormatType.DateTime, "dd/MM/yy", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Work", "Hạng Mục", 57, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Content", "Nội Dung", 53, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Contractor", "Nhà Thầu", 56, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsTerminated", "Đã Thanh Lý", 71, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TerminateDate", "Ngày Thanh Lý", 82, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ContractOriginValue", "GTHĐ Ban Đầu", 82, DevExpress.Utils.FormatType.Numeric, "c", true, DevExpress.Utils.HorzAlignment.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ContractValue", "GTHĐ Hiện Tại", 79, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.ContractIdLookUpEdit.Properties.DataSource = this.contractBindingSource;
+            this.ContractIdLookUpEdit.Properties.DisplayMember = "Name";
+            this.ContractIdLookUpEdit.Properties.NullText = "";
+            this.ContractIdLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.ContractIdLookUpEdit.Properties.ValueMember = "Id";
+            this.ContractIdLookUpEdit.Size = new System.Drawing.Size(678, 20);
+            this.ContractIdLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.ContractIdLookUpEdit.TabIndex = 6;
             // 
             // ItemForContractId
             // 
-            this.ItemForContractId.Control = this.ContractIdTextEdit;
-            this.ItemForContractId.Location = new System.Drawing.Point(0, 72);
+            this.ItemForContractId.Control = this.ContractIdLookUpEdit;
+            this.ItemForContractId.Location = new System.Drawing.Point(0, 48);
             this.ItemForContractId.Name = "ItemForContractId";
             this.ItemForContractId.Size = new System.Drawing.Size(781, 24);
-            this.ItemForContractId.Text = "Contract Id";
-            this.ItemForContractId.TextSize = new System.Drawing.Size(81, 13);
-            // 
-            // ContractTextEdit
-            // 
-            this.ContractTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "Contract", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ContractTextEdit.Location = new System.Drawing.Point(97, 108);
-            this.ContractTextEdit.MenuManager = this.ribbonControl1;
-            this.ContractTextEdit.Name = "ContractTextEdit";
-            this.ContractTextEdit.Size = new System.Drawing.Size(692, 20);
-            this.ContractTextEdit.StyleController = this.dataLayoutControl1;
-            this.ContractTextEdit.TabIndex = 8;
-            // 
-            // ItemForContract
-            // 
-            this.ItemForContract.Control = this.ContractTextEdit;
-            this.ItemForContract.Location = new System.Drawing.Point(0, 96);
-            this.ItemForContract.Name = "ItemForContract";
-            this.ItemForContract.Size = new System.Drawing.Size(781, 24);
-            this.ItemForContract.Text = "Contract";
-            this.ItemForContract.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForContractId.TextSize = new System.Drawing.Size(95, 13);
             // 
             // OrderTextEdit
             // 
             this.OrderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "Order", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.OrderTextEdit.Location = new System.Drawing.Point(97, 132);
+            this.OrderTextEdit.Location = new System.Drawing.Point(111, 84);
             this.OrderTextEdit.MenuManager = this.ribbonControl1;
             this.OrderTextEdit.Name = "OrderTextEdit";
             this.OrderTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -394,222 +351,182 @@
             this.OrderTextEdit.Properties.Mask.EditMask = "N0";
             this.OrderTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.OrderTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.OrderTextEdit.Size = new System.Drawing.Size(692, 20);
+            this.OrderTextEdit.Size = new System.Drawing.Size(678, 20);
             this.OrderTextEdit.StyleController = this.dataLayoutControl1;
-            this.OrderTextEdit.TabIndex = 9;
+            this.OrderTextEdit.TabIndex = 7;
             // 
             // ItemForOrder
             // 
             this.ItemForOrder.Control = this.OrderTextEdit;
-            this.ItemForOrder.Location = new System.Drawing.Point(0, 120);
+            this.ItemForOrder.Location = new System.Drawing.Point(0, 72);
             this.ItemForOrder.Name = "ItemForOrder";
             this.ItemForOrder.Size = new System.Drawing.Size(781, 24);
-            this.ItemForOrder.Text = "Order";
-            this.ItemForOrder.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForOrder.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // TypeImageComboBoxEdit
+            // TypeLookUpEdit
             // 
-            this.TypeImageComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "Type", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.TypeImageComboBoxEdit.Location = new System.Drawing.Point(97, 156);
-            this.TypeImageComboBoxEdit.MenuManager = this.ribbonControl1;
-            this.TypeImageComboBoxEdit.Name = "TypeImageComboBoxEdit";
-            this.TypeImageComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.TypeImageComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.TypeImageComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.TypeLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "Type", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.TypeLookUpEdit.Location = new System.Drawing.Point(111, 108);
+            this.TypeLookUpEdit.MenuManager = this.ribbonControl1;
+            this.TypeLookUpEdit.Name = "TypeLookUpEdit";
+            this.TypeLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.TypeLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.TypeLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TypeImageComboBoxEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Advanced", QLHD.Model.Models.PaymentType.Advanced, 0),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("PaidInProgress", QLHD.Model.Models.PaymentType.PaidInProgress, 1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Settlement", QLHD.Model.Models.PaymentType.Settlement, 2)});
-            this.TypeImageComboBoxEdit.Properties.UseCtrlScroll = true;
-            this.TypeImageComboBoxEdit.Size = new System.Drawing.Size(692, 20);
-            this.TypeImageComboBoxEdit.StyleController = this.dataLayoutControl1;
-            this.TypeImageComboBoxEdit.TabIndex = 10;
+            this.TypeLookUpEdit.Properties.NullText = "";
+            this.TypeLookUpEdit.Properties.PopupSizeable = false;
+            this.TypeLookUpEdit.Size = new System.Drawing.Size(678, 20);
+            this.TypeLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.TypeLookUpEdit.TabIndex = 8;
             // 
             // ItemForType
             // 
-            this.ItemForType.Control = this.TypeImageComboBoxEdit;
-            this.ItemForType.Location = new System.Drawing.Point(0, 144);
+            this.ItemForType.Control = this.TypeLookUpEdit;
+            this.ItemForType.Location = new System.Drawing.Point(0, 96);
             this.ItemForType.Name = "ItemForType";
             this.ItemForType.Size = new System.Drawing.Size(781, 24);
-            this.ItemForType.Text = "Type";
-            this.ItemForType.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForType.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // ValueRequestedSpinEdit
+            // ValueRequestedTextEdit
             // 
-            this.ValueRequestedSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValueRequested", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ValueRequestedSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ValueRequestedSpinEdit.Location = new System.Drawing.Point(97, 180);
-            this.ValueRequestedSpinEdit.MenuManager = this.ribbonControl1;
-            this.ValueRequestedSpinEdit.Name = "ValueRequestedSpinEdit";
-            this.ValueRequestedSpinEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ValueRequestedSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ValueRequestedSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ValueRequestedSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.ValueRequestedSpinEdit.Properties.Mask.EditMask = "F";
-            this.ValueRequestedSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.ValueRequestedSpinEdit.Size = new System.Drawing.Size(692, 20);
-            this.ValueRequestedSpinEdit.StyleController = this.dataLayoutControl1;
-            this.ValueRequestedSpinEdit.TabIndex = 11;
+            this.ValueRequestedTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValueRequested", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ValueRequestedTextEdit.Location = new System.Drawing.Point(111, 132);
+            this.ValueRequestedTextEdit.MenuManager = this.ribbonControl1;
+            this.ValueRequestedTextEdit.Name = "ValueRequestedTextEdit";
+            this.ValueRequestedTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.ValueRequestedTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.ValueRequestedTextEdit.Properties.Mask.EditMask = "F";
+            this.ValueRequestedTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.ValueRequestedTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.ValueRequestedTextEdit.Size = new System.Drawing.Size(678, 20);
+            this.ValueRequestedTextEdit.StyleController = this.dataLayoutControl1;
+            this.ValueRequestedTextEdit.TabIndex = 9;
             // 
             // ItemForValueRequested
             // 
-            this.ItemForValueRequested.Control = this.ValueRequestedSpinEdit;
-            this.ItemForValueRequested.Location = new System.Drawing.Point(0, 168);
+            this.ItemForValueRequested.Control = this.ValueRequestedTextEdit;
+            this.ItemForValueRequested.Location = new System.Drawing.Point(0, 120);
             this.ItemForValueRequested.Name = "ItemForValueRequested";
             this.ItemForValueRequested.Size = new System.Drawing.Size(781, 24);
-            this.ItemForValueRequested.Text = "Value Requested";
-            this.ItemForValueRequested.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForValueRequested.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // ValuePaidSpinEdit
+            // ValuePaidTextEdit
             // 
-            this.ValuePaidSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValuePaid", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ValuePaidSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ValuePaidSpinEdit.Location = new System.Drawing.Point(97, 204);
-            this.ValuePaidSpinEdit.MenuManager = this.ribbonControl1;
-            this.ValuePaidSpinEdit.Name = "ValuePaidSpinEdit";
-            this.ValuePaidSpinEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ValuePaidSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ValuePaidSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ValuePaidSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.ValuePaidSpinEdit.Properties.Mask.EditMask = "F";
-            this.ValuePaidSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.ValuePaidSpinEdit.Size = new System.Drawing.Size(692, 20);
-            this.ValuePaidSpinEdit.StyleController = this.dataLayoutControl1;
-            this.ValuePaidSpinEdit.TabIndex = 12;
+            this.ValuePaidTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValuePaid", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ValuePaidTextEdit.Location = new System.Drawing.Point(111, 156);
+            this.ValuePaidTextEdit.MenuManager = this.ribbonControl1;
+            this.ValuePaidTextEdit.Name = "ValuePaidTextEdit";
+            this.ValuePaidTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.ValuePaidTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.ValuePaidTextEdit.Properties.Mask.EditMask = "F";
+            this.ValuePaidTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.ValuePaidTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.ValuePaidTextEdit.Size = new System.Drawing.Size(678, 20);
+            this.ValuePaidTextEdit.StyleController = this.dataLayoutControl1;
+            this.ValuePaidTextEdit.TabIndex = 10;
             // 
             // ItemForValuePaid
             // 
-            this.ItemForValuePaid.Control = this.ValuePaidSpinEdit;
-            this.ItemForValuePaid.Location = new System.Drawing.Point(0, 192);
+            this.ItemForValuePaid.Control = this.ValuePaidTextEdit;
+            this.ItemForValuePaid.Location = new System.Drawing.Point(0, 144);
             this.ItemForValuePaid.Name = "ItemForValuePaid";
             this.ItemForValuePaid.Size = new System.Drawing.Size(781, 24);
-            this.ItemForValuePaid.Text = "Value Paid";
-            this.ItemForValuePaid.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForValuePaid.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // ValueCompletedSpinEdit
+            // ValueCompletedTextEdit
             // 
-            this.ValueCompletedSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValueCompleted", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ValueCompletedSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ValueCompletedSpinEdit.Location = new System.Drawing.Point(97, 228);
-            this.ValueCompletedSpinEdit.MenuManager = this.ribbonControl1;
-            this.ValueCompletedSpinEdit.Name = "ValueCompletedSpinEdit";
-            this.ValueCompletedSpinEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ValueCompletedSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ValueCompletedSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ValueCompletedSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.ValueCompletedSpinEdit.Properties.Mask.EditMask = "F";
-            this.ValueCompletedSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.ValueCompletedSpinEdit.Size = new System.Drawing.Size(692, 20);
-            this.ValueCompletedSpinEdit.StyleController = this.dataLayoutControl1;
-            this.ValueCompletedSpinEdit.TabIndex = 13;
+            this.ValueCompletedTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValueCompleted", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ValueCompletedTextEdit.Location = new System.Drawing.Point(111, 180);
+            this.ValueCompletedTextEdit.MenuManager = this.ribbonControl1;
+            this.ValueCompletedTextEdit.Name = "ValueCompletedTextEdit";
+            this.ValueCompletedTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.ValueCompletedTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.ValueCompletedTextEdit.Properties.Mask.EditMask = "F";
+            this.ValueCompletedTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.ValueCompletedTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.ValueCompletedTextEdit.Size = new System.Drawing.Size(678, 20);
+            this.ValueCompletedTextEdit.StyleController = this.dataLayoutControl1;
+            this.ValueCompletedTextEdit.TabIndex = 11;
             // 
             // ItemForValueCompleted
             // 
-            this.ItemForValueCompleted.Control = this.ValueCompletedSpinEdit;
-            this.ItemForValueCompleted.Location = new System.Drawing.Point(0, 216);
+            this.ItemForValueCompleted.Control = this.ValueCompletedTextEdit;
+            this.ItemForValueCompleted.Location = new System.Drawing.Point(0, 168);
             this.ItemForValueCompleted.Name = "ItemForValueCompleted";
             this.ItemForValueCompleted.Size = new System.Drawing.Size(781, 24);
-            this.ItemForValueCompleted.Text = "Value Completed";
-            this.ItemForValueCompleted.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForValueCompleted.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // ValueInInvoiceSpinEdit
+            // ValueInInvoiceTextEdit
             // 
-            this.ValueInInvoiceSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValueInInvoice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ValueInInvoiceSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ValueInInvoiceSpinEdit.Location = new System.Drawing.Point(97, 252);
-            this.ValueInInvoiceSpinEdit.MenuManager = this.ribbonControl1;
-            this.ValueInInvoiceSpinEdit.Name = "ValueInInvoiceSpinEdit";
-            this.ValueInInvoiceSpinEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ValueInInvoiceSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ValueInInvoiceSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ValueInInvoiceSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.ValueInInvoiceSpinEdit.Properties.Mask.EditMask = "F";
-            this.ValueInInvoiceSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.ValueInInvoiceSpinEdit.Size = new System.Drawing.Size(692, 20);
-            this.ValueInInvoiceSpinEdit.StyleController = this.dataLayoutControl1;
-            this.ValueInInvoiceSpinEdit.TabIndex = 14;
+            this.ValueInInvoiceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "ValueInInvoice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ValueInInvoiceTextEdit.Location = new System.Drawing.Point(111, 204);
+            this.ValueInInvoiceTextEdit.MenuManager = this.ribbonControl1;
+            this.ValueInInvoiceTextEdit.Name = "ValueInInvoiceTextEdit";
+            this.ValueInInvoiceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.ValueInInvoiceTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.ValueInInvoiceTextEdit.Properties.Mask.EditMask = "F";
+            this.ValueInInvoiceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.ValueInInvoiceTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.ValueInInvoiceTextEdit.Size = new System.Drawing.Size(678, 20);
+            this.ValueInInvoiceTextEdit.StyleController = this.dataLayoutControl1;
+            this.ValueInInvoiceTextEdit.TabIndex = 12;
             // 
             // ItemForValueInInvoice
             // 
-            this.ItemForValueInInvoice.Control = this.ValueInInvoiceSpinEdit;
-            this.ItemForValueInInvoice.Location = new System.Drawing.Point(0, 240);
+            this.ItemForValueInInvoice.Control = this.ValueInInvoiceTextEdit;
+            this.ItemForValueInInvoice.Location = new System.Drawing.Point(0, 192);
             this.ItemForValueInInvoice.Name = "ItemForValueInInvoice";
             this.ItemForValueInInvoice.Size = new System.Drawing.Size(781, 24);
-            this.ItemForValueInInvoice.Text = "Value In Invoice";
-            this.ItemForValueInInvoice.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForValueInInvoice.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // VatInInvoiceSpinEdit
+            // VatInInvoiceTextEdit
             // 
-            this.VatInInvoiceSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "VatInInvoice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.VatInInvoiceSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.VatInInvoiceSpinEdit.Location = new System.Drawing.Point(97, 276);
-            this.VatInInvoiceSpinEdit.MenuManager = this.ribbonControl1;
-            this.VatInInvoiceSpinEdit.Name = "VatInInvoiceSpinEdit";
-            this.VatInInvoiceSpinEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.VatInInvoiceSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.VatInInvoiceSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VatInInvoiceSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.VatInInvoiceSpinEdit.Properties.Mask.EditMask = "F";
-            this.VatInInvoiceSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.VatInInvoiceSpinEdit.Size = new System.Drawing.Size(692, 20);
-            this.VatInInvoiceSpinEdit.StyleController = this.dataLayoutControl1;
-            this.VatInInvoiceSpinEdit.TabIndex = 15;
+            this.VatInInvoiceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "VatInInvoice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.VatInInvoiceTextEdit.Location = new System.Drawing.Point(111, 228);
+            this.VatInInvoiceTextEdit.MenuManager = this.ribbonControl1;
+            this.VatInInvoiceTextEdit.Name = "VatInInvoiceTextEdit";
+            this.VatInInvoiceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.VatInInvoiceTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.VatInInvoiceTextEdit.Properties.Mask.EditMask = "F";
+            this.VatInInvoiceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.VatInInvoiceTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.VatInInvoiceTextEdit.Size = new System.Drawing.Size(678, 20);
+            this.VatInInvoiceTextEdit.StyleController = this.dataLayoutControl1;
+            this.VatInInvoiceTextEdit.TabIndex = 13;
             // 
             // ItemForVatInInvoice
             // 
-            this.ItemForVatInInvoice.Control = this.VatInInvoiceSpinEdit;
-            this.ItemForVatInInvoice.Location = new System.Drawing.Point(0, 264);
+            this.ItemForVatInInvoice.Control = this.VatInInvoiceTextEdit;
+            this.ItemForVatInInvoice.Location = new System.Drawing.Point(0, 216);
             this.ItemForVatInInvoice.Name = "ItemForVatInInvoice";
             this.ItemForVatInInvoice.Size = new System.Drawing.Size(781, 24);
-            this.ItemForVatInInvoice.Text = "Vat In Invoice";
-            this.ItemForVatInInvoice.TextSize = new System.Drawing.Size(81, 13);
+            this.ItemForVatInInvoice.TextSize = new System.Drawing.Size(95, 13);
             // 
             // IsActiveCheckEdit
             // 
             this.IsActiveCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.paymentPeriodBindingSource, "IsActive", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IsActiveCheckEdit.Location = new System.Drawing.Point(12, 300);
+            this.IsActiveCheckEdit.EditValue = true;
+            this.IsActiveCheckEdit.Location = new System.Drawing.Point(12, 252);
             this.IsActiveCheckEdit.MenuManager = this.ribbonControl1;
             this.IsActiveCheckEdit.Name = "IsActiveCheckEdit";
-            this.IsActiveCheckEdit.Properties.Caption = "checkEdit1";
+            this.IsActiveCheckEdit.Properties.Caption = "Kích hoạt";
             this.IsActiveCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.IsActiveCheckEdit.Size = new System.Drawing.Size(777, 19);
             this.IsActiveCheckEdit.StyleController = this.dataLayoutControl1;
-            this.IsActiveCheckEdit.TabIndex = 16;
+            this.IsActiveCheckEdit.TabIndex = 14;
             // 
             // ItemForIsActive
             // 
             this.ItemForIsActive.Control = this.IsActiveCheckEdit;
-            this.ItemForIsActive.Location = new System.Drawing.Point(0, 288);
+            this.ItemForIsActive.Location = new System.Drawing.Point(0, 240);
             this.ItemForIsActive.Name = "ItemForIsActive";
             this.ItemForIsActive.Size = new System.Drawing.Size(781, 23);
             this.ItemForIsActive.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForIsActive.TextVisible = false;
+            // 
+            // contractBindingSource
+            // 
+            this.contractBindingSource.DataSource = typeof(QLHD.Model.Models.Contract);
             // 
             // PaymentPeriodsEditFormView
             // 
@@ -626,32 +543,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentPeriodBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DescriptionTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDescription)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractIdTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContractId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForContract)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypeImageComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypeLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValueRequestedSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValueRequestedTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValueRequested)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValuePaidSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValuePaidTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValuePaid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValueCompletedSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValueCompletedTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValueCompleted)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValueInInvoiceSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValueInInvoiceTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForValueInInvoice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VatInInvoiceSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VatInInvoiceTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForVatInInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -670,29 +584,26 @@
         private DevExpress.XtraBars.BarButtonItem bbiResetLayout;
         private DevExpress.XtraBars.BarButtonItem bbiDelete;
         private DevExpress.XtraBars.BarButtonItem bbiClose;
-        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        private DevExpress.XtraEditors.TextEdit IdTextEdit;
-        private System.Windows.Forms.BindingSource paymentPeriodBindingSource;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private DevExpress.XtraEditors.TextEdit NameTextEdit;
+        private System.Windows.Forms.BindingSource paymentPeriodBindingSource;
         private DevExpress.XtraEditors.TextEdit DescriptionTextEdit;
-        private DevExpress.XtraEditors.TextEdit ContractIdTextEdit;
-        private DevExpress.XtraEditors.TextEdit ContractTextEdit;
+        private DevExpress.XtraEditors.LookUpEdit ContractIdLookUpEdit;
+        private System.Windows.Forms.BindingSource contractBindingSource;
         private DevExpress.XtraEditors.TextEdit OrderTextEdit;
-        private DevExpress.XtraEditors.ImageComboBoxEdit TypeImageComboBoxEdit;
-        private DevExpress.XtraEditors.SpinEdit ValueRequestedSpinEdit;
-        private DevExpress.XtraEditors.SpinEdit ValuePaidSpinEdit;
-        private DevExpress.XtraEditors.SpinEdit ValueCompletedSpinEdit;
-        private DevExpress.XtraEditors.SpinEdit ValueInInvoiceSpinEdit;
-        private DevExpress.XtraEditors.SpinEdit VatInInvoiceSpinEdit;
+        private DevExpress.XtraEditors.LookUpEdit TypeLookUpEdit;
+        private DevExpress.XtraEditors.TextEdit ValueRequestedTextEdit;
+        private DevExpress.XtraEditors.TextEdit ValuePaidTextEdit;
+        private DevExpress.XtraEditors.TextEdit ValueCompletedTextEdit;
+        private DevExpress.XtraEditors.TextEdit ValueInInvoiceTextEdit;
+        private DevExpress.XtraEditors.TextEdit VatInInvoiceTextEdit;
         private DevExpress.XtraEditors.CheckEdit IsActiveCheckEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForId;
         private DevExpress.XtraLayout.LayoutControlItem ItemForName;
         private DevExpress.XtraLayout.LayoutControlItem ItemForDescription;
         private DevExpress.XtraLayout.LayoutControlItem ItemForContractId;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForContract;
         private DevExpress.XtraLayout.LayoutControlItem ItemForOrder;
         private DevExpress.XtraLayout.LayoutControlItem ItemForType;
         private DevExpress.XtraLayout.LayoutControlItem ItemForValueRequested;

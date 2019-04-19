@@ -14,6 +14,7 @@ namespace QLHD.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(AutoGenerateField = false)]
         public int Id { get; set; }
 
         [Display(Name = "Tên Hợp Đồng")]
@@ -49,6 +50,7 @@ namespace QLHD.Model.Models
         [DataType(DataType.Currency)]
         public double ContractOriginValue { get; set; }
 
+        [DataType(DataType.Currency)]
         [Display(Name = "GTHĐ Hiện Tại")]
         public virtual double ContractValue {
             get {
@@ -61,5 +63,10 @@ namespace QLHD.Model.Models
 
         [Display(Name = "Danh Sách Lần Thanh Toán")]
         public virtual ICollection<PaymentPeriod> PaymentPeriods { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

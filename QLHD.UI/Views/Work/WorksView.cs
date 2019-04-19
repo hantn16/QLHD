@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using QLHD.UI.Views.Commons;
+using DevExpress.XtraGrid;
 
 namespace QLHD.UI.Views.Work
 {
@@ -26,12 +28,8 @@ namespace QLHD.UI.Views.Work
         void CustomizeGridView()
         {
             GridView gv = (GridView)gridControl1.MainView;
-            gv.OptionsBehavior.Editable = false;
-            List<String> listHideColumnName = new List<string> { "Project","Contracts"};
-            foreach (string item in listHideColumnName)
-            {
-                gv.Columns[item].Visible = false;
-            }
+            GridControlConfig.SetColumnsHide(gv, new List<string> { "ProjectId", "Contracts", "ParentWorkId", "ChildWorks" });
+            //gv.BestFitColumns();
         }
 
         private void InitBindings()
@@ -42,6 +40,14 @@ namespace QLHD.UI.Views.Work
             fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity, args => args.Row as QLHD.Model.Models.Work,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+        }
+
+
+        private void gridControl1_DataSourceChanged(object sender, EventArgs e)
+        {
+            GridControl gc = (GridControl)sender;
+            GridView gv = (GridView)gc.MainView;
+            gv.BestFitColumns();
         }
     }
 }

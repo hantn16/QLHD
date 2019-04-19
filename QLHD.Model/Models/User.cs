@@ -13,6 +13,7 @@ namespace QLHD.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(AutoGenerateField = false)]
         public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }

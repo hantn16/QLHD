@@ -42,48 +42,42 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.IdTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.workBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ContractsGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.IsActiveCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.workBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProjectIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ParentWorkIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
-            this.CostTypeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.workBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.IsActiveCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.CostTypeIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.costTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.ItemForId = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForCostType = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForProjectId = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForParentWorkId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForContracts = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForIsActive = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForCostTypeId = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IdTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParentWorkIdLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CostTypeComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CostTypeIdLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCostType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForProjectId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForParentWorkId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCostTypeId)).BeginInit();
             this.SuspendLayout();
             // 
             // mvvmContext1
@@ -197,106 +191,56 @@
             // 
             // dataLayoutControl1
             // 
-            this.dataLayoutControl1.Controls.Add(this.IdTextEdit);
             this.dataLayoutControl1.Controls.Add(this.NameTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.ContractsGridControl);
-            this.dataLayoutControl1.Controls.Add(this.IsActiveCheckEdit);
             this.dataLayoutControl1.Controls.Add(this.ProjectIdLookUpEdit);
             this.dataLayoutControl1.Controls.Add(this.ParentWorkIdLookUpEdit);
-            this.dataLayoutControl1.Controls.Add(this.CostTypeComboBoxEdit);
+            this.dataLayoutControl1.Controls.Add(this.IsActiveCheckEdit);
+            this.dataLayoutControl1.Controls.Add(this.CostTypeIdLookUpEdit);
             this.dataLayoutControl1.DataSource = this.workBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 141);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
             this.dataLayoutControl1.Size = new System.Drawing.Size(699, 276);
-            this.dataLayoutControl1.TabIndex = 3;
+            this.dataLayoutControl1.TabIndex = 9;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
-            // IdTextEdit
+            // NameTextEdit
             // 
-            this.IdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("ReadOnly", this.workBindingSource, "Id", true));
-            this.IdTextEdit.Enabled = false;
-            this.IdTextEdit.Location = new System.Drawing.Point(84, 12);
-            this.IdTextEdit.MenuManager = this.ribbonControl1;
-            this.IdTextEdit.Name = "IdTextEdit";
-            this.IdTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.IdTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.IdTextEdit.Properties.Mask.EditMask = "N0";
-            this.IdTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.IdTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.IdTextEdit.Properties.ReadOnly = true;
-            this.IdTextEdit.Size = new System.Drawing.Size(603, 20);
-            this.IdTextEdit.StyleController = this.dataLayoutControl1;
-            this.IdTextEdit.TabIndex = 4;
+            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NameTextEdit.Location = new System.Drawing.Point(101, 12);
+            this.NameTextEdit.MenuManager = this.ribbonControl1;
+            this.NameTextEdit.Name = "NameTextEdit";
+            this.NameTextEdit.Size = new System.Drawing.Size(586, 20);
+            this.NameTextEdit.StyleController = this.dataLayoutControl1;
+            this.NameTextEdit.TabIndex = 4;
             // 
             // workBindingSource
             // 
             this.workBindingSource.DataSource = typeof(QLHD.Model.Models.Work);
             // 
-            // NameTextEdit
-            // 
-            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(84, 36);
-            this.NameTextEdit.MenuManager = this.ribbonControl1;
-            this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.NameTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.NameTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.NameTextEdit.Size = new System.Drawing.Size(603, 20);
-            this.NameTextEdit.StyleController = this.dataLayoutControl1;
-            this.NameTextEdit.TabIndex = 5;
-            // 
-            // ContractsGridControl
-            // 
-            this.ContractsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.workBindingSource, "Contracts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ContractsGridControl.Location = new System.Drawing.Point(12, 132);
-            this.ContractsGridControl.MainView = this.gridView1;
-            this.ContractsGridControl.MenuManager = this.ribbonControl1;
-            this.ContractsGridControl.Name = "ContractsGridControl";
-            this.ContractsGridControl.Size = new System.Drawing.Size(675, 109);
-            this.ContractsGridControl.TabIndex = 9;
-            this.ContractsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.ContractsGridControl;
-            this.gridView1.Name = "gridView1";
-            // 
-            // IsActiveCheckEdit
-            // 
-            this.IsActiveCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "IsActive", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IsActiveCheckEdit.EditValue = true;
-            this.IsActiveCheckEdit.Location = new System.Drawing.Point(12, 245);
-            this.IsActiveCheckEdit.MenuManager = this.ribbonControl1;
-            this.IsActiveCheckEdit.Name = "IsActiveCheckEdit";
-            this.IsActiveCheckEdit.Properties.Caption = "Kích hoạt";
-            this.IsActiveCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.IsActiveCheckEdit.Size = new System.Drawing.Size(675, 19);
-            this.IsActiveCheckEdit.StyleController = this.dataLayoutControl1;
-            this.IsActiveCheckEdit.TabIndex = 10;
-            // 
             // ProjectIdLookUpEdit
             // 
-            this.ProjectIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "ProjectId", true));
-            this.ProjectIdLookUpEdit.Location = new System.Drawing.Point(84, 84);
+            this.ProjectIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "ProjectId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ProjectIdLookUpEdit.Location = new System.Drawing.Point(101, 36);
             this.ProjectIdLookUpEdit.MenuManager = this.ribbonControl1;
             this.ProjectIdLookUpEdit.Name = "ProjectIdLookUpEdit";
             this.ProjectIdLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.ProjectIdLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ProjectIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ProjectIdLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "Mã Dự Án", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Dự Án", 61, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("StartDate", "Ngày Khởi Công", 86, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EndDate", "Ngày Hoàn Công", 91, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.ProjectIdLookUpEdit.Properties.DataSource = this.projectBindingSource;
-            this.ProjectIdLookUpEdit.Properties.DisplayMember = "Code";
-            this.ProjectIdLookUpEdit.Properties.DropDownRows = 3;
+            this.ProjectIdLookUpEdit.Properties.DisplayMember = "Name";
             this.ProjectIdLookUpEdit.Properties.NullText = "";
-            this.ProjectIdLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.ProjectIdLookUpEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.ProjectIdLookUpEdit.Properties.ValueMember = "Id";
-            this.ProjectIdLookUpEdit.Size = new System.Drawing.Size(603, 20);
+            this.ProjectIdLookUpEdit.Size = new System.Drawing.Size(586, 20);
             this.ProjectIdLookUpEdit.StyleController = this.dataLayoutControl1;
-            this.ProjectIdLookUpEdit.TabIndex = 11;
+            this.ProjectIdLookUpEdit.TabIndex = 6;
             // 
             // projectBindingSource
             // 
@@ -304,8 +248,8 @@
             // 
             // ParentWorkIdLookUpEdit
             // 
-            this.ParentWorkIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "ParentWorkId", true));
-            this.ParentWorkIdLookUpEdit.Location = new System.Drawing.Point(84, 108);
+            this.ParentWorkIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "ParentWorkId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ParentWorkIdLookUpEdit.Location = new System.Drawing.Point(101, 84);
             this.ParentWorkIdLookUpEdit.MenuManager = this.ribbonControl1;
             this.ParentWorkIdLookUpEdit.Name = "ParentWorkIdLookUpEdit";
             this.ParentWorkIdLookUpEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -313,28 +257,66 @@
             this.ParentWorkIdLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ParentWorkIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ParentWorkIdLookUpEdit.Properties.DataSource = this.workBindingSource;
+            this.ParentWorkIdLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Hạng Mục", 91, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CostType", "Loại Chi Phí", 64, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Project", "Dự Án", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentWork", "Hạng Mục Cha", 79, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.ParentWorkIdLookUpEdit.Properties.DataSource = this.workBindingSource1;
             this.ParentWorkIdLookUpEdit.Properties.DisplayMember = "Name";
             this.ParentWorkIdLookUpEdit.Properties.NullText = "";
-            this.ParentWorkIdLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.ParentWorkIdLookUpEdit.Properties.ValueMember = "Id";
-            this.ParentWorkIdLookUpEdit.Size = new System.Drawing.Size(603, 20);
+            this.ParentWorkIdLookUpEdit.Size = new System.Drawing.Size(586, 20);
             this.ParentWorkIdLookUpEdit.StyleController = this.dataLayoutControl1;
-            this.ParentWorkIdLookUpEdit.TabIndex = 12;
+            this.ParentWorkIdLookUpEdit.TabIndex = 7;
             // 
-            // CostTypeComboBoxEdit
+            // workBindingSource1
             // 
-            this.CostTypeComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "CostType", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CostTypeComboBoxEdit.Location = new System.Drawing.Point(84, 60);
-            this.CostTypeComboBoxEdit.MenuManager = this.ribbonControl1;
-            this.CostTypeComboBoxEdit.Name = "CostTypeComboBoxEdit";
-            this.CostTypeComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.CostTypeComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.CostTypeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.workBindingSource1.DataSource = typeof(QLHD.Model.Models.Work);
+            // 
+            // IsActiveCheckEdit
+            // 
+            this.IsActiveCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "IsActive", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.IsActiveCheckEdit.Location = new System.Drawing.Point(12, 108);
+            this.IsActiveCheckEdit.MenuManager = this.ribbonControl1;
+            this.IsActiveCheckEdit.Name = "IsActiveCheckEdit";
+            this.IsActiveCheckEdit.Properties.Caption = "checkEdit1";
+            this.IsActiveCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.IsActiveCheckEdit.Size = new System.Drawing.Size(675, 19);
+            this.IsActiveCheckEdit.StyleController = this.dataLayoutControl1;
+            this.IsActiveCheckEdit.TabIndex = 8;
+            // 
+            // CostTypeIdLookUpEdit
+            // 
+            this.CostTypeIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.workBindingSource, "CostTypeId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.CostTypeIdLookUpEdit.Location = new System.Drawing.Point(101, 60);
+            this.CostTypeIdLookUpEdit.MenuManager = this.ribbonControl1;
+            this.CostTypeIdLookUpEdit.Name = "CostTypeIdLookUpEdit";
+            this.CostTypeIdLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.CostTypeIdLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.CostTypeIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CostTypeComboBoxEdit.Size = new System.Drawing.Size(603, 20);
-            this.CostTypeComboBoxEdit.StyleController = this.dataLayoutControl1;
-            this.CostTypeComboBoxEdit.TabIndex = 6;
+            this.CostTypeIdLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 33, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Loại Chi Phí", 85, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedAt", "Ngày tạo", 54, DevExpress.Utils.FormatType.DateTime, "dd/MM/yy", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedBy", "Người tạo", 57, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedAt", "Ngày sửa", 56, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedBy", "Người sửa", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.CostTypeIdLookUpEdit.Properties.DataSource = this.costTypeBindingSource;
+            this.CostTypeIdLookUpEdit.Properties.DisplayMember = "Name";
+            this.CostTypeIdLookUpEdit.Properties.NullText = "";
+            this.CostTypeIdLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.CostTypeIdLookUpEdit.Properties.ValueMember = "Id";
+            this.CostTypeIdLookUpEdit.Size = new System.Drawing.Size(586, 20);
+            this.CostTypeIdLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.CostTypeIdLookUpEdit.TabIndex = 9;
+            // 
+            // costTypeBindingSource
+            // 
+            this.costTypeBindingSource.DataSource = typeof(QLHD.Model.Models.CostType);
             // 
             // layoutControlGroup1
             // 
@@ -352,76 +334,55 @@
             this.layoutControlGroup2.AllowDrawBackground = false;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForId,
             this.ItemForName,
-            this.ItemForCostType,
             this.ItemForProjectId,
             this.ItemForParentWorkId,
-            this.ItemForContracts,
-            this.ItemForIsActive});
+            this.ItemForIsActive,
+            this.ItemForCostTypeId});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(679, 256);
             // 
-            // ItemForId
-            // 
-            this.ItemForId.Control = this.IdTextEdit;
-            this.ItemForId.Location = new System.Drawing.Point(0, 0);
-            this.ItemForId.Name = "ItemForId";
-            this.ItemForId.Size = new System.Drawing.Size(679, 24);
-            this.ItemForId.Text = "Id";
-            this.ItemForId.TextSize = new System.Drawing.Size(69, 13);
-            // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
-            this.ItemForName.Location = new System.Drawing.Point(0, 24);
+            this.ItemForName.Location = new System.Drawing.Point(0, 0);
             this.ItemForName.Name = "ItemForName";
             this.ItemForName.Size = new System.Drawing.Size(679, 24);
-            this.ItemForName.TextSize = new System.Drawing.Size(69, 13);
-            // 
-            // ItemForCostType
-            // 
-            this.ItemForCostType.Control = this.CostTypeComboBoxEdit;
-            this.ItemForCostType.Location = new System.Drawing.Point(0, 48);
-            this.ItemForCostType.Name = "ItemForCostType";
-            this.ItemForCostType.Size = new System.Drawing.Size(679, 24);
-            this.ItemForCostType.TextSize = new System.Drawing.Size(69, 13);
+            this.ItemForName.TextSize = new System.Drawing.Size(86, 13);
             // 
             // ItemForProjectId
             // 
             this.ItemForProjectId.Control = this.ProjectIdLookUpEdit;
-            this.ItemForProjectId.Location = new System.Drawing.Point(0, 72);
+            this.ItemForProjectId.Location = new System.Drawing.Point(0, 24);
             this.ItemForProjectId.Name = "ItemForProjectId";
             this.ItemForProjectId.Size = new System.Drawing.Size(679, 24);
-            this.ItemForProjectId.TextSize = new System.Drawing.Size(69, 13);
+            this.ItemForProjectId.TextSize = new System.Drawing.Size(86, 13);
             // 
             // ItemForParentWorkId
             // 
             this.ItemForParentWorkId.Control = this.ParentWorkIdLookUpEdit;
-            this.ItemForParentWorkId.Location = new System.Drawing.Point(0, 96);
+            this.ItemForParentWorkId.Location = new System.Drawing.Point(0, 72);
             this.ItemForParentWorkId.Name = "ItemForParentWorkId";
             this.ItemForParentWorkId.Size = new System.Drawing.Size(679, 24);
-            this.ItemForParentWorkId.TextSize = new System.Drawing.Size(69, 13);
-            // 
-            // ItemForContracts
-            // 
-            this.ItemForContracts.Control = this.ContractsGridControl;
-            this.ItemForContracts.Location = new System.Drawing.Point(0, 120);
-            this.ItemForContracts.Name = "ItemForContracts";
-            this.ItemForContracts.Size = new System.Drawing.Size(679, 113);
-            this.ItemForContracts.StartNewLine = true;
-            this.ItemForContracts.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForContracts.TextVisible = false;
+            this.ItemForParentWorkId.TextSize = new System.Drawing.Size(86, 13);
             // 
             // ItemForIsActive
             // 
             this.ItemForIsActive.Control = this.IsActiveCheckEdit;
-            this.ItemForIsActive.Location = new System.Drawing.Point(0, 233);
+            this.ItemForIsActive.Location = new System.Drawing.Point(0, 96);
             this.ItemForIsActive.Name = "ItemForIsActive";
-            this.ItemForIsActive.Size = new System.Drawing.Size(679, 23);
+            this.ItemForIsActive.Size = new System.Drawing.Size(679, 160);
             this.ItemForIsActive.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForIsActive.TextVisible = false;
+            // 
+            // ItemForCostTypeId
+            // 
+            this.ItemForCostTypeId.Control = this.CostTypeIdLookUpEdit;
+            this.ItemForCostTypeId.Location = new System.Drawing.Point(0, 48);
+            this.ItemForCostTypeId.Name = "ItemForCostTypeId";
+            this.ItemForCostTypeId.Size = new System.Drawing.Size(679, 24);
+            this.ItemForCostTypeId.TextSize = new System.Drawing.Size(86, 13);
             // 
             // WorksEditFormView
             // 
@@ -435,25 +396,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.IdTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ParentWorkIdLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CostTypeComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CostTypeIdLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCostType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForProjectId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForParentWorkId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForContracts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCostTypeId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,24 +432,21 @@
         private DevExpress.XtraBars.BarButtonItem bbiClose;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        private DevExpress.XtraEditors.TextEdit IdTextEdit;
-        private System.Windows.Forms.BindingSource workBindingSource;
         private DevExpress.XtraEditors.TextEdit NameTextEdit;
-        private DevExpress.XtraGrid.GridControl ContractsGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource workBindingSource;
+        private DevExpress.XtraEditors.LookUpEdit ProjectIdLookUpEdit;
+        private DevExpress.XtraEditors.LookUpEdit ParentWorkIdLookUpEdit;
         private DevExpress.XtraEditors.CheckEdit IsActiveCheckEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForId;
         private DevExpress.XtraLayout.LayoutControlItem ItemForName;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForCostType;
         private DevExpress.XtraLayout.LayoutControlItem ItemForProjectId;
         private DevExpress.XtraLayout.LayoutControlItem ItemForParentWorkId;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForContracts;
         private DevExpress.XtraLayout.LayoutControlItem ItemForIsActive;
         private System.Windows.Forms.BindingSource projectBindingSource;
-        private DevExpress.XtraEditors.LookUpEdit ProjectIdLookUpEdit;
-        private DevExpress.XtraEditors.LookUpEdit ParentWorkIdLookUpEdit;
-        private DevExpress.XtraEditors.ComboBoxEdit CostTypeComboBoxEdit;
+        private System.Windows.Forms.BindingSource workBindingSource1;
+        private DevExpress.XtraEditors.LookUpEdit CostTypeIdLookUpEdit;
+        private System.Windows.Forms.BindingSource costTypeBindingSource;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForCostTypeId;
     }
 }

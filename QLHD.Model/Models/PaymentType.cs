@@ -9,25 +9,26 @@ using System.Threading.Tasks;
 
 namespace QLHD.Model.Models
 {
-    [Table("ContractApendix")]
-    public class ContractApendix : Auditable
+    [Table("PaymentType")]
+    public class PaymentType : Auditable
     {
-        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         [Display(AutoGenerateField = false)]
         public int Id { get; set; }
 
-        [Display(Name = "Thứ Tự")]
-        public int Order { get; set; }
+        [Display(Name = "Kiểu Thanh Toán")]
+        public string Name { get; set; }
 
-        [Display(Name = "Tên Phụ Lục")]
+        [Display(Name = "Mô tả")]
         public string Description { get; set; }
 
-        [Display(Name = "Mã Hợp Đồng")]
-        [ForeignKey("Contract")]
-        public int ContractId { get; set; }
-
-        [Display(Name = "Hợp Đồng")]
-        public virtual Contract Contract { get; set; }
+        public virtual ICollection<PaymentPeriod> PaymentPeriods { get; set; }
     }
+    //public enum PaymentType
+    //{
+    //    Advanced = 0,
+    //    PaidInProgress = 1,
+    //    Settlement = 2
+    //}
 }

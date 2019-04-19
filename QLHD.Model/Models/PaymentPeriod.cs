@@ -14,6 +14,7 @@ namespace QLHD.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(AutoGenerateField = false)]
         public int Id { get; set; }
 
         [Display(Name = "Tên Lần TT")]
@@ -32,8 +33,12 @@ namespace QLHD.Model.Models
         [Display(Name = "Thứ Tự")]
         public int Order { get; set; }
 
-        [Display(Name = "Kiểu")]
-        public PaymentType Type { get; set; }
+        [Display(Name = "Mã Kiểu TT")]
+        public int PaymentTypeId { get; set; }
+
+        [Display(Name = "Kiểu TT")]
+        [ForeignKey("PaymentTypeId")]
+        public virtual PaymentType PaymentType { get; set; }
 
         [Display(Name = "Số Tiền Đề Nghị")]
         public double ValueRequested { get; set; }
@@ -50,10 +55,5 @@ namespace QLHD.Model.Models
         [Display(Name = "Thuế GTGT")]
         public double VatInInvoice { get; set; }
     }
-    public enum PaymentType
-    {
-        Advanced = 0,
-        PaidInProgress = 1,
-        Settlement = 2
-    }
+
 }

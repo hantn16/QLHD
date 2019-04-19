@@ -30,7 +30,15 @@
             if (context.Users.Count() == 0)
             {
                 context.Users.AddRange(users);
-            }        
+            }
+            if (context.CostTypes.Count() == 0)
+            {
+                context.CostTypes.AddRange(InitCostType());
+            }
+            if (context.PaymentTypes.Count() == 0)
+            {
+                context.PaymentTypes.AddRange(InitPaymentType());
+            }
             context.SaveChanges();
 
         }
@@ -67,6 +75,29 @@
                 new User(){Login = "hantn",Password = GetHash("anhhan")},
             };
             return users;
+        }
+        CostType[] InitCostType()
+        {
+            return new CostType[]
+            {
+                new CostType() {Name = "Chi phí xây dựng",IsActive = true,CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new CostType() {Name = "Chi phí thiết bị",IsActive = true,CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new CostType() {Name = "Chi phí tư vấn, thiết kế",IsActive = true,CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new CostType() {Name = "Chi phí GPMB",IsActive = true,CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new CostType() {Name = "Chi phí QLDA",IsActive = true,CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new CostType() {Name = "Chi phí bán hàng",IsActive = true,CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new CostType() {Name = "Chi phí khác",IsActive = true,CreatedAt = DateTime.Now,CreatedBy = "admin"}
+            };
+        }
+
+        PaymentType[] InitPaymentType()
+        {
+            return new PaymentType[]
+            {
+                new PaymentType(){Name = "Tạm ứng", IsActive = true, Description = "Ứng trước tiền cho nhà thầu cho dù họ chưa thi công",CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new PaymentType(){Name = "Thanh toán", IsActive = true, Description = "Thanh toán tiền cho nhà thầu tương ứng với khối lượng nghiệm thu hoàn thành",CreatedAt = DateTime.Now,CreatedBy = "admin"},
+                new PaymentType(){Name = "Quyết toán", IsActive = true, Description = "Thanh toán nốt tiền cho nhà thầu sau khi quyết toán khối lượng hoàn thành và thanh lý hợp đồng",CreatedAt = DateTime.Now,CreatedBy = "admin"}
+            };
         }
         private string GetHash(string password)
         {

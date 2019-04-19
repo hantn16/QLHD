@@ -14,6 +14,7 @@ namespace QLHD.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(AutoGenerateField = false)]
         public int Id { get; set; }
 
         [MinLength(4)]
@@ -47,6 +48,10 @@ namespace QLHD.Model.Models
         [Display(Name = "Danh Sách Hợp Đồng")]
         public virtual ICollection<Contract> Contracts { get; set; }
 
+        public override string ToString()
+        {
+            return (Code + '-' + Name); 
+        }
 
     }
 }
