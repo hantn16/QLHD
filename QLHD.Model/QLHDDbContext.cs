@@ -1,4 +1,4 @@
-namespace QLHD.Data
+namespace QLHD.Model
 {
     using QLHD.Model.Models;
     using System;
@@ -33,9 +33,7 @@ namespace QLHD.Data
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
         public virtual DbSet<CostType> CostTypes { get; set; }
-
     }
-
 
     //public class MyEntity
     //{

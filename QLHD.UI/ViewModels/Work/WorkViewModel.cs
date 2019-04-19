@@ -10,7 +10,6 @@ using DevExpress.Mvvm.ViewModel;
 using QLHD.UI.QLHDDbContextDataModel;
 using QLHD.UI.Common;
 using QLHD.Model.Models;
-using QLHD.Data;
 
 namespace QLHD.UI.ViewModels {
 

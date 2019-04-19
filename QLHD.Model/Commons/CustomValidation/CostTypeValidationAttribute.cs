@@ -12,32 +12,26 @@ namespace QLHD.Model.Commons.CustomValidation
     [AttributeUsage(AttributeTargets.Property,AllowMultiple = false,Inherited = true)]
     public class CostTypeValidationAttribute : ValidationAttribute
     {
-        public static ValidationResult HasSameCostTypeWithParent(Work work)
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            if (work.ParentWorkId == null)
+            var _context = (QLHDDbContext) validationContext.GetService(typeof(QLHDDbContext));
+            var context = (QLHDDbContext) validationContext.ServiceContainer.GetService(typeof(QLHDDbContext));
+            Work work = (Work)validationContext.ObjectInstance;
+            var costTypeId = (int?)value;
+            if (costTypeId == null)
             {
                 return ValidationResult.Success;
             }
             else
             {
-
-            }
-            return new ValidationResult("Hạng mục con phải thuộc loại chi phí giống hạng mục cha");
-        }
-        protected override ValidationResult IsValid(object value, ValidationContext context)
-        {
-            var work = (Work)value;
-            Type myType = context.GetType();
-            var _context = context.GetService(myType);
-            if (work.ParentWorkId == null)
-            {
-                return ValidationResult.Success;
-            }
-            else
-            {
+                Work parent = _context.Works.First(w => w.Id == work.Id);
+                if (costTypeId == parent.CostTypeId)
+                {
+                    return ValidationResult.Success;
+                }
                 //Work parentWork = context;
             }
-            return new ValidationResult("Test");
+            return new ValidationResult("Hạng mục con phải cùng loại chi phí với hạng mục cha");
         }
     }
 }

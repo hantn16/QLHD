@@ -1,19 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.ComponentModel;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
-using DevExpress.Mvvm;
-using DevExpress.Mvvm.POCO;
-using DevExpress.Mvvm.DataAnnotations;
+﻿using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.ViewModel;
-using DevExpress.Mvvm.DataModel;
+using System;
+using System.Linq;
 
-namespace QLHD.UI.Common {
+namespace QLHD.UI.Common
+{
     /// <summary>
     /// The base class for POCO view models exposing a collection of entities of the given type.
     /// This is a partial class that provides an extension point to add custom properties, commands and override methods without modifying the auto-generated code.

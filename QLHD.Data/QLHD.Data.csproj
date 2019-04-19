@@ -49,41 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201903210954325_Initial.cs" />
-    <Compile Include="Migrations\201903210954325_Initial.Designer.cs">
-      <DependentUpon>201903210954325_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903260300528_1stAddDisplayName.cs" />
-    <Compile Include="Migrations\201903260300528_1stAddDisplayName.Designer.cs">
-      <DependentUpon>201903260300528_1stAddDisplayName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903260838337_2ndAddUserModel.cs" />
-    <Compile Include="Migrations\201903260838337_2ndAddUserModel.Designer.cs">
-      <DependentUpon>201903260838337_2ndAddUserModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903270207165_3rdModifyWorkModel.cs" />
-    <Compile Include="Migrations\201903270207165_3rdModifyWorkModel.Designer.cs">
-      <DependentUpon>201903270207165_3rdModifyWorkModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904060421165_EditDisplayColumn.cs" />
-    <Compile Include="Migrations\201904060421165_EditDisplayColumn.Designer.cs">
-      <DependentUpon>201904060421165_EditDisplayColumn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904090411263_Config_Work_Model.cs" />
-    <Compile Include="Migrations\201904090411263_Config_Work_Model.Designer.cs">
-      <DependentUpon>201904090411263_Config_Work_Model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904110708553_test.cs" />
-    <Compile Include="Migrations\201904110708553_test.Designer.cs">
-      <DependentUpon>201904110708553_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904180930283_AddCostTypeAndPaymentTypeModel.cs" />
-    <Compile Include="Migrations\201904180930283_AddCostTypeAndPaymentTypeModel.Designer.cs">
-      <DependentUpon>201904180930283_AddCostTypeAndPaymentTypeModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLHDDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLHD.Model\QLHD.Model.csproj">
@@ -100,32 +66,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903210954325_Initial.resx">
-      <DependentUpon>201903210954325_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903260300528_1stAddDisplayName.resx">
-      <DependentUpon>201903260300528_1stAddDisplayName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903260838337_2ndAddUserModel.resx">
-      <DependentUpon>201903260838337_2ndAddUserModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903270207165_3rdModifyWorkModel.resx">
-      <DependentUpon>201903270207165_3rdModifyWorkModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904060421165_EditDisplayColumn.resx">
-      <DependentUpon>201904060421165_EditDisplayColumn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904090411263_Config_Work_Model.resx">
-      <DependentUpon>201904090411263_Config_Work_Model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904110708553_test.resx">
-      <DependentUpon>201904110708553_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904180930283_AddCostTypeAndPaymentTypeModel.resx">
-      <DependentUpon>201904180930283_AddCostTypeAndPaymentTypeModel.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

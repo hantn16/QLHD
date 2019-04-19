@@ -1,12 +1,13 @@
-﻿namespace QLHD.Data.Migrations
+﻿namespace QLHD.Model.Migrations
 {
-    using QLHD.Model.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using QLHD.Model;
+    using QLHD.Model.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<QLHD.Data.QLHDDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<QLHDDbContext>
     {
         private QLHDDbContext _context { get; set; }
         public Configuration()
@@ -15,17 +16,17 @@
             _context = new QLHDDbContext();
         }
 
-        protected override void Seed(QLHD.Data.QLHDDbContext context)
+        protected override void Seed(QLHDDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
             Project[] projects = InitProject();
-            if (context.Projects.Count()==0)
+            if (context.Projects.Count() == 0)
             {
                 context.Projects.AddRange(projects);
-            }           
+            }
             User[] users = InitUser();
             if (context.Users.Count() == 0)
             {

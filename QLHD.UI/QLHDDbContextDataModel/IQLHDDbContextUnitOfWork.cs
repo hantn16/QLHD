@@ -1,5 +1,4 @@
 ﻿using DevExpress.Mvvm.DataModel;
-using QLHD.Data;
 using QLHD.Model.Models;
 using System;
 using System.Collections.Generic;

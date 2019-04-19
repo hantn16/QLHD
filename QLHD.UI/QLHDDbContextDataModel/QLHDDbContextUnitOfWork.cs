@@ -1,12 +1,11 @@
 ﻿using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.DataModel.EF6;
-using QLHD.Data;
+using QLHD.Model;
 using QLHD.Model.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace QLHD.UI.QLHDDbContextDataModel {
+namespace QLHD.UI.QLHDDbContextDataModel
+{
 
     /// <summary>
     /// A QLHDDbContextUnitOfWork instance that represents the run-time implementation of the IQLHDDbContextUnitOfWork interface.
