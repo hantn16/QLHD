@@ -40,10 +40,11 @@
             this.biPaymentPeriods = new DevExpress.XtraBars.BarButtonItem();
             this.biWorks = new DevExpress.XtraBars.BarButtonItem();
             this.biLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.biSettings = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.biSettings = new DevExpress.XtraBars.BarButtonItem();
+            this.biContractApendixes = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
@@ -80,9 +81,10 @@
             this.biPaymentPeriods,
             this.biWorks,
             this.biLogout,
-            this.biSettings});
+            this.biSettings,
+            this.biContractApendixes});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 14;
+            this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -143,6 +145,15 @@
             this.biLogout.Name = "biLogout";
             this.biLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // biSettings
+            // 
+            this.biSettings.Caption = "Settings";
+            this.biSettings.Id = 13;
+            this.biSettings.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biSettings.ImageOptions.Image")));
+            this.biSettings.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biSettings.ImageOptions.LargeImage")));
+            this.biSettings.Name = "biSettings";
+            this.biSettings.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -158,6 +169,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.biProjects);
             this.ribbonPageGroup1.ItemLinks.Add(this.biPaymentPeriods);
             this.ribbonPageGroup1.ItemLinks.Add(this.biWorks);
+            this.ribbonPageGroup1.ItemLinks.Add(this.biContractApendixes);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Danh mục";
             // 
@@ -168,14 +180,14 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Hệ thống";
             // 
-            // biSettings
+            // biContractApendixes
             // 
-            this.biSettings.Caption = "Settings";
-            this.biSettings.Id = 13;
-            this.biSettings.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.biSettings.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.biSettings.Name = "biSettings";
-            this.biSettings.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.biContractApendixes.Caption = "ContractApendix";
+            this.biContractApendixes.Id = 14;
+            this.biContractApendixes.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.biContractApendixes.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.biContractApendixes.Name = "biContractApendixes";
+            this.biContractApendixes.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // MainView
             // 
@@ -212,5 +224,6 @@
         private DevExpress.XtraBars.BarButtonItem biLogout;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem biSettings;
+        private DevExpress.XtraBars.BarButtonItem biContractApendixes;
     }
 }

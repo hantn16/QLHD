@@ -10,25 +10,22 @@ using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.ViewModels;
 
-namespace QLHD.UI.Views.PaymentPeriod
+namespace QLHD.UI.Views.ContractApendix
 {
-    [ViewType("PaymentPeriodView")]
-    public partial class PaymentPeriodsEditFormView : UserControl
+    [ViewType("ContractApendixView")]
+    public partial class ContractApendixesEditFormView : UserControl
     {
-        public PaymentPeriodsEditFormView()
+        public ContractApendixesEditFormView()
         {
             InitializeComponent();
             InitBindings();
-
         }
 
         private void InitBindings()
         {
-            var fluent = mvvmContext1.OfType<PaymentPeriodViewModel>();
-            fluent.SetObjectDataSourceBinding(
-                paymentPeriodBindingSource, x => x.Entity, x => x.Update());
+            var fluent = mvvmContext1.OfType<ContractApendixViewModel>();
+            fluent.SetObjectDataSourceBinding(contractApendixBindingSource, x => x.Entity, x => x.Update());
             fluent.SetBinding(contractBindingSource, x => x.DataSource, y => y.LookUpContracts.Entities);
-            fluent.SetBinding(paymentTypeBindingSource, x => x.DataSource, y => y.LookUpPaymentTypes.Entities);
         }
     }
 }

@@ -51,9 +51,14 @@
   <ItemGroup>
     <Compile Include="Abstracts\Auditable.cs" />
     <Compile Include="Commons\CustomValidation\CostTypeValidationAttribute.cs" />
+    <Compile Include="Commons\CustomValidation\ProjectValidationAttribute.cs" />
     <Compile Include="Migrations\201904190341170_Initial.cs" />
     <Compile Include="Migrations\201904190341170_Initial.Designer.cs">
       <DependentUpon>201904190341170_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904190833128_ConfigContracApendixModel.cs" />
+    <Compile Include="Migrations\201904190833128_ConfigContracApendixModel.Designer.cs">
+      <DependentUpon>201904190833128_ConfigContracApendixModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contract.cs" />
@@ -71,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904190341170_Initial.resx">
       <DependentUpon>201904190341170_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904190833128_ConfigContracApendixModel.resx">
+      <DependentUpon>201904190833128_ConfigContracApendixModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

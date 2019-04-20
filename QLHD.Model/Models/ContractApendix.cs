@@ -21,7 +21,14 @@ namespace QLHD.Model.Models
         public int Order { get; set; }
 
         [Display(Name = "Tên Phụ Lục")]
+        public string Name { get; set; }
+
+        [Display(Name = "Chi tiết")]
         public string Description { get; set; }
+
+        [Display(Name = "Giá trị điều chỉnh")]
+        [DataType(DataType.Currency)]
+        public double AdjustedValue { get; set; }
 
         [Display(Name = "Mã Hợp Đồng")]
         [ForeignKey("Contract")]
@@ -29,5 +36,10 @@ namespace QLHD.Model.Models
 
         [Display(Name = "Hợp Đồng")]
         public virtual Contract Contract { get; set; }
+
+        public override string ToString()
+        {
+            return Name + " - " + Description;
+        }
     }
 }

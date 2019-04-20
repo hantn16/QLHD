@@ -30,6 +30,7 @@ namespace QLHD.Model.Models
         public virtual CostType CostType { get; set; }
 
         [Display(Name = "Mã Dự Án")]
+        [ProjectValidationAttribute]
         public int ProjectId { get; set; }
 
         [Display(Name = "Dự Án")]

@@ -19,6 +19,11 @@ namespace QLHD.UI.Views.PaymentPeriod
         public PaymentPeriodsView()
         {
             InitializeComponent();
+            InitBindings();
+        }
+
+        private void InitBindings()
+        {
             var fluent = mvvmContext1.OfType<PaymentPeriodCollectionViewModel>();
             fluent.SetBinding(gridView1, gView => gView.LoadingPanelVisible, x => x.IsLoading);
             fluent.SetBinding(gridControl1, gControl => gControl.DataSource, x => x.Entities);

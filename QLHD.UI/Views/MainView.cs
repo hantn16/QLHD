@@ -35,6 +35,7 @@ namespace QLHD.UI.Views
             fluentAPI.BindCommand(biProjects, (x, m) => x.Show(m), x => x.Modules[2]);
             fluentAPI.BindCommand(biPaymentPeriods, (x, m) => x.Show(m), x => x.Modules[3]);
             fluentAPI.BindCommand(biWorks, (x, m) => x.Show(m), x => x.Modules[4]);
+            fluentAPI.BindCommand(biContractApendixes, (x, m) => x.Show(m), x => x.Modules[6]);
             //
             fluentAPI.BindCommand(biLogout, x => x.Logout());
             //

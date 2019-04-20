@@ -111,6 +111,18 @@
     <Compile Include="ViewModels\Work\WorkCollectionViewModel.cs" />
     <Compile Include="ViewModels\Work\WorkViewModel.cs" />
     <Compile Include="Views\Commons\GridControlConfig.cs" />
+    <Compile Include="Views\ContractApendix\ContractApendixesEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ContractApendix\ContractApendixesEditFormView.Designer.cs">
+      <DependentUpon>ContractApendixesEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContractApendix\ContractApendixesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ContractApendix\ContractApendixesView.Designer.cs">
+      <DependentUpon>ContractApendixesView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Contractor\ContractorsEditFormView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +206,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ContractApendix\ContractApendixesEditFormView.resx">
+      <DependentUpon>ContractApendixesEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ContractApendix\ContractApendixesView.resx">
+      <DependentUpon>ContractApendixesView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Contractor\ContractorsEditFormView.resx">
       <DependentUpon>ContractorsEditFormView.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,9 +250,11 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Contract.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.ContractApendix.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Contractor.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.CostType.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.PaymentPeriod.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.PaymentType.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Project.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.User.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Work.datasource" />
@@ -262,7 +282,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\ContractApendix\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>

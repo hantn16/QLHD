@@ -46,13 +46,18 @@ namespace QLHD.UI.ViewModels {
                     getRepositoryFunc: x => x.Contracts);
             }
         }
-        public System.Array LookUpPaymentTypes
+
+        /// <summary>
+        /// The view model that contains a look-up collection of PaymentTypes for the corresponding navigation property in the view.
+        /// </summary>
+        public IEntitiesViewModel<PaymentType> LookUpPaymentTypes
         {
             get
             {
-                return Enum.GetValues(typeof(PaymentType));
+                return GetLookUpEntitiesViewModel(
+                    propertyExpression: (PaymentPeriodViewModel x) => x.LookUpPaymentTypes,
+                    getRepositoryFunc: x => x.PaymentTypes);
             }
         }
-
     }
 }
