@@ -37,6 +37,13 @@ namespace QLHD.UI.Views
             fluentAPI.BindCommand(biWorks, (x, m) => x.Show(m), x => x.Modules[4]);
             fluentAPI.BindCommand(biContractApendixes, (x, m) => x.Show(m), x => x.Modules[6]);
             //
+            fluentAPI.BindCommand(bbContracts, (x, m) => x.Show(m), x => x.Modules[0]);
+            fluentAPI.BindCommand(bbContractors, (x, m) => x.Show(m), x => x.Modules[1]);
+            fluentAPI.BindCommand(bbProjects, (x, m) => x.Show(m), x => x.Modules[2]);
+            fluentAPI.BindCommand(bbPaymentPeriods, (x, m) => x.Show(m), x => x.Modules[3]);
+            fluentAPI.BindCommand(bbWorks, (x, m) => x.Show(m), x => x.Modules[4]);
+            fluentAPI.BindCommand(bbContractApendixes, (x, m) => x.Show(m), x => x.Modules[6]);
+            //
             fluentAPI.BindCommand(biLogout, x => x.Logout());
             //
             fluentAPI.WithEvent(this, "Load")
@@ -59,6 +66,11 @@ namespace QLHD.UI.Views
             else
                 this.Text = "Ứng dụng quản lý hợp đồng - (" + userName + ")";
             ConstantVariable.CurrentUserName = userName;
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

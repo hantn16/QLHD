@@ -105,16 +105,5 @@ namespace QLHD.UI.ViewModels {
                     navigationExpression: x => x.ParentWork);
             }
         }
-
-        //protected override void OnBeforeEntitySaved(int primaryKey, Work entity, bool isNewEntity)
-        //{
-        //    QLHDDbContext context = new QLHDDbContext();
-        //    Work parent = context.Works.First(x => x.Id == entity.ParentWorkId);
-        //    if (parent != null)
-        //    {
-        //        entity.ParentWork = parent;
-        //    }
-        //    base.OnBeforeEntitySaved(primaryKey, entity, isNewEntity);
-        //}
     }
 }

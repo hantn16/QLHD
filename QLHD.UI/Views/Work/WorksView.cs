@@ -29,6 +29,7 @@ namespace QLHD.UI.Views.Work
         {
             GridView gv = (GridView)gridControl1.MainView;
             GridControlConfig.SetColumnsHide(gv, new List<string> { "ProjectId", "Contracts", "ParentWorkId", "ChildWorks","CostTypeId" });
+            gv.OptionsView.ShowAutoFilterRow = true;
             //gv.BestFitColumns();
         }
 
@@ -40,6 +41,16 @@ namespace QLHD.UI.Views.Work
             fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity, args => args.Row as QLHD.Model.Models.Work,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            fluent.WithEvent<RowClickEventArgs>(gridView1, "RowClick").EventToCommand(
+                x => x.Edit(null),
+                x => x.SelectedEntity,
+                args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
+            gridView1.RowClick += (s, e) => {
+                if (e.Clicks == 1 && e.Button == MouseButtons.Right)
+                {
+                    popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
+                }
+            };
         }
 
 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLHD.UI.Views.PaymentPeriod
 {
@@ -30,6 +31,16 @@ namespace QLHD.UI.Views.PaymentPeriod
             fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity, args => args.Row as QLHD.Model.Models.PaymentPeriod,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            fluent.WithEvent<RowClickEventArgs>(gridView1, "RowClick").EventToCommand(
+                x => x.Edit(null),
+                x => x.SelectedEntity,
+                args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
+            gridView1.RowClick += (s, e) => {
+                if (e.Clicks == 1 && e.Button == MouseButtons.Right)
+                {
+                    popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
+                }
+            };
         }
     }
 }

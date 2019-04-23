@@ -43,17 +43,26 @@ namespace QLHD.Model.Models
         [Display(Name = "Số Tiền Đề Nghị")]
         public double ValueRequested { get; set; }
 
+        [Display(Name = "Ngày Đề Nghị")]
+        public DateTime RequestedDate { get; set; }
+
         [Display(Name = "Số Tiền Thanh Toán")]
         public double ValuePaid { get; set; }
 
+        [Display(Name = "Ngày Thanh Toán")]
+        public DateTime PaidDate { get; set; }
+
         [Display(Name = "Giá Trị NTHT")]
-        public double ValueCompleted { get; set; }
+        public double ValueAccepted { get; set; }
 
-        [Display(Name = "Giá Trị Xuất HĐ")]
-        public double ValueInInvoice { get; set; }
+        [Display(Name = "Ngày nghiệm thu")]
+        public DateTime? AcceptedDate { get; set; }
 
-        [Display(Name = "Thuế GTGT")]
-        public double VatInInvoice { get; set; }
+        [Display(Name = "Mã Hóa Đơn")]
+        public int? InvoiceId { get; set; }
+
+        [Display(Name = "Hóa Đơn")]
+        public virtual Invoice Invoice { get; set; }
     }
 
 }

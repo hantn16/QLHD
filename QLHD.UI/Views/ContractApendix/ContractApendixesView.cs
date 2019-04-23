@@ -6,6 +6,7 @@ using QLHD.UI.ViewModels;
 using QLHD.UI.Views.Commons;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace QLHD.UI.Views.ContractApendix
 {
@@ -34,6 +35,16 @@ namespace QLHD.UI.Views.ContractApendix
             fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity, args => args.Row as QLHD.Model.Models.ContractApendix,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            fluent.WithEvent<RowClickEventArgs>(gridView1, "RowClick").EventToCommand(
+                x => x.Edit(null),
+                x => x.SelectedEntity,
+                args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
+            gridView1.RowClick += (s, e) => {
+                if (e.Clicks == 1 && e.Button == MouseButtons.Right)
+                {
+                    popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
+                }
+            };
         }
 
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)

@@ -39,10 +39,14 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.mvvmContext2 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -55,7 +59,7 @@
             this.bbiDelete,
             this.bbiRefresh});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 7;
+            this.ribbonControl1.MaxItemId = 10;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -121,6 +125,7 @@
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Full;
             // 
             // mvvmContext1
@@ -132,6 +137,20 @@
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.WorkCollectionViewModel), "Refresh", this.bbiRefresh)});
             this.mvvmContext1.ContainerControl = this;
             this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.WorkCollectionViewModel);
+            // 
+            // mvvmContext2
+            // 
+            this.mvvmContext2.ContainerControl = this;
+            this.mvvmContext2.ViewModelType = typeof(QLHD.UI.ViewModels.ContractCollectionViewModel);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.AddItems(new DevExpress.XtraBars.BarItem[]
+            {
+                this.bbiNew,this.bbiEdit,this.bbiDelete,this.bbiRefresh
+            });
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbonControl1;
             // 
             // WorksView
             // 
@@ -145,6 +164,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +183,7 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
+        private DevExpress.Utils.MVVM.MVVMContext mvvmContext2;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }
