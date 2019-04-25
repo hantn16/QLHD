@@ -26,9 +26,11 @@ namespace QLHD.Model.Models
         public string Name { get; set; }
 
         [Display(Name = "Ngày Khởi Công")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime? StartDate { get; set; }
 
         [Display(Name = "Ngày Hoàn Công")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime? EndDate { get; set; }
 
         [Display(Name = "Danh Sách Hạng Mục")]

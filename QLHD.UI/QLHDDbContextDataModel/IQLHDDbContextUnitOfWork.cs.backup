@@ -1,5 +1,4 @@
 ﻿using DevExpress.Mvvm.DataModel;
-using QLHD.Data;
 using QLHD.Model.Models;
 using System;
 using System.Collections.Generic;
@@ -41,5 +40,25 @@ namespace QLHD.UI.QLHDDbContextDataModel {
         /// The Project entities repository.
         /// </summary>
 		IRepository<Project, int> Projects { get; }
+        
+        /// <summary>
+        /// The User entities repository.
+        /// </summary>
+		IRepository<User, int> Users { get; }
+
+        /// <summary>
+        /// The User entities repository.
+        /// </summary>
+        IRepository<CostType, int> CostTypes { get; }
+
+        /// <summary>
+        /// The User entities repository.
+        /// </summary>
+        IRepository<PaymentType, int> PaymentTypes { get; }
+
+        /// <summary>
+        /// The Invoice entities repository.
+        /// </summary>
+        IRepository<Invoice, int> Invoices { get; }
     }
 }

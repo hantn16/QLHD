@@ -30,19 +30,13 @@ namespace QLHD.UI.Views
         void InitializeNavigation()
         {
             var fluentAPI = mvvmContext1.OfType<QLHDDbContextViewModel>();
-            fluentAPI.BindCommand(biContracts, (x, m) => x.Show(m), x => x.Modules[0]);
-            fluentAPI.BindCommand(biContractors, (x, m) => x.Show(m), x => x.Modules[1]);
-            fluentAPI.BindCommand(biProjects, (x, m) => x.Show(m), x => x.Modules[2]);
+            fluentAPI.BindCommand(biContracts, (x, m) => x.Show(m), x => x.Modules[1]);
+            fluentAPI.BindCommand(biContractors, (x, m) => x.Show(m), x => x.Modules[2]);
+            fluentAPI.BindCommand(biProjects, (x, m) => x.Show(m), x => x.Modules[8]);
             fluentAPI.BindCommand(biPaymentPeriods, (x, m) => x.Show(m), x => x.Modules[3]);
-            fluentAPI.BindCommand(biWorks, (x, m) => x.Show(m), x => x.Modules[4]);
-            fluentAPI.BindCommand(biContractApendixes, (x, m) => x.Show(m), x => x.Modules[6]);
-            //
-            fluentAPI.BindCommand(bbContracts, (x, m) => x.Show(m), x => x.Modules[0]);
-            fluentAPI.BindCommand(bbContractors, (x, m) => x.Show(m), x => x.Modules[1]);
-            fluentAPI.BindCommand(bbProjects, (x, m) => x.Show(m), x => x.Modules[2]);
-            fluentAPI.BindCommand(bbPaymentPeriods, (x, m) => x.Show(m), x => x.Modules[3]);
-            fluentAPI.BindCommand(bbWorks, (x, m) => x.Show(m), x => x.Modules[4]);
-            fluentAPI.BindCommand(bbContractApendixes, (x, m) => x.Show(m), x => x.Modules[6]);
+            fluentAPI.BindCommand(biWorks, (x, m) => x.Show(m), x => x.Modules[6]);
+            fluentAPI.BindCommand(biContractApendixes, (x, m) => x.Show(m), x => x.Modules[0]);
+            fluentAPI.BindCommand(biInvoices, (x, m) => x.Show(m), x => x.Modules[4]);
             //
             fluentAPI.BindCommand(biLogout, x => x.Logout());
             //

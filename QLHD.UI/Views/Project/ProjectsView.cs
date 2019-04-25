@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using QLHD.UI.Views.Commons;
 
 namespace QLHD.UI.Views.Project
 {
@@ -25,12 +26,9 @@ namespace QLHD.UI.Views.Project
         void CustomizeGridView()
         {
             GridView gv = (GridView)gridControl1.MainView;
+            GridControlConfig.CommonFormat(gv);
+            GridControlConfig.SetColumnsHide(gv, new List<string> { "Works", "Contracts" });
             gv.OptionsBehavior.Editable = false;
-            List<String> listHideColumnName = new List<string> { "Works", "Contracts" };
-            foreach (string item in listHideColumnName)
-            {
-                gv.Columns[item].Visible = false;
-            }
         }
         void InitBindings()
         {

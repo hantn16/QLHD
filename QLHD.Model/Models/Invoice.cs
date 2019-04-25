@@ -13,7 +13,6 @@ namespace QLHD.Model.Models
     public class Invoice : Auditable
     {
         [Key]
-        [ForeignKey("PaymentPeriod")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(AutoGenerateField = false)]
         public int Id { get; set; }
@@ -21,19 +20,28 @@ namespace QLHD.Model.Models
         [StringLength(7)]
         [Display(Name = "Số hóa đơn")]
         public string Number { get; set; }
-
+        
         [Display(Name = "Ngày hóa đơn")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime ReleaseDate { get; set; }
 
-        [Display(Name = "GT trước thuế")]
+        [DisplayFormat(DataFormatString = "n0")]
+        [Display(Name ="GT trước thuế")]
         public double PretaxValue { get; set; }
 
-        [Display(Name = "Thuế GTGT")]
+        [DisplayFormat(DataFormatString = "n0")]
+        [Display(Name ="Thuế GTGT")]
         public double VatValue { get; set; }
 
+        [Display(Name = "Mã Lần TT")]
+        public int PaymentPeriodId { get; set; }
+
+        [Display(Name = "Lần TT")]
+        [ForeignKey("PaymentPeriodId")]
         public virtual PaymentPeriod PaymentPeriod { get; set; }
 
         [Display(Name = "GT thanh toán")]
+        [DisplayFormat(DataFormatString = "n0")]
         public double PayValue {
             get {
                 return PretaxValue + VatValue;

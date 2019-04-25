@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.ViewModels;
+using DevExpress.XtraEditors;
 
 namespace QLHD.UI.Views.PaymentPeriod
 {
@@ -29,6 +30,12 @@ namespace QLHD.UI.Views.PaymentPeriod
                 paymentPeriodBindingSource, x => x.Entity, x => x.Update());
             fluent.SetBinding(contractBindingSource, x => x.DataSource, y => y.LookUpContracts.Entities);
             fluent.SetBinding(paymentTypeBindingSource, x => x.DataSource, y => y.LookUpPaymentTypes.Entities);
+        }
+
+        private void ContractIdLookUpEdit_QueryPopUp(object sender, CancelEventArgs e)
+        {
+            //LookUpEdit lookupEdit = (LookUpEdit)sender;
+            //lookupEdit.
         }
     }
 }

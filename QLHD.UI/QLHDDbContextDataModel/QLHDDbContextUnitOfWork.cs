@@ -3,9 +3,10 @@ using DevExpress.Mvvm.DataModel.EF6;
 using QLHD.Model;
 using QLHD.Model.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace QLHD.UI.QLHDDbContextDataModel
-{
+namespace QLHD.UI.QLHDDbContextDataModel {
 
     /// <summary>
     /// A QLHDDbContextUnitOfWork instance that represents the run-time implementation of the IQLHDDbContextUnitOfWork interface.
@@ -32,8 +33,20 @@ namespace QLHD.UI.QLHDDbContextDataModel
             get { return GetRepository(x => x.Set<PaymentPeriod>(), (PaymentPeriod x) => x.Id); }
         }
 
+        IRepository<Invoice, int> IQLHDDbContextUnitOfWork.Invoices {
+            get { return GetRepository(x => x.Set<Invoice>(), (Invoice x) => x.Id); }
+        }
+
+        IRepository<PaymentType, int> IQLHDDbContextUnitOfWork.PaymentTypes {
+            get { return GetRepository(x => x.Set<PaymentType>(), (PaymentType x) => x.Id); }
+        }
+
         IRepository<Work, int> IQLHDDbContextUnitOfWork.Works {
             get { return GetRepository(x => x.Set<Work>(), (Work x) => x.Id); }
+        }
+
+        IRepository<CostType, int> IQLHDDbContextUnitOfWork.CostTypes {
+            get { return GetRepository(x => x.Set<CostType>(), (CostType x) => x.Id); }
         }
 
         IRepository<Project, int> IQLHDDbContextUnitOfWork.Projects {
@@ -42,16 +55,6 @@ namespace QLHD.UI.QLHDDbContextDataModel
 
         IRepository<User, int> IQLHDDbContextUnitOfWork.Users {
             get { return GetRepository(x => x.Set<User>(), (User x) => x.Id); }
-        }
-
-        IRepository<CostType, int> IQLHDDbContextUnitOfWork.CostTypes
-        {
-            get { return GetRepository(x => x.Set<CostType>(), (CostType x) => x.Id); }
-        }
-
-        IRepository<PaymentType, int> IQLHDDbContextUnitOfWork.PaymentTypes
-        {
-            get { return GetRepository(x => x.Set<PaymentType>(), (PaymentType x) => x.Id); }
         }
     }
 }

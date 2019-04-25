@@ -64,6 +64,10 @@
     <Compile Include="Migrations\201904211006216_AddInvoiceModel.Designer.cs">
       <DependentUpon>201904211006216_AddInvoiceModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904240155413_FixInvoiceModel.cs" />
+    <Compile Include="Migrations\201904240155413_FixInvoiceModel.Designer.cs">
+      <DependentUpon>201904240155413_FixInvoiceModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractApendix.cs" />
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904211006216_AddInvoiceModel.resx">
       <DependentUpon>201904211006216_AddInvoiceModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904240155413_FixInvoiceModel.resx">
+      <DependentUpon>201904240155413_FixInvoiceModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

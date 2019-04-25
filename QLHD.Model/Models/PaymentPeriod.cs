@@ -41,28 +41,38 @@ namespace QLHD.Model.Models
         public virtual PaymentType PaymentType { get; set; }
 
         [Display(Name = "Số Tiền Đề Nghị")]
+        [DisplayFormat(DataFormatString = "n0")]
         public double ValueRequested { get; set; }
 
         [Display(Name = "Ngày Đề Nghị")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime RequestedDate { get; set; }
 
         [Display(Name = "Số Tiền Thanh Toán")]
+        [DisplayFormat(DataFormatString = "n0")]
         public double ValuePaid { get; set; }
 
         [Display(Name = "Ngày Thanh Toán")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime PaidDate { get; set; }
 
         [Display(Name = "Giá Trị NTHT")]
+        [DisplayFormat(DataFormatString = "n0")]
         public double ValueAccepted { get; set; }
 
         [Display(Name = "Ngày nghiệm thu")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime? AcceptedDate { get; set; }
 
-        [Display(Name = "Mã Hóa Đơn")]
-        public int? InvoiceId { get; set; }
-
         [Display(Name = "Hóa Đơn")]
-        public virtual Invoice Invoice { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; set; }
+
+        //public bool HasInvoice { get { return InvoiceId != null; } }
+
+        public override string ToString()
+        {
+            return Order + ". " + Name;
+        }
     }
 
 }

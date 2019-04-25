@@ -151,6 +151,7 @@
             });
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbonControl1;
+
             // 
             // WorksView
             // 

@@ -24,6 +24,11 @@ namespace QLHD.Model.Models
         public string Description { get; set; }
 
         public virtual ICollection<PaymentPeriod> PaymentPeriods { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
     //public enum PaymentType
     //{

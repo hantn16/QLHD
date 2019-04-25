@@ -1,9 +1,13 @@
-﻿using DevExpress.Mvvm.DataModel;
+﻿using DevExpress.Mvvm;
+using DevExpress.Mvvm.DataModel;
+using DevExpress.Mvvm.DataModel.DesignTime;
 using DevExpress.Mvvm.DataModel.EF6;
 using QLHD.Model;
+using System;
+using System.Collections;
+using System.Linq;
 
-namespace QLHD.UI.QLHDDbContextDataModel
-{
+namespace QLHD.UI.QLHDDbContextDataModel {
 
     /// <summary>
     /// Provides methods to obtain the relevant IUnitOfWorkFactory.

@@ -25,19 +25,30 @@ namespace QLHD.UI.ViewModels {
             return ViewModelSource.Create(() => new QLHDDbContextViewModel());
         }
 
+		
+        /// <summary>
+        /// Initializes a new instance of the QLHDDbContextViewModel class.
+        /// This constructor is declared protected to avoid undesired instantiation of the QLHDDbContextViewModel type without the POCO proxy factory.
+        /// </summary>
+      //  protected QLHDDbContextViewModel()
+		    //: base(UnitOfWorkSource.GetUnitOfWorkFactory()) {
+      //  }
+
         protected override QLHDDbContextModuleDescription[] CreateModules() {
 			return new QLHDDbContextModuleDescription[] {
-                
+                new QLHDDbContextModuleDescription( "Contract Apendixes", "ContractApendixCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.ContractApendixes)),
                 new QLHDDbContextModuleDescription( "Contracts", "ContractCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Contracts)),
                 new QLHDDbContextModuleDescription( "Contractors", "ContractorCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Contractors)),
-                new QLHDDbContextModuleDescription( "Projects", "ProjectCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Projects)),
                 new QLHDDbContextModuleDescription( "Payment Periods", "PaymentPeriodCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.PaymentPeriods)),
+                new QLHDDbContextModuleDescription( "Invoices", "InvoiceCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Invoices)),
+                new QLHDDbContextModuleDescription( "Payment Types", "PaymentTypeCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.PaymentTypes)),
                 new QLHDDbContextModuleDescription( "Works", "WorkCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Works)),
+                new QLHDDbContextModuleDescription( "Cost Types", "CostTypeCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.CostTypes)),
+                new QLHDDbContextModuleDescription( "Projects", "ProjectCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Projects)),
                 new QLHDDbContextModuleDescription( "Users", "UserCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.Users)),
-                new QLHDDbContextModuleDescription( "Contract Apendixes", "ContractApendixCollectionView", TablesGroup, GetPeekCollectionViewModelFactory(x => x.ContractApendixes)),
-            };
+			};
         }
-                	}
+    }
 
     public partial class QLHDDbContextModuleDescription : ModuleDescription<QLHDDbContextModuleDescription> {
         public QLHDDbContextModuleDescription(string title, string documentType, string group, Func<QLHDDbContextModuleDescription, object> peekCollectionViewModelFactory = null)

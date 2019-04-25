@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.ViewModels;
 using QLHD.Model.Models;
+using QLHD.UI.Views.Commons;
+using DevExpress.Mvvm.POCO;
 
 namespace QLHD.UI.Views.Work
 {
@@ -21,13 +23,14 @@ namespace QLHD.UI.Views.Work
             InitializeComponent();
             if (!DesignMode)
                 InitialBindings();
-            InitCostTypeList();
+            CustomizeGridView();
 
         }
 
-        private void InitCostTypeList()
+        private void CustomizeGridView()
         {
-            //CostTypeComboBoxEdit.Properties.Items.AddRange(Enum.GetValues(typeof(CostType)));
+            GridControlConfig.SetColumnsHide(searchLookUpEdit1View, new List<string> { "Works", "Contracts" });
+            GridControlConfig.CommonFormat(searchLookUpEdit1View);
         }
 
         private void InitialBindings()
@@ -37,6 +40,12 @@ namespace QLHD.UI.Views.Work
             fluent.SetBinding(projectBindingSource, pbs => pbs.DataSource, x => x.LookUpProjects.Entities);
             fluent.SetBinding(workBindingSource1, pbs => pbs.DataSource, x => x.LookUpWorks.Entities);
             fluent.SetBinding(costTypeBindingSource, bs => bs.DataSource, x => x.LookUpCostTypes.Entities);
+            //fluent.BindCommand<ProjectCollectionViewModel>(this.ProjectIdLookUpEdit.Properties.View.A, (w, p) => p.New());
+        }
+
+        private void ProjectIdLookUpEdit_AddNewValue(object sender, DevExpress.XtraEditors.Controls.AddNewValueEventArgs e)
+        {
+            //var vm = ViewModelSource.Create<ProjectViewModel>();
         }
     }
 }

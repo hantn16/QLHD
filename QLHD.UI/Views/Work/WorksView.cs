@@ -29,6 +29,7 @@ namespace QLHD.UI.Views.Work
         {
             GridView gv = (GridView)gridControl1.MainView;
             GridControlConfig.SetColumnsHide(gv, new List<string> { "ProjectId", "Contracts", "ParentWorkId", "ChildWorks","CostTypeId" });
+            GridControlConfig.CommonFormat(gv);
             gv.OptionsView.ShowAutoFilterRow = true;
             //gv.BestFitColumns();
         }

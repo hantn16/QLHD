@@ -21,12 +21,14 @@ namespace QLHD.Model.Abstracts
         public bool IsActive { get; set; }
 
         [Display(Name = "Ngày tạo")]
+        [DisplayFormat(DataFormatString ="dd/MM/yyyy hh:mm:ss")]
         public DateTime CreatedAt { get; set; }
 
         [Display(Name = "Người tạo")]
         public string CreatedBy { get; set; }
 
         [Display(Name = "Ngày sửa")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy hh:mm:ss")]
         public DateTime? ModifiedAt { get; set; }
 
         [Display(Name = "Người sửa")]

@@ -24,6 +24,7 @@ namespace QLHD.UI.Views.ContractApendix
         {
             GridView gv = (GridView)gridControl1.MainView;
             GridControlConfig.SetColumnsHide(gv, new List<string> { "ContractId" });
+            GridControlConfig.CommonFormat(gv);
             gv.Columns["Contract"].GroupIndex = 0;
             //gv.BestFitColumns();
         }

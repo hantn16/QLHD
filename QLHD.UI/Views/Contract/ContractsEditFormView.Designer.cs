@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -108,6 +109,8 @@
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ContractViewModel), "Delete", this.bbiDelete),
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ContractViewModel), "Close", this.bbiClose)});
             this.mvvmContext1.ContainerControl = this;
+            this.mvvmContext1.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
+            DevExpress.Utils.MVVM.RegistrationExpression.RegisterWindowedDocumentManagerService(null, false, this, DevExpress.Utils.MVVM.Services.DefaultWindowedDocumentManagerServiceType.XtraForm, null)});
             this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.ContractViewModel);
             // 
             // bbiSave
@@ -184,7 +187,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(577, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(600, 141);
             // 
             // ribbonPage1
             // 
@@ -223,7 +226,7 @@
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 141);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(577, 178);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(600, 219);
             this.dataLayoutControl1.TabIndex = 1;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -233,7 +236,7 @@
             this.NameTextEdit.Location = new System.Drawing.Point(87, 12);
             this.NameTextEdit.MenuManager = this.ribbonControl1;
             this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(461, 20);
+            this.NameTextEdit.Size = new System.Drawing.Size(501, 20);
             this.NameTextEdit.StyleController = this.dataLayoutControl1;
             this.NameTextEdit.TabIndex = 4;
             // 
@@ -252,7 +255,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.SigningDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SigningDateDateEdit.Size = new System.Drawing.Size(461, 20);
+            this.SigningDateDateEdit.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.SigningDateDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.SigningDateDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.SigningDateDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.SigningDateDateEdit.Size = new System.Drawing.Size(501, 20);
             this.SigningDateDateEdit.StyleController = this.dataLayoutControl1;
             this.SigningDateDateEdit.TabIndex = 5;
             // 
@@ -262,7 +269,7 @@
             this.ContentTextEdit.Location = new System.Drawing.Point(87, 84);
             this.ContentTextEdit.MenuManager = this.ribbonControl1;
             this.ContentTextEdit.Name = "ContentTextEdit";
-            this.ContentTextEdit.Size = new System.Drawing.Size(461, 20);
+            this.ContentTextEdit.Size = new System.Drawing.Size(501, 20);
             this.ContentTextEdit.StyleController = this.dataLayoutControl1;
             this.ContentTextEdit.TabIndex = 7;
             // 
@@ -291,7 +298,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TerminateDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TerminateDateDateEdit.Size = new System.Drawing.Size(461, 20);
+            this.TerminateDateDateEdit.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.TerminateDateDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.TerminateDateDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.TerminateDateDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.TerminateDateDateEdit.Size = new System.Drawing.Size(501, 20);
             this.TerminateDateDateEdit.StyleController = this.dataLayoutControl1;
             this.TerminateDateDateEdit.TabIndex = 10;
             // 
@@ -306,7 +317,7 @@
             this.ContractOriginValueTextEdit.Properties.Mask.EditMask = "c";
             this.ContractOriginValueTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.ContractOriginValueTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.ContractOriginValueTextEdit.Size = new System.Drawing.Size(461, 20);
+            this.ContractOriginValueTextEdit.Size = new System.Drawing.Size(501, 20);
             this.ContractOriginValueTextEdit.StyleController = this.dataLayoutControl1;
             this.ContractOriginValueTextEdit.TabIndex = 11;
             // 
@@ -319,7 +330,7 @@
             this.IsActiveCheckEdit.Name = "IsActiveCheckEdit";
             this.IsActiveCheckEdit.Properties.Caption = "Kích hoạt";
             this.IsActiveCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.IsActiveCheckEdit.Size = new System.Drawing.Size(536, 19);
+            this.IsActiveCheckEdit.Size = new System.Drawing.Size(576, 19);
             this.IsActiveCheckEdit.StyleController = this.dataLayoutControl1;
             this.IsActiveCheckEdit.TabIndex = 12;
             // 
@@ -332,7 +343,8 @@
             this.WorkIdTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.WorkIdTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.WorkIdTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Add new work")});
             this.WorkIdTextEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Hạng Mục", 91, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CostType", "Loại Chi Phí", 64, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
@@ -344,7 +356,8 @@
             this.WorkIdTextEdit.Properties.NullText = "";
             this.WorkIdTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.WorkIdTextEdit.Properties.ValueMember = "Id";
-            this.WorkIdTextEdit.Size = new System.Drawing.Size(461, 20);
+            this.WorkIdTextEdit.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.WorkIdTextEdit_Properties_ButtonClick);
+            this.WorkIdTextEdit.Size = new System.Drawing.Size(501, 20);
             this.WorkIdTextEdit.StyleController = this.dataLayoutControl1;
             this.WorkIdTextEdit.TabIndex = 6;
             // 
@@ -377,7 +390,7 @@
             this.ContractorIdTextEdit.Properties.NullText = "";
             this.ContractorIdTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.ContractorIdTextEdit.Properties.ValueMember = "Id";
-            this.ContractorIdTextEdit.Size = new System.Drawing.Size(461, 20);
+            this.ContractorIdTextEdit.Size = new System.Drawing.Size(501, 20);
             this.ContractorIdTextEdit.StyleController = this.dataLayoutControl1;
             this.ContractorIdTextEdit.TabIndex = 8;
             // 
@@ -402,7 +415,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(560, 211);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(600, 219);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -420,14 +433,14 @@
             this.ItemForIsActive});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(540, 191);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(580, 199);
             // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
             this.ItemForName.Location = new System.Drawing.Point(0, 0);
             this.ItemForName.Name = "ItemForName";
-            this.ItemForName.Size = new System.Drawing.Size(540, 24);
+            this.ItemForName.Size = new System.Drawing.Size(580, 24);
             this.ItemForName.TextSize = new System.Drawing.Size(72, 13);
             // 
             // ItemForSigningDate
@@ -435,7 +448,7 @@
             this.ItemForSigningDate.Control = this.SigningDateDateEdit;
             this.ItemForSigningDate.Location = new System.Drawing.Point(0, 24);
             this.ItemForSigningDate.Name = "ItemForSigningDate";
-            this.ItemForSigningDate.Size = new System.Drawing.Size(540, 24);
+            this.ItemForSigningDate.Size = new System.Drawing.Size(580, 24);
             this.ItemForSigningDate.TextSize = new System.Drawing.Size(72, 13);
             // 
             // ItemForWorkId
@@ -443,7 +456,7 @@
             this.ItemForWorkId.Control = this.WorkIdTextEdit;
             this.ItemForWorkId.Location = new System.Drawing.Point(0, 48);
             this.ItemForWorkId.Name = "ItemForWorkId";
-            this.ItemForWorkId.Size = new System.Drawing.Size(540, 24);
+            this.ItemForWorkId.Size = new System.Drawing.Size(580, 24);
             this.ItemForWorkId.TextSize = new System.Drawing.Size(72, 13);
             // 
             // ItemForContent
@@ -451,7 +464,7 @@
             this.ItemForContent.Control = this.ContentTextEdit;
             this.ItemForContent.Location = new System.Drawing.Point(0, 72);
             this.ItemForContent.Name = "ItemForContent";
-            this.ItemForContent.Size = new System.Drawing.Size(540, 24);
+            this.ItemForContent.Size = new System.Drawing.Size(580, 24);
             this.ItemForContent.TextSize = new System.Drawing.Size(72, 13);
             // 
             // ItemForContractorId
@@ -459,7 +472,7 @@
             this.ItemForContractorId.Control = this.ContractorIdTextEdit;
             this.ItemForContractorId.Location = new System.Drawing.Point(0, 96);
             this.ItemForContractorId.Name = "ItemForContractorId";
-            this.ItemForContractorId.Size = new System.Drawing.Size(540, 24);
+            this.ItemForContractorId.Size = new System.Drawing.Size(580, 24);
             this.ItemForContractorId.TextSize = new System.Drawing.Size(72, 13);
             // 
             // ItemForTerminateDate
@@ -467,7 +480,7 @@
             this.ItemForTerminateDate.Control = this.TerminateDateDateEdit;
             this.ItemForTerminateDate.Location = new System.Drawing.Point(0, 120);
             this.ItemForTerminateDate.Name = "ItemForTerminateDate";
-            this.ItemForTerminateDate.Size = new System.Drawing.Size(540, 24);
+            this.ItemForTerminateDate.Size = new System.Drawing.Size(580, 24);
             this.ItemForTerminateDate.TextSize = new System.Drawing.Size(72, 13);
             // 
             // ItemForContractOriginValue
@@ -475,7 +488,7 @@
             this.ItemForContractOriginValue.Control = this.ContractOriginValueTextEdit;
             this.ItemForContractOriginValue.Location = new System.Drawing.Point(0, 144);
             this.ItemForContractOriginValue.Name = "ItemForContractOriginValue";
-            this.ItemForContractOriginValue.Size = new System.Drawing.Size(540, 24);
+            this.ItemForContractOriginValue.Size = new System.Drawing.Size(580, 24);
             this.ItemForContractOriginValue.TextSize = new System.Drawing.Size(72, 13);
             // 
             // ItemForIsActive
@@ -483,7 +496,7 @@
             this.ItemForIsActive.Control = this.IsActiveCheckEdit;
             this.ItemForIsActive.Location = new System.Drawing.Point(0, 168);
             this.ItemForIsActive.Name = "ItemForIsActive";
-            this.ItemForIsActive.Size = new System.Drawing.Size(540, 23);
+            this.ItemForIsActive.Size = new System.Drawing.Size(580, 31);
             this.ItemForIsActive.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForIsActive.TextVisible = false;
             // 
@@ -494,7 +507,7 @@
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "ContractsEditFormView";
-            this.Size = new System.Drawing.Size(577, 319);
+            this.Size = new System.Drawing.Size(600, 360);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();

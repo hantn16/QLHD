@@ -1,4 +1,5 @@
 ﻿using DevExpress.Mvvm.DataModel;
+using QLHD.Model;
 using QLHD.Model.Models;
 using System;
 using System.Collections.Generic;
@@ -32,9 +33,24 @@ namespace QLHD.UI.QLHDDbContextDataModel {
 		IRepository<PaymentPeriod, int> PaymentPeriods { get; }
         
         /// <summary>
+        /// The Invoice entities repository.
+        /// </summary>
+		IRepository<Invoice, int> Invoices { get; }
+        
+        /// <summary>
+        /// The PaymentType entities repository.
+        /// </summary>
+		IRepository<PaymentType, int> PaymentTypes { get; }
+        
+        /// <summary>
         /// The Work entities repository.
         /// </summary>
 		IRepository<Work, int> Works { get; }
+        
+        /// <summary>
+        /// The CostType entities repository.
+        /// </summary>
+		IRepository<CostType, int> CostTypes { get; }
         
         /// <summary>
         /// The Project entities repository.
@@ -45,15 +61,5 @@ namespace QLHD.UI.QLHDDbContextDataModel {
         /// The User entities repository.
         /// </summary>
 		IRepository<User, int> Users { get; }
-
-        /// <summary>
-        /// The User entities repository.
-        /// </summary>
-        IRepository<CostType, int> CostTypes { get; }
-
-        /// <summary>
-        /// The User entities repository.
-        /// </summary>
-        IRepository<PaymentType, int> PaymentTypes { get; }
     }
 }

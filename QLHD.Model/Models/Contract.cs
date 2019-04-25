@@ -21,6 +21,7 @@ namespace QLHD.Model.Models
         public string Name { get; set; }
 
         [Display(Name = "Ngày ký")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime SigningDate { get; set; }
 
         [Display(Name = "Mã Hạng Mục")]
@@ -44,13 +45,14 @@ namespace QLHD.Model.Models
         public bool IsTerminated { get { return TerminateDate.HasValue; }}
 
         [Display(Name = "Ngày Thanh Lý")]
+        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime? TerminateDate { get; set; }
 
         [Display(Name = "GTHĐ Ban Đầu")]
-        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "n0")]
         public double ContractOriginValue { get; set; }
 
-        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "n0")]
         [Display(Name = "GTHĐ Hiện Tại")]
         public virtual double ContractValue {
             get {

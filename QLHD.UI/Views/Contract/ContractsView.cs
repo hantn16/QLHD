@@ -29,8 +29,9 @@ namespace QLHD.UI.Views.Contract
 
         private void CustomizeGridControl()
         {
-            GridControlConfig.SetColumnsHide((GridView)gridControl1.MainView, 
-                new List<string> { "WorkId", "ContractorId", "ContractApendixes", "PaymentPeriods" });
+            GridView gv = (GridView)gridControl1.MainView;
+            GridControlConfig.SetColumnsHide(gv, new List<string> { "WorkId", "ContractorId", "ContractApendixes", "PaymentPeriods" });
+            GridControlConfig.CommonFormat(gv);
         }
 
         private void InitBindings()
@@ -42,9 +43,9 @@ namespace QLHD.UI.Views.Contract
                 .SetBinding(x => x.SelectedEntity, args => args.Row as QLHD.Model.Models.Contract,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
             fluent.WithEvent<RowClickEventArgs>(gridView1, "RowClick").EventToCommand(
-    x => x.Edit(null),
-    x => x.SelectedEntity,
-    args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
+                x => x.Edit(null),
+                x => x.SelectedEntity,
+                args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
             gridView1.RowClick += (s, e) => {
                 if (e.Clicks == 1 && e.Button == MouseButtons.Right)
                 {

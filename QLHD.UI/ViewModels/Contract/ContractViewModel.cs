@@ -66,6 +66,21 @@ namespace QLHD.UI.ViewModels {
                     getRepositoryFunc: x => x.Works);
             }
         }
+
+        /// <summary>
+        /// The view model that contains a look-up collection of Works for the corresponding navigation property in the view.
+        /// </summary>
+        public IEntitiesViewModel<Work> LookUpChildWorks
+        {
+            get
+            {
+                return GetLookUpEntitiesViewModel(
+                    propertyExpression: (ContractViewModel x) => x.LookUpChildWorks,
+                    getRepositoryFunc: x => x.Works,
+                    projection: query => query.Where(work => work.ChildWorks.Count == 0));
+            }
+        }
+
         /// <summary>
         /// The view model that contains a look-up collection of PaymentPeriods for the corresponding navigation property in the view.
         /// </summary>

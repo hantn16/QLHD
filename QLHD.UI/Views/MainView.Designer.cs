@@ -47,6 +47,7 @@
             this.biContractApendixes = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.biInvoices = new DevExpress.XtraBars.BarButtonItem();
             this.bbContracts = new DevExpress.XtraBars.BarButtonItem();
             this.bbContractors = new DevExpress.XtraBars.BarButtonItem();
             this.bbProjects = new DevExpress.XtraBars.BarButtonItem();
@@ -104,9 +105,10 @@
             this.bbProjects,
             this.bbWorks,
             this.bbPaymentPeriods,
-            this.bbContractApendixes});
+            this.bbContractApendixes,
+            this.biInvoices});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 23;
+            this.ribbonControl1.MaxItemId = 24;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -225,13 +227,23 @@
             this.barSubItem2.Caption = "Danh Mục";
             this.barSubItem2.Id = 16;
             this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbContracts),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbContractors),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.bbProjects, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbWorks),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbPaymentPeriods),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbContractApendixes)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.biContracts),
+            new DevExpress.XtraBars.LinkPersistInfo(this.biContractors),
+            new DevExpress.XtraBars.LinkPersistInfo(this.biProjects),
+            new DevExpress.XtraBars.LinkPersistInfo(this.biWorks),
+            new DevExpress.XtraBars.LinkPersistInfo(this.biPaymentPeriods),
+            new DevExpress.XtraBars.LinkPersistInfo(this.biContractApendixes),
+            new DevExpress.XtraBars.LinkPersistInfo(this.biInvoices)});
             this.barSubItem2.Name = "barSubItem2";
+            // 
+            // biInvoices
+            // 
+            this.biInvoices.Caption = "Invoices";
+            this.biInvoices.Id = 23;
+            this.biInvoices.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biInvoices.ImageOptions.Image")));
+            this.biInvoices.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biInvoices.ImageOptions.LargeImage")));
+            this.biInvoices.Name = "biInvoices";
+            this.biInvoices.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // bbContracts
             // 
@@ -280,12 +292,14 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ImageUri.Uri = "ListNumbers";
             this.ribbonPageGroup1.ItemLinks.Add(this.biContracts);
             this.ribbonPageGroup1.ItemLinks.Add(this.biContractors);
             this.ribbonPageGroup1.ItemLinks.Add(this.biProjects);
             this.ribbonPageGroup1.ItemLinks.Add(this.biPaymentPeriods);
             this.ribbonPageGroup1.ItemLinks.Add(this.biWorks);
             this.ribbonPageGroup1.ItemLinks.Add(this.biContractApendixes);
+            this.ribbonPageGroup1.ItemLinks.Add(this.biInvoices);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Danh mục";
             // 
@@ -346,5 +360,6 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewControl backstageViewControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
+        private DevExpress.XtraBars.BarButtonItem biInvoices;
     }
 }

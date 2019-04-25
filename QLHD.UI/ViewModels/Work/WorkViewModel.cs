@@ -47,6 +47,16 @@ namespace QLHD.UI.ViewModels {
             }
         }
         /// <summary>
+        /// The view model that contains a look-up collection of CostTypes for the corresponding navigation property in the view.
+        /// </summary>
+        public IEntitiesViewModel<CostType> LookUpCostTypes {
+            get {
+                return GetLookUpEntitiesViewModel(
+                    propertyExpression: (WorkViewModel x) => x.LookUpCostTypes,
+                    getRepositoryFunc: x => x.CostTypes);
+            }
+        }
+        /// <summary>
         /// The view model that contains a look-up collection of Works for the corresponding navigation property in the view.
         /// </summary>
         public IEntitiesViewModel<Work> LookUpWorks {
@@ -67,18 +77,6 @@ namespace QLHD.UI.ViewModels {
             }
         }
 
-        /// <summary>
-        /// The view model that contains a look-up collection of CostTypes for the corresponding navigation property in the view.
-        /// </summary>
-        public IEntitiesViewModel<CostType> LookUpCostTypes
-        {
-            get
-            {
-                return GetLookUpEntitiesViewModel(
-                    propertyExpression: (WorkViewModel x) => x.LookUpCostTypes,
-                    getRepositoryFunc: x => x.CostTypes);
-            }
-        }
 
         /// <summary>
         /// The view model for the WorkContracts detail collection.

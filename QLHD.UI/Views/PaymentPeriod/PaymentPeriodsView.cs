@@ -11,6 +11,8 @@ using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using QLHD.UI.Views.Commons;
+using DevExpress.XtraGrid;
 
 namespace QLHD.UI.Views.PaymentPeriod
 {
@@ -21,6 +23,16 @@ namespace QLHD.UI.Views.PaymentPeriod
         {
             InitializeComponent();
             InitBindings();
+            CustomizeGridControl();
+        }
+
+        private void CustomizeGridControl()
+        {
+            GridView gv = gridView1;
+            GridControlConfig.SetColumnsHide(gv, new List<string> { "ContractId", "PaymentTypeId", "Invoices"});
+            GridControlConfig.CommonFormat(gv);
+            gv.OptionsView.ShowAutoFilterRow = true;
+            
         }
 
         private void InitBindings()
@@ -41,6 +53,13 @@ namespace QLHD.UI.Views.PaymentPeriod
                     popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
                 }
             };
+        }
+
+        private void gridControl1_DataSourceChanged(object sender, EventArgs e)
+        {
+            GridControl gc = (GridControl)sender;
+            GridView gv = (GridView)gc.MainView;
+            gv.BestFitColumns();
         }
     }
 }

@@ -36,6 +36,7 @@
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Mvvm.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
@@ -105,9 +106,15 @@
     <Compile Include="ViewModels\Contractor\ContractorViewModel.cs" />
     <Compile Include="ViewModels\Contract\ContractCollectionViewModel.cs" />
     <Compile Include="ViewModels\Contract\ContractViewModel.cs" />
+    <Compile Include="ViewModels\CostType\CostTypeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\CostType\CostTypeViewModel.cs" />
+    <Compile Include="ViewModels\Invoice\InvoiceCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Invoice\InvoiceViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\PaymentPeriod\PaymentPeriodCollectionViewModel.cs" />
     <Compile Include="ViewModels\PaymentPeriod\PaymentPeriodViewModel.cs" />
+    <Compile Include="ViewModels\PaymentType\PaymentTypeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PaymentType\PaymentTypeViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectCollectionViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectViewModel.cs" />
     <Compile Include="ViewModels\QLHDDbContextViewModel.cs" />
@@ -152,6 +159,18 @@
     </Compile>
     <Compile Include="Views\Contract\ContractsView.Designer.cs">
       <DependentUpon>ContractsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Invoice\InvoicesEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Invoice\InvoicesEditFormView.Designer.cs">
+      <DependentUpon>InvoicesEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Invoice\InvoicesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Invoice\InvoicesView.Designer.cs">
+      <DependentUpon>InvoicesView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +249,12 @@
     <EmbeddedResource Include="Views\Contract\ContractsView.resx">
       <DependentUpon>ContractsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Invoice\InvoicesEditFormView.resx">
+      <DependentUpon>InvoicesEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Invoice\InvoicesView.resx">
+      <DependentUpon>InvoicesView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +284,7 @@
     <None Include="Properties\DataSources\QLHD.Model.Models.ContractApendix.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Contractor.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.CostType.datasource" />
+    <None Include="Properties\DataSources\QLHD.Model.Models.Invoice.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.PaymentPeriod.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.PaymentType.datasource" />
     <None Include="Properties\DataSources\QLHD.Model.Models.Project.datasource" />
