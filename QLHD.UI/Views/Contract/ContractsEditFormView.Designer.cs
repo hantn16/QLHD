@@ -110,7 +110,7 @@
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ContractViewModel), "Close", this.bbiClose)});
             this.mvvmContext1.ContainerControl = this;
             this.mvvmContext1.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
-            DevExpress.Utils.MVVM.RegistrationExpression.RegisterWindowedDocumentManagerService(null, false, this, DevExpress.Utils.MVVM.Services.DefaultWindowedDocumentManagerServiceType.XtraForm, null)});
+            DevExpress.Utils.MVVM.RegistrationExpression.RegisterDocumentManagerService(null, false, null)});
             this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.ContractViewModel);
             // 
             // bbiSave
@@ -225,6 +225,7 @@
             this.ItemForIsTerminated});
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 141);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
+            this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(852, 82, 450, 400);
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
             this.dataLayoutControl1.Size = new System.Drawing.Size(600, 219);
             this.dataLayoutControl1.TabIndex = 1;
@@ -414,7 +415,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(600, 219);
             this.layoutControlGroup1.TextVisible = false;
             // 

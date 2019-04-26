@@ -49,6 +49,7 @@ namespace QLHD.UI.ViewModels
                     cancelEventArgs.Cancel = true;
             }
         }
+        public override QLHDDbContextModuleDescription DefaultModule { get { return Modules.ElementAt(2); } }
         public virtual AppState State { get; set; }
         // Shows the Login View 
         public void Login()
