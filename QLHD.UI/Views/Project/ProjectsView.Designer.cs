@@ -132,6 +132,8 @@
             DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(QLHD.UI.ViewModels.ProjectCollectionViewModel), "Delete", "SelectedEntity", this.bbiDelete),
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ProjectCollectionViewModel), "Refresh", this.bbiRefresh)});
             this.mvvmContext1.ContainerControl = this;
+            this.mvvmContext1.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
+            DevExpress.Utils.MVVM.RegistrationExpression.RegisterWindowedDocumentManagerService(null, false, null, DevExpress.Utils.MVVM.Services.DefaultWindowedDocumentManagerServiceType.XtraForm, null)});
             this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.ProjectCollectionViewModel);
             // 
             // popupMenu1

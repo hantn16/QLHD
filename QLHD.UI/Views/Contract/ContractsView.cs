@@ -13,6 +13,8 @@ using DevExpress.XtraEditors.Repository;
 using QLHD.Model.Models;
 using QLHD.UI.Views.Commons;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid;
+using DevExpress.Data;
 
 namespace QLHD.UI.Views.Contract
 {
@@ -31,7 +33,7 @@ namespace QLHD.UI.Views.Contract
         {
             GridView gv = (GridView)gridControl1.MainView;
             GridControlConfig.SetColumnsHide(gv, new List<string> { "WorkId", "ContractorId", "ContractApendixes", "PaymentPeriods" });
-            GridControlConfig.CommonFormat(gv);
+            GridControlConfig.CommonFormat(gv,true);
         }
 
         private void InitBindings()
@@ -52,6 +54,17 @@ namespace QLHD.UI.Views.Contract
                     popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
                 }
             };
+            fluent.WithEvent<SelectionChangedEventArgs>(gridView1, "SelectionChanged")
+                .SetBinding(x => x.Selection, e => gridView1.GetSelectedRows().Select(r => gridView1.GetRow(r) as QLHD.Model.Models.Contract));
+        }
+
+        private void gridControl1_DataSourceChanged(object sender, EventArgs e)
+        {
+            GridControl gc = (GridControl)sender;
+            GridView gv = (GridView)gc.MainView;
+            GridControlConfig.CommonFormat(gv, true);
+            gv.Columns["Name"].BestFit();
+            gv.Columns["SigningDate"].BestFit();
         }
     }
 }

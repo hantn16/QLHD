@@ -1,4 +1,6 @@
-﻿namespace QLHD.UI.Views.Contract
+﻿using System;
+
+namespace QLHD.UI.Views.Contract
 {
     partial class ContractsEditFormView
     {
@@ -30,6 +32,12 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractsEditFormView));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -51,21 +59,22 @@
             this.TerminateDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ContractOriginValueTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.IsActiveCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.WorkIdTextEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.WorkIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.workBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ContractorIdTextEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.ContractorIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.contractorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ItemForIsTerminated = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForSigningDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForWorkId = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForContent = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForContractorId = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForTerminateDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForContractOriginValue = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForIsActive = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForSigningDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.mvvmContext2 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -80,21 +89,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.TerminateDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContractOriginValueTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WorkIdTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractorIdTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractorIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsTerminated)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForSigningDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForWorkId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContractorId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTerminateDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContractOriginValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSigningDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext2)).BeginInit();
             this.SuspendLayout();
             // 
             // mvvmContext1
@@ -110,7 +120,7 @@
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ContractViewModel), "Close", this.bbiClose)});
             this.mvvmContext1.ContainerControl = this;
             this.mvvmContext1.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
-            DevExpress.Utils.MVVM.RegistrationExpression.RegisterDocumentManagerService(null, false, null)});
+            DevExpress.Utils.MVVM.RegistrationExpression.RegisterWindowedDocumentManagerService(null, false, null, DevExpress.Utils.MVVM.Services.DefaultWindowedDocumentManagerServiceType.XtraForm, null)});
             this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.ContractViewModel);
             // 
             // bbiSave
@@ -217,8 +227,8 @@
             this.dataLayoutControl1.Controls.Add(this.TerminateDateDateEdit);
             this.dataLayoutControl1.Controls.Add(this.ContractOriginValueTextEdit);
             this.dataLayoutControl1.Controls.Add(this.IsActiveCheckEdit);
-            this.dataLayoutControl1.Controls.Add(this.WorkIdTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.ContractorIdTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.WorkIdLookUpEdit);
+            this.dataLayoutControl1.Controls.Add(this.ContractorIdLookUpEdit);
             this.dataLayoutControl1.DataSource = this.contractBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -260,6 +270,7 @@
             this.SigningDateDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.SigningDateDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.SigningDateDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.SigningDateDateEdit.Properties.NullDateCalendarValue = new System.DateTime(2019, 5, 2, 0, 0, 0, 0);
             this.SigningDateDateEdit.Size = new System.Drawing.Size(501, 20);
             this.SigningDateDateEdit.StyleController = this.dataLayoutControl1;
             this.SigningDateDateEdit.TabIndex = 5;
@@ -335,65 +346,68 @@
             this.IsActiveCheckEdit.StyleController = this.dataLayoutControl1;
             this.IsActiveCheckEdit.TabIndex = 12;
             // 
-            // WorkIdTextEdit
+            // WorkIdLookUpEdit
             // 
-            this.WorkIdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.contractBindingSource, "WorkId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.WorkIdTextEdit.Location = new System.Drawing.Point(87, 60);
-            this.WorkIdTextEdit.MenuManager = this.ribbonControl1;
-            this.WorkIdTextEdit.Name = "WorkIdTextEdit";
-            this.WorkIdTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.WorkIdTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.WorkIdTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.WorkIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.contractBindingSource, "WorkId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.WorkIdLookUpEdit.Location = new System.Drawing.Point(87, 60);
+            this.WorkIdLookUpEdit.MenuManager = this.ribbonControl1;
+            this.WorkIdLookUpEdit.Name = "WorkIdLookUpEdit";
+            this.WorkIdLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.WorkIdLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.WorkIdLookUpEdit.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.WorkIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Add new work")});
-            this.WorkIdTextEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.WorkIdLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Hạng Mục", 91, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CostType", "Loại Chi Phí", 64, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Project", "Dự Án", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentWork", "Hạng Mục Cha", 79, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.WorkIdTextEdit.Properties.DataSource = this.workBindingSource;
-            this.WorkIdTextEdit.Properties.DisplayMember = "Name";
-            this.WorkIdTextEdit.Properties.NullText = "";
-            this.WorkIdTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.WorkIdTextEdit.Properties.ValueMember = "Id";
-            this.WorkIdTextEdit.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.WorkIdTextEdit_Properties_ButtonClick);
-            this.WorkIdTextEdit.Size = new System.Drawing.Size(501, 20);
-            this.WorkIdTextEdit.StyleController = this.dataLayoutControl1;
-            this.WorkIdTextEdit.TabIndex = 6;
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ParentWork", "Hạng Mục Cha", 79, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.WorkIdLookUpEdit.Properties.DataSource = this.workBindingSource;
+            this.WorkIdLookUpEdit.Properties.DisplayMember = "Name";
+            this.WorkIdLookUpEdit.Properties.NullText = "Chọn hạng mục";
+            this.WorkIdLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.WorkIdLookUpEdit.Properties.ValueMember = "Id";
+            this.WorkIdLookUpEdit.Size = new System.Drawing.Size(501, 20);
+            this.WorkIdLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.WorkIdLookUpEdit.TabIndex = 6;
             // 
             // workBindingSource
             // 
             this.workBindingSource.DataSource = typeof(QLHD.Model.Models.Work);
             // 
-            // ContractorIdTextEdit
+            // ContractorIdLookUpEdit
             // 
-            this.ContractorIdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.contractBindingSource, "ContractorId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ContractorIdTextEdit.Location = new System.Drawing.Point(87, 108);
-            this.ContractorIdTextEdit.MenuManager = this.ribbonControl1;
-            this.ContractorIdTextEdit.Name = "ContractorIdTextEdit";
-            this.ContractorIdTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ContractorIdTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ContractorIdTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ContractorIdTextEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.ContractorIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.contractBindingSource, "ContractorId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ContractorIdLookUpEdit.Location = new System.Drawing.Point(87, 108);
+            this.ContractorIdLookUpEdit.MenuManager = this.ribbonControl1;
+            this.ContractorIdLookUpEdit.Name = "ContractorIdLookUpEdit";
+            this.ContractorIdLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.ContractorIdLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            serializableAppearanceObject1.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject1.Image")));
+            serializableAppearanceObject1.Options.UseImage = true;
+            serializableAppearanceObject2.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject2.Image")));
+            serializableAppearanceObject2.Options.UseImage = true;
+            serializableAppearanceObject3.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject3.Image")));
+            serializableAppearanceObject3.Options.UseImage = true;
+            serializableAppearanceObject4.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject4.Image")));
+            serializableAppearanceObject4.Options.UseImage = true;
+            this.ContractorIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Add new Contractor", null, null)});
+            this.ContractorIdLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "Mã Nhà Thầu", 86, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Nhà Thầu", 77, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TaxCode", "Mã Số Thuế", 66, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Address", "Địa Chỉ", 44, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Representative", "Người Đại Diện", 81, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BankAccountNo", "TK Ngân Hàng Số", 93, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BankName", "Tại Ngân Hàng", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PhoneNumber", "SĐT", 30, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.ContractorIdTextEdit.Properties.DataSource = this.contractorBindingSource;
-            this.ContractorIdTextEdit.Properties.DisplayMember = "Name";
-            this.ContractorIdTextEdit.Properties.NullText = "";
-            this.ContractorIdTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.ContractorIdTextEdit.Properties.ValueMember = "Id";
-            this.ContractorIdTextEdit.Size = new System.Drawing.Size(501, 20);
-            this.ContractorIdTextEdit.StyleController = this.dataLayoutControl1;
-            this.ContractorIdTextEdit.TabIndex = 8;
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TaxCode", "Mã Số Thuế", 66, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.ContractorIdLookUpEdit.Properties.DataSource = this.contractorBindingSource;
+            this.ContractorIdLookUpEdit.Properties.DisplayMember = "Name";
+            this.ContractorIdLookUpEdit.Properties.NullText = "Chọn nhà thầu";
+            this.ContractorIdLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.ContractorIdLookUpEdit.Properties.ValueMember = "Id";
+            this.ContractorIdLookUpEdit.Size = new System.Drawing.Size(501, 20);
+            this.ContractorIdLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.ContractorIdLookUpEdit.TabIndex = 8;
+            
             // 
             // contractorBindingSource
             // 
@@ -425,13 +439,13 @@
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForName,
-            this.ItemForSigningDate,
             this.ItemForWorkId,
             this.ItemForContent,
             this.ItemForContractorId,
             this.ItemForTerminateDate,
             this.ItemForContractOriginValue,
-            this.ItemForIsActive});
+            this.ItemForIsActive,
+            this.ItemForSigningDate});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(580, 199);
@@ -444,17 +458,9 @@
             this.ItemForName.Size = new System.Drawing.Size(580, 24);
             this.ItemForName.TextSize = new System.Drawing.Size(72, 13);
             // 
-            // ItemForSigningDate
-            // 
-            this.ItemForSigningDate.Control = this.SigningDateDateEdit;
-            this.ItemForSigningDate.Location = new System.Drawing.Point(0, 24);
-            this.ItemForSigningDate.Name = "ItemForSigningDate";
-            this.ItemForSigningDate.Size = new System.Drawing.Size(580, 24);
-            this.ItemForSigningDate.TextSize = new System.Drawing.Size(72, 13);
-            // 
             // ItemForWorkId
             // 
-            this.ItemForWorkId.Control = this.WorkIdTextEdit;
+            this.ItemForWorkId.Control = this.WorkIdLookUpEdit;
             this.ItemForWorkId.Location = new System.Drawing.Point(0, 48);
             this.ItemForWorkId.Name = "ItemForWorkId";
             this.ItemForWorkId.Size = new System.Drawing.Size(580, 24);
@@ -470,7 +476,7 @@
             // 
             // ItemForContractorId
             // 
-            this.ItemForContractorId.Control = this.ContractorIdTextEdit;
+            this.ItemForContractorId.Control = this.ContractorIdLookUpEdit;
             this.ItemForContractorId.Location = new System.Drawing.Point(0, 96);
             this.ItemForContractorId.Name = "ItemForContractorId";
             this.ItemForContractorId.Size = new System.Drawing.Size(580, 24);
@@ -501,6 +507,19 @@
             this.ItemForIsActive.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForIsActive.TextVisible = false;
             // 
+            // ItemForSigningDate
+            // 
+            this.ItemForSigningDate.Control = this.SigningDateDateEdit;
+            this.ItemForSigningDate.Location = new System.Drawing.Point(0, 24);
+            this.ItemForSigningDate.Name = "ItemForSigningDate";
+            this.ItemForSigningDate.Size = new System.Drawing.Size(580, 24);
+            this.ItemForSigningDate.TextSize = new System.Drawing.Size(72, 13);
+            // 
+            // mvvmContext2
+            // 
+            this.mvvmContext2.ContainerControl = this;
+            this.mvvmContext2.ViewModelType = typeof(QLHD.UI.ViewModels.WorkCollectionViewModel);
+            // 
             // ContractsEditFormView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,21 +542,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.TerminateDateDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContractOriginValueTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IsActiveCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WorkIdTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractorIdTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractorIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsTerminated)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForSigningDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForWorkId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContractorId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTerminateDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForContractOriginValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSigningDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,9 +597,10 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForTerminateDate;
         private DevExpress.XtraLayout.LayoutControlItem ItemForContractOriginValue;
         private DevExpress.XtraLayout.LayoutControlItem ItemForIsActive;
-        private DevExpress.XtraEditors.LookUpEdit WorkIdTextEdit;
+        private DevExpress.XtraEditors.LookUpEdit WorkIdLookUpEdit;
         private System.Windows.Forms.BindingSource workBindingSource;
-        private DevExpress.XtraEditors.LookUpEdit ContractorIdTextEdit;
+        private DevExpress.XtraEditors.LookUpEdit ContractorIdLookUpEdit;
         private System.Windows.Forms.BindingSource contractorBindingSource;
+        private DevExpress.Utils.MVVM.MVVMContext mvvmContext2;
     }
 }

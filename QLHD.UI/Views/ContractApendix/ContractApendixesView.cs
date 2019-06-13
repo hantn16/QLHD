@@ -1,4 +1,5 @@
-﻿using DevExpress.Utils.MVVM.UI;
+﻿using DevExpress.Data;
+using DevExpress.Utils.MVVM.UI;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
@@ -7,6 +8,7 @@ using QLHD.UI.Views.Commons;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace QLHD.UI.Views.ContractApendix
 {
@@ -46,6 +48,8 @@ namespace QLHD.UI.Views.ContractApendix
                     popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
                 }
             };
+            fluent.WithEvent<SelectionChangedEventArgs>(gridView1, "SelectionChanged")
+                .SetBinding(x => x.Selection, e => gridView1.GetSelectedRows().Select(r => gridView1.GetRow(r) as QLHD.Model.Models.ContractApendix));
         }
 
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)

@@ -18,7 +18,7 @@ namespace QLHD.Model.Models
         public int Id { get; set; }
 
         [MinLength(4)]
-        [MaxLength(12)]
+        [MaxLength(16)]
         [Display(Name = "Mã Nhà Thầu")]
         public string Code { get; set; }
 
@@ -26,7 +26,7 @@ namespace QLHD.Model.Models
         public string Name { get; set; }
 
         [MinLength(10)]
-        [MaxLength(13)]
+        [MaxLength(14)]
         [Display(Name = "Mã Số Thuế")]
         public string TaxCode { get; set; }
 

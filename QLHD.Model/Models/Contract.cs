@@ -60,6 +60,33 @@ namespace QLHD.Model.Models
             }
         }
 
+        [DisplayFormat(DataFormatString = "n0")]
+        [Display(Name = "GTNT Lũy kế")]
+        public virtual double CompletedValue {
+            get {
+                return PaymentPeriods.Sum(x => x.ValueAccepted);
+            }
+        }
+
+        [DisplayFormat(DataFormatString = "n0")]
+        [Display(Name = "GT Xuất HĐ Lũy Kế")]
+        public virtual double InvoicedValue
+        {
+            get {
+                return PaymentPeriods.Sum(x => x.InvoicedValue);
+            }
+        }
+
+        [DisplayFormat(DataFormatString = "n0")]
+        [Display(Name = "GTTT Lũy Kế")]
+        public virtual double PaidValue
+        {
+            get
+            {
+                return PaymentPeriods.Sum(x => x.ValuePaid);
+            }
+        }
+
         [Display(Name = "Danh Sách Phụ Lục")]
         public virtual ICollection<ContractApendix> ContractApendixes { get; set; }
 

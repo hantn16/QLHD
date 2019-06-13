@@ -68,6 +68,14 @@
     <Compile Include="Migrations\201904240155413_FixInvoiceModel.Designer.cs">
       <DependentUpon>201904240155413_FixInvoiceModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905040324091_configContractor.cs" />
+    <Compile Include="Migrations\201905040324091_configContractor.Designer.cs">
+      <DependentUpon>201905040324091_configContractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905210835311_AddPropertiesOfContract.cs" />
+    <Compile Include="Migrations\201905210835311_AddPropertiesOfContract.Designer.cs">
+      <DependentUpon>201905210835311_AddPropertiesOfContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractApendix.cs" />
@@ -94,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904240155413_FixInvoiceModel.resx">
       <DependentUpon>201904240155413_FixInvoiceModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905040324091_configContractor.resx">
+      <DependentUpon>201905040324091_configContractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905210835311_AddPropertiesOfContract.resx">
+      <DependentUpon>201905210835311_AddPropertiesOfContract.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using QLHD.Model.Abstracts;
+﻿
+using QLHD.Model.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -72,6 +73,13 @@ namespace QLHD.Model.Models
         public override string ToString()
         {
             return Order + ". " + Name;
+        }
+
+
+        public virtual double InvoicedValue {
+            get {
+                return Invoices.Sum(x => (x.PretaxValue + x.VatValue));
+            }
         }
     }
 

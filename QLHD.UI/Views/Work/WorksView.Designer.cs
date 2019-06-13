@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorksView));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiPrint = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -57,13 +59,14 @@
             this.bbiNew,
             this.bbiEdit,
             this.bbiDelete,
-            this.bbiRefresh});
+            this.bbiRefresh,
+            this.bbiPrint});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(456, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(554, 141);
             // 
             // bbiNew
             // 
@@ -93,6 +96,16 @@
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
             // 
+            // bbiPrint
+            // 
+            this.bbiPrint.Caption = "Print";
+            this.bbiPrint.Id = 10;
+            this.bbiPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbiPrint.ImageOptions.Image")));
+            this.bbiPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiPrint.ImageOptions.LargeImage")));
+            this.bbiPrint.Name = "bbiPrint";
+            this.bbiPrint.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.bbiPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiPrint_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -106,6 +119,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiPrint);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // gridControl1
@@ -115,7 +129,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.ribbonControl1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(456, 171);
+            this.gridControl1.Size = new System.Drawing.Size(554, 258);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -145,13 +159,12 @@
             // 
             // popupMenu1
             // 
-            this.popupMenu1.AddItems(new DevExpress.XtraBars.BarItem[]
-            {
-                this.bbiNew,this.bbiEdit,this.bbiDelete,this.bbiRefresh
-            });
+            this.popupMenu1.ItemLinks.Add(this.bbiNew);
+            this.popupMenu1.ItemLinks.Add(this.bbiEdit);
+            this.popupMenu1.ItemLinks.Add(this.bbiDelete);
+            this.popupMenu1.ItemLinks.Add(this.bbiRefresh);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbonControl1;
-
             // 
             // WorksView
             // 
@@ -160,7 +173,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "WorksView";
-            this.Size = new System.Drawing.Size(456, 312);
+            this.Size = new System.Drawing.Size(554, 399);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -186,5 +199,6 @@
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext2;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem bbiPrint;
     }
 }

@@ -117,5 +117,14 @@ namespace QLHD.UI.Common {
             UnitOfWorkPolicy unitOfWorkPolicy = UnitOfWorkPolicy.Individual
             ) : base(unitOfWorkFactory, getRepositoryFunc, projection, newEntityInitializer, canCreateNewEntity, ignoreSelectEntityMessage, unitOfWorkPolicy) {
         }
+        public virtual IEnumerable<TProjection> Selection { get; set; }
+        protected void OnSelectionChanged()
+        {
+            this.RaiseCanExecuteChanged(x => x.Edit(SelectedEntity));
+        }
+        public override bool CanEdit(TProjection projectionEntity)
+        {
+            return projectionEntity != null && !IsLoading && Selection != null && Selection.Count() == 1;
+        }
     }
 }

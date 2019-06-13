@@ -42,11 +42,13 @@ namespace QLHD.Model.Models
 
         [Display(Name = "GT thanh toán")]
         [DisplayFormat(DataFormatString = "n0")]
-        public double PayValue {
+        public virtual double PayValue {
             get {
                 return PretaxValue + VatValue;
             }
         }
+
+
 
         public override string ToString()
         {

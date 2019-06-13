@@ -13,6 +13,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid;
 using DevExpress.Utils.MVVM.UI;
 using QLHD.UI.Views.Commons;
+using DevExpress.Data;
 
 namespace QLHD.UI.Views.Invoice
 {
@@ -52,6 +53,8 @@ namespace QLHD.UI.Views.Invoice
                     popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
                 }
             };
+            fluent.WithEvent<SelectionChangedEventArgs>(gridView1, "SelectionChanged")
+                .SetBinding(x => x.Selection, e => gridView1.GetSelectedRows().Select(r => gridView1.GetRow(r) as QLHD.Model.Models.Invoice));
         }
 
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)

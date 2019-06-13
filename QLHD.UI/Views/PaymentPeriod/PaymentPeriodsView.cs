@@ -13,6 +13,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using QLHD.UI.Views.Commons;
 using DevExpress.XtraGrid;
+using DevExpress.Data;
 
 namespace QLHD.UI.Views.PaymentPeriod
 {
@@ -53,6 +54,8 @@ namespace QLHD.UI.Views.PaymentPeriod
                     popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
                 }
             };
+            fluent.WithEvent<SelectionChangedEventArgs>(gridView1, "SelectionChanged")
+                .SetBinding(x => x.Selection, e => gridView1.GetSelectedRows().Select(r => gridView1.GetRow(r) as QLHD.Model.Models.PaymentPeriod));
         }
 
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)

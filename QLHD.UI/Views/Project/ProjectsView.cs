@@ -11,6 +11,7 @@ using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using QLHD.UI.Views.Commons;
+using DevExpress.Data;
 
 namespace QLHD.UI.Views.Project
 {
@@ -48,6 +49,8 @@ namespace QLHD.UI.Views.Project
                     popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
                 }
             };
+            fluent.WithEvent<SelectionChangedEventArgs>(gridView1, "SelectionChanged")
+                .SetBinding(x => x.Selection, e => gridView1.GetSelectedRows().Select(r => gridView1.GetRow(r) as QLHD.Model.Models.Project));
         }
     }
 }

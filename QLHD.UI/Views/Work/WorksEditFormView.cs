@@ -23,14 +23,7 @@ namespace QLHD.UI.Views.Work
             InitializeComponent();
             if (!DesignMode)
                 InitialBindings();
-            CustomizeGridView();
 
-        }
-
-        private void CustomizeGridView()
-        {
-            GridControlConfig.SetColumnsHide(searchLookUpEdit1View, new List<string> { "Works", "Contracts" });
-            GridControlConfig.CommonFormat(searchLookUpEdit1View);
         }
 
         private void InitialBindings()

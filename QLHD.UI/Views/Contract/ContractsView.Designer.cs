@@ -65,7 +65,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(450, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(825, 141);
             // 
             // bbiNew
             // 
@@ -100,7 +100,7 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "Contracts";
             // 
             // ribbonPageGroup2
             // 
@@ -119,10 +119,11 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(450, 235);
+            this.gridControl1.Size = new System.Drawing.Size(825, 370);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DataSourceChanged += new System.EventHandler(this.gridControl1_DataSourceChanged);
             // 
             // gridView1
             // 
@@ -145,6 +146,8 @@
             DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(QLHD.UI.ViewModels.ContractCollectionViewModel), "Delete", "SelectedEntity", this.bbiDelete),
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(QLHD.UI.ViewModels.ContractCollectionViewModel), "Refresh", this.bbiRefresh)});
             this.mvvmContext1.ContainerControl = this;
+            this.mvvmContext1.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
+            DevExpress.Utils.MVVM.RegistrationExpression.RegisterWindowedDocumentManagerService(null, false, null, DevExpress.Utils.MVVM.Services.DefaultWindowedDocumentManagerServiceType.XtraForm, null)});
             this.mvvmContext1.ViewModelType = typeof(QLHD.UI.ViewModels.ContractCollectionViewModel);
             // 
             // bbiSendRefreshCollectionsMessage
@@ -166,7 +169,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "ContractsView";
-            this.Size = new System.Drawing.Size(450, 376);
+            this.Size = new System.Drawing.Size(825, 511);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

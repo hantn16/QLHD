@@ -54,9 +54,13 @@
             this.bbWorks = new DevExpress.XtraBars.BarButtonItem();
             this.bbPaymentPeriods = new DevExpress.XtraBars.BarButtonItem();
             this.bbContractApendixes = new DevExpress.XtraBars.BarButtonItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.bbiCTMucDT = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
@@ -106,15 +110,17 @@
             this.bbWorks,
             this.bbPaymentPeriods,
             this.bbContractApendixes,
-            this.biInvoices});
+            this.biInvoices,
+            this.skinRibbonGalleryBarItem1,
+            this.bbiCTMucDT});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 24;
+            this.ribbonControl1.MaxItemId = 26;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.QuickToolbarItemLinks.Add(this.barSubItem1);
-            this.ribbonControl1.Size = new System.Drawing.Size(800, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(1246, 141);
             // 
             // backstageViewControl1
             // 
@@ -141,7 +147,7 @@
             // 
             // biContracts
             // 
-            this.biContracts.Caption = "Contracts";
+            this.biContracts.Caption = "Hợp đồng";
             this.biContracts.Id = 7;
             this.biContracts.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biContracts.ImageOptions.Image")));
             this.biContracts.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biContracts.ImageOptions.LargeImage")));
@@ -150,7 +156,7 @@
             // 
             // biContractors
             // 
-            this.biContractors.Caption = "Contractors";
+            this.biContractors.Caption = "Nhà thầu";
             this.biContractors.Id = 8;
             this.biContractors.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biContractors.ImageOptions.Image")));
             this.biContractors.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biContractors.ImageOptions.LargeImage")));
@@ -159,7 +165,7 @@
             // 
             // biProjects
             // 
-            this.biProjects.Caption = "Projects";
+            this.biProjects.Caption = "Dự án";
             this.biProjects.Id = 9;
             this.biProjects.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biProjects.ImageOptions.Image")));
             this.biProjects.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biProjects.ImageOptions.LargeImage")));
@@ -168,7 +174,7 @@
             // 
             // biPaymentPeriods
             // 
-            this.biPaymentPeriods.Caption = "PaymentPeriods";
+            this.biPaymentPeriods.Caption = "Lần thanh toán";
             this.biPaymentPeriods.Id = 10;
             this.biPaymentPeriods.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biPaymentPeriods.ImageOptions.Image")));
             this.biPaymentPeriods.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biPaymentPeriods.ImageOptions.LargeImage")));
@@ -177,7 +183,7 @@
             // 
             // biWorks
             // 
-            this.biWorks.Caption = "Works";
+            this.biWorks.Caption = "Hạng mục";
             this.biWorks.Id = 11;
             this.biWorks.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biWorks.ImageOptions.Image")));
             this.biWorks.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biWorks.ImageOptions.LargeImage")));
@@ -186,7 +192,7 @@
             // 
             // biLogout
             // 
-            this.biLogout.Caption = "Logout";
+            this.biLogout.Caption = "Đăng xuất";
             this.biLogout.Id = 12;
             this.biLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biLogout.ImageOptions.Image")));
             this.biLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biLogout.ImageOptions.LargeImage")));
@@ -195,7 +201,7 @@
             // 
             // biSettings
             // 
-            this.biSettings.Caption = "Settings";
+            this.biSettings.Caption = "Cài đặt";
             this.biSettings.Id = 13;
             this.biSettings.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biSettings.ImageOptions.Image")));
             this.biSettings.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biSettings.ImageOptions.LargeImage")));
@@ -204,7 +210,7 @@
             // 
             // biContractApendixes
             // 
-            this.biContractApendixes.Caption = "ContractApendix";
+            this.biContractApendixes.Caption = "Phụ lục HĐ";
             this.biContractApendixes.Id = 14;
             this.biContractApendixes.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biContractApendixes.ImageOptions.Image")));
             this.biContractApendixes.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biContractApendixes.ImageOptions.LargeImage")));
@@ -238,7 +244,7 @@
             // 
             // biInvoices
             // 
-            this.biInvoices.Caption = "Invoices";
+            this.biInvoices.Caption = "Hóa đơn";
             this.biInvoices.Id = 23;
             this.biInvoices.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biInvoices.ImageOptions.Image")));
             this.biInvoices.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("biInvoices.ImageOptions.LargeImage")));
@@ -262,7 +268,6 @@
             this.bbProjects.Caption = "Projects";
             this.bbProjects.Id = 19;
             this.bbProjects.Name = "bbProjects";
-            this.bbProjects.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // bbWorks
             // 
@@ -282,11 +287,28 @@
             this.bbContractApendixes.Id = 22;
             this.bbContractApendixes.Name = "bbContractApendixes";
             // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 24;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
+            // bbiCTMucDT
+            // 
+            this.bbiCTMucDT.Caption = "Chi tiết mức đầu tư";
+            this.bbiCTMucDT.Id = 25;
+            this.bbiCTMucDT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbiCTMucDT.ImageOptions.Image")));
+            this.bbiCTMucDT.Name = "bbiCTMucDT";
+            this.bbiCTMucDT.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.bbiCTMucDT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiCTMucDT_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup4});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "ListEntities";
             // 
@@ -310,15 +332,30 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Hệ thống";
             // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Appearance";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.bbiCTMucDT);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Báo Cáo";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageStore = global::QLHD.UI.Properties.Resources._308383;
+            this.ClientSize = new System.Drawing.Size(1246, 733);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.backstageViewControl1);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.LookAndFeel.SkinName = "Summer 2008";
             this.Name = "MainView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
@@ -361,5 +398,9 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
         private DevExpress.XtraBars.BarButtonItem biInvoices;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem bbiCTMucDT;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }

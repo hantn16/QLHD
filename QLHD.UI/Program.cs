@@ -17,6 +17,8 @@ namespace QLHD.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // Skin registration. 
+            DevExpress.UserSkins.BonusSkins.Register();
             Application.Run(new MainView());
         }
     }

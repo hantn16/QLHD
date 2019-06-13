@@ -1,6 +1,10 @@
 ﻿using DevExpress.Mvvm;
+using DevExpress.XtraPrinting;
+using DevExpress.XtraPrinting.Preview;
+using DevExpress.XtraReports.UI;
 using QLHD.UI.Common;
 using QLHD.UI.ViewModels;
+using QLHD.UI.Views.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +17,7 @@ using System.Windows.Forms;
 
 namespace QLHD.UI.Views
 {
-    public partial class MainView : Form
+    public partial class MainView : DevExpress.XtraEditors.XtraForm
     {
         public MainView()
         {
@@ -62,9 +66,12 @@ namespace QLHD.UI.Views
             ConstantVariable.CurrentUserName = userName;
         }
 
-        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bbiCTMucDT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            ReportPrintTool reportPrintTool = new ReportPrintTool(new CTMucDauTu());
+            reportPrintTool.Report.CreateDocument(true);
+            reportPrintTool.ShowPreview();
+            
         }
     }
 }

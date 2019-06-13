@@ -11,6 +11,8 @@ using QLHD.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using QLHD.UI.Views.Commons;
+using DevExpress.XtraGrid;
+using DevExpress.Data;
 
 namespace QLHD.UI.Views.Contractor
 {
@@ -41,6 +43,8 @@ namespace QLHD.UI.Views.Contractor
                     popupMenu1.ShowPopup(gridControl1.PointToScreen(e.Location), s);
                 }
             };
+            fluent.WithEvent<SelectionChangedEventArgs>(gridView1, "SelectionChanged")
+                .SetBinding(x => x.Selection, e => gridView1.GetSelectedRows().Select(r => gridView1.GetRow(r) as QLHD.Model.Models.Contractor));
         }
         void CustomizeGridView()
         {
@@ -48,6 +52,13 @@ namespace QLHD.UI.Views.Contractor
             gv.OptionsBehavior.Editable = false;
             GridControlConfig.CommonFormat(gv);
             GridControlConfig.SetColumnsHide(gv, new List<string> { "Contracts" });
+        }
+
+        private void gridControl1_DataSourceChanged(object sender, EventArgs e)
+        {
+            GridControl gc = (GridControl)sender;
+            GridView gv = (GridView)gc.MainView;
+            gv.BestFitColumns();
         }
     }
 }

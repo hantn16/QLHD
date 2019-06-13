@@ -31,7 +31,7 @@ namespace QLHD.Model.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
-                        SigningDate = c.DateTime(nullable: false),
+                        SigningDate = c.DateTime(nullable: false,defaultValueSql: "getdate()"),
                         WorkId = c.Int(nullable: false),
                         Content = c.String(),
                         ContractorId = c.Int(nullable: false),
