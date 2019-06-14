@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ContractApendix" xml:space="preserve">
+    <value>Phụ lục hợp đồng</value>
+  </data>
+  <data name="ContractApendixPlural" xml:space="preserve">
+    <value>Phụ lục hợp đồng</value>
+  </data>
+  <data name="ContractApendix_Order" xml:space="preserve">
+    <value>Thứ Tự</value>
+  </data>
+  <data name="ContractApendix_Name" xml:space="preserve">
+    <value>Tên Phụ Lục</value>
+  </data>
+  <data name="ContractApendix_Description" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ContractApendix_AdjustedValue" xml:space="preserve">
+    <value>Giá trị điều chỉnh</value>
+  </data>
+  <data name="ContractApendix_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="ContractApendix_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="ContractApendix_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="ContractApendix_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="ContractApendix_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="ContractApendix_Contract" xml:space="preserve">
+    <value>Hợp Đồng</value>
+  </data>
+  <data name="Contract" xml:space="preserve">
+    <value>Hợp Đồng</value>
+  </data>
+  <data name="ContractPlural" xml:space="preserve">
+    <value>Hợp đồng</value>
+  </data>
+  <data name="Contract_Name" xml:space="preserve">
+    <value>Tên Hợp Đồng</value>
+  </data>
+  <data name="Contract_SigningDate" xml:space="preserve">
+    <value>Ngày ký</value>
+  </data>
+  <data name="Contract_Content" xml:space="preserve">
+    <value>Nội Dung</value>
+  </data>
+  <data name="Contract_TerminateDate" xml:space="preserve">
+    <value>Ngày Thanh Lý</value>
+  </data>
+  <data name="Contract_ContractOriginValue" xml:space="preserve">
+    <value>GTHĐ Ban Đầu</value>
+  </data>
+  <data name="Contract_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="Contract_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="Contract_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="Contract_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="Contract_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="Contract_Contractor" xml:space="preserve">
+    <value>Nhà Thầu</value>
+  </data>
+  <data name="Contract_Work" xml:space="preserve">
+    <value>Hạng Mục</value>
+  </data>
+  <data name="Contractor" xml:space="preserve">
+    <value>Nhà thầu</value>
+  </data>
+  <data name="ContractorPlural" xml:space="preserve">
+    <value>Nhà thầu</value>
+  </data>
+  <data name="Contractor_Code" xml:space="preserve">
+    <value>Mã Nhà Thầu</value>
+  </data>
+  <data name="Contractor_Name" xml:space="preserve">
+    <value>Tên Nhà Thầu</value>
+  </data>
+  <data name="Contractor_TaxCode" xml:space="preserve">
+    <value>Mã Số Thuế</value>
+  </data>
+  <data name="Contractor_Address" xml:space="preserve">
+    <value>Địa Chỉ</value>
+  </data>
+  <data name="Contractor_Representative" xml:space="preserve">
+    <value>Người Đại Diện</value>
+  </data>
+  <data name="Contractor_BankAccountNo" xml:space="preserve">
+    <value>TK Ngân Hàng Số</value>
+  </data>
+  <data name="Contractor_BankName" xml:space="preserve">
+    <value>Tại Ngân Hàng</value>
+  </data>
+  <data name="Contractor_PhoneNumber" xml:space="preserve">
+    <value>SĐT</value>
+  </data>
+  <data name="Contractor_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="Contractor_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="Contractor_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="Contractor_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="Contractor_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="PaymentPeriod" xml:space="preserve">
+    <value>Lần TT</value>
+  </data>
+  <data name="PaymentPeriodPlural" xml:space="preserve">
+    <value>Lần Thanh Toán</value>
+  </data>
+  <data name="PaymentPeriod_Name" xml:space="preserve">
+    <value>Tên Lần TT</value>
+  </data>
+  <data name="PaymentPeriod_Description" xml:space="preserve">
+    <value>Mô Tả</value>
+  </data>
+  <data name="PaymentPeriod_Order" xml:space="preserve">
+    <value>Thứ Tự</value>
+  </data>
+  <data name="PaymentPeriod_ValueRequested" xml:space="preserve">
+    <value>Số Tiền Đề Nghị</value>
+  </data>
+  <data name="PaymentPeriod_RequestedDate" xml:space="preserve">
+    <value>Ngày Đề Nghị</value>
+  </data>
+  <data name="PaymentPeriod_ValuePaid" xml:space="preserve">
+    <value>Số Tiền Thanh Toán</value>
+  </data>
+  <data name="PaymentPeriod_PaidDate" xml:space="preserve">
+    <value>Ngày Thanh Toán</value>
+  </data>
+  <data name="PaymentPeriod_ValueAccepted" xml:space="preserve">
+    <value>Giá Trị NTHT</value>
+  </data>
+  <data name="PaymentPeriod_AcceptedDate" xml:space="preserve">
+    <value>Ngày nghiệm thu</value>
+  </data>
+  <data name="PaymentPeriod_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="PaymentPeriod_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="PaymentPeriod_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="PaymentPeriod_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="PaymentPeriod_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="PaymentPeriod_Contract" xml:space="preserve">
+    <value>Hợp Đồng</value>
+  </data>
+  <data name="PaymentPeriod_PaymentType" xml:space="preserve">
+    <value>Kiểu TT</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Hóa đơn</value>
+  </data>
+  <data name="InvoicePlural" xml:space="preserve">
+    <value>Hóa đơn</value>
+  </data>
+  <data name="Invoice_Number" xml:space="preserve">
+    <value>Số hóa đơn</value>
+  </data>
+  <data name="Invoice_ReleaseDate" xml:space="preserve">
+    <value>Ngày hóa đơn</value>
+  </data>
+  <data name="Invoice_PretaxValue" xml:space="preserve">
+    <value>GT trước thuế</value>
+  </data>
+  <data name="Invoice_VatValue" xml:space="preserve">
+    <value>Thuế GTGT</value>
+  </data>
+  <data name="Invoice_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="Invoice_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="Invoice_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="Invoice_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="Invoice_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="Invoice_PaymentPeriod" xml:space="preserve">
+    <value>Lần TT</value>
+  </data>
+  <data name="PaymentType" xml:space="preserve">
+    <value>Kiểu TT</value>
+  </data>
+  <data name="PaymentTypePlural" xml:space="preserve">
+    <value>Kiểu Thanh Toán</value>
+  </data>
+  <data name="PaymentType_Name" xml:space="preserve">
+    <value>Kiểu Thanh Toán</value>
+  </data>
+  <data name="PaymentType_Description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="PaymentType_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="PaymentType_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="PaymentType_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="PaymentType_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="PaymentType_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="Work" xml:space="preserve">
+    <value>Hạng Mục</value>
+  </data>
+  <data name="WorkPlural" xml:space="preserve">
+    <value>Hạng Mục</value>
+  </data>
+  <data name="Work_Name" xml:space="preserve">
+    <value>Tên Hạng Mục</value>
+  </data>
+  <data name="Work_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="Work_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="Work_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="Work_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="Work_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="Work_CostType" xml:space="preserve">
+    <value>Loại Chi Phí</value>
+  </data>
+  <data name="Work_ParentWork" xml:space="preserve">
+    <value>Hạng Mục Cha</value>
+  </data>
+  <data name="Work_Project" xml:space="preserve">
+    <value>Dự Án</value>
+  </data>
+  <data name="CostType" xml:space="preserve">
+    <value>Loại chi phí</value>
+  </data>
+  <data name="CostTypePlural" xml:space="preserve">
+    <value>Loại chi phí</value>
+  </data>
+  <data name="CostType_Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="CostType_Name" xml:space="preserve">
+    <value>Tên Loại Chi Phí</value>
+  </data>
+  <data name="CostType_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="CostType_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="CostType_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="CostType_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="CostType_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Dự Án</value>
+  </data>
+  <data name="ProjectPlural" xml:space="preserve">
+    <value>Dự Án</value>
+  </data>
+  <data name="Project_Code" xml:space="preserve">
+    <value>Mã Dự Án</value>
+  </data>
+  <data name="Project_Name" xml:space="preserve">
+    <value>Tên Dự Án</value>
+  </data>
+  <data name="Project_StartDate" xml:space="preserve">
+    <value>Ngày Khởi Công</value>
+  </data>
+  <data name="Project_EndDate" xml:space="preserve">
+    <value>Ngày Hoàn Công</value>
+  </data>
+  <data name="Project_IsActive" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="Project_CreatedAt" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="Project_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="Project_ModifiedAt" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="Project_ModifiedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="UserPlural" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="User_Login" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="User_Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+</root>

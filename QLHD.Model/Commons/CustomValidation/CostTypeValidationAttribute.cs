@@ -15,20 +15,15 @@ namespace QLHD.Model.Commons.CustomValidation
         public static ValidationResult HasSameCostTypeWithParent(Work work)
         {
             var _context = new QLHDDbContext();
-            if (work.ParentWorkId == null)
-            {
-                return ValidationResult.Success;
-            }
-            else
+            if (work !=null && work.ParentWorkId != null)
             {
                 Work parent = _context.Works.First(w => w.Id == work.ParentWorkId);
-                if (parent.CostTypeId == work.CostTypeId)
+                if (parent != null && parent.CostTypeId != work.CostTypeId)
                 {
-                    return ValidationResult.Success;
-                }
-
-                return new ValidationResult("Hạng mục con phải cùng loại chi phí với hạng mục cha");
+                    return new ValidationResult("Hạng mục con phải cùng loại chi phí với hạng mục cha");
+                }           
             }
+            return ValidationResult.Success;
         }
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {

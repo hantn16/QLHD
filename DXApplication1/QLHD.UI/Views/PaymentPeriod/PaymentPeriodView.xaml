@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="QLHD.UI.Views.PaymentPeriodView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+        xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+        xmlns:dxrudex="http://schemas.devexpress.com/winfx/2008/xaml/reports/userdesignerextensions"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:viewModel="clr-namespace:QLHD.UI.ViewModels"
+        xmlns:view="clr-namespace:QLHD.UI.Views"
+        xmlns:localization="clr-namespace:QLHD.UI.Localization"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="600" DataContext="{dxmvvm:ViewModelSource viewModel:PaymentPeriodViewModel}">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../../Resources/EntityViewResources.xaml" />
+    </UserControl.Resources>
+    <DockPanel Style="{StaticResource EntityView.RootContainer}">
+        <dxr:RibbonControl DockPanel.Dock="Top" Style="{StaticResource EntityView.RibbonControl}">
+            <dxr:RibbonDefaultPageCategory>
+                <dxr:RibbonPage Style="{StaticResource EntityView.RibbonPage}">
+                    <dxr:RibbonPageGroup Style="{StaticResource EntityView.RibbonPageGroup.Main}">
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Save}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.SaveAndClose}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.SaveAndNew}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Reset}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Delete}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Close}" />
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Style="{StaticResource EntityView.RibbonPageGroup.Layout}">
+                        <dxb:BarCheckItem Style="{StaticResource EntityView.Command.Customize}" IsChecked="{Binding IsCustomization, ElementName=layoutControl}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.SaveLayout}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.ResetLayout}" />
+                    </dxr:RibbonPageGroup>
+                </dxr:RibbonPage>
+            </dxr:RibbonDefaultPageCategory>
+        </dxr:RibbonControl>
+        <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom" Style="{StaticResource EntityView.RibbonStatusBar}" />
+        <dxlc:LayoutControl x:Name="layoutControl" Style="{StaticResource EntityView.LayoutControl}">
+            <dxlc:DataLayoutItem x:Name="layoutItemName" Binding="{Binding Entity.Name, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemDescription" Binding="{Binding Entity.Description, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemOrder" Binding="{Binding Entity.Order, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemValueRequested" Binding="{Binding Entity.ValueRequested, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemRequestedDate" Binding="{Binding Entity.RequestedDate, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemValuePaid" Binding="{Binding Entity.ValuePaid, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemPaidDate" Binding="{Binding Entity.PaidDate, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemValueAccepted" Binding="{Binding Entity.ValueAccepted, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemAcceptedDate" Binding="{Binding Entity.AcceptedDate, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemIsActive" Binding="{Binding Entity.IsActive, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemCreatedAt" Binding="{Binding Entity.CreatedAt, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemCreatedBy" Binding="{Binding Entity.CreatedBy, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemModifiedAt" Binding="{Binding Entity.ModifiedAt, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemModifiedBy" Binding="{Binding Entity.ModifiedBy, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemContract" Binding="{Binding Entity.Contract, Mode=OneTime}">
+                <dxg:LookUpEdit Style="{StaticResource EntityView.LookUpEdit}" DataContext="{Binding ElementName=layoutControl, Path=DataContext}" EditValue="{Binding Entity.ContractId, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" ItemsSource="{Binding LookUpContracts.Entities}" ValueMember="Id" DisplayMember="Name">
+                    <dxg:LookUpEdit.PopupContentTemplate>
+                        <ControlTemplate TargetType="ContentControl">
+                            <dxg:GridControl x:Name="PART_GridControl" ShowBorder="False" ShowLoadingPanel="{Binding LookUpContracts.IsLoading}" />
+                        </ControlTemplate>
+                    </dxg:LookUpEdit.PopupContentTemplate>
+                </dxg:LookUpEdit>
+            </dxlc:DataLayoutItem>
+            <dxlc:DataLayoutItem x:Name="layoutItemPaymentType" Binding="{Binding Entity.PaymentType, Mode=OneTime}">
+                <dxg:LookUpEdit Style="{StaticResource EntityView.LookUpEdit}" DataContext="{Binding ElementName=layoutControl, Path=DataContext}" EditValue="{Binding Entity.PaymentTypeId, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" ItemsSource="{Binding LookUpPaymentTypes.Entities}" ValueMember="Id" DisplayMember="Name">
+                    <dxg:LookUpEdit.PopupContentTemplate>
+                        <ControlTemplate TargetType="ContentControl">
+                            <dxg:GridControl x:Name="PART_GridControl" ShowBorder="False" ShowLoadingPanel="{Binding LookUpPaymentTypes.IsLoading}" />
+                        </ControlTemplate>
+                    </dxg:LookUpEdit.PopupContentTemplate>
+                </dxg:LookUpEdit>
+            </dxlc:DataLayoutItem>
+            <dxlc:LayoutGroup x:Name="Tabs" View="Tabs" MinHeight="250">
+                <DockPanel Style="{StaticResource EntityView.Detail.Container}" DataContext="{Binding PaymentPeriodInvoicesDetails}" dxlc:LayoutControl.TabHeader="{x:Static localization:QLHDDbContextResources.InvoicePlural}">
+                    <dxb:ToolBarControl DockPanel.Dock="Top">
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.New}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Edit}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Delete}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Refresh}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Save}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Reset}" />
+                    </dxb:ToolBarControl>
+                    <dxg:GridControl x:Name="PaymentPeriodInvoicesDetailsGrid" dx:DXSerializer.SerializationID="PaymentPeriodInvoicesDetailsGrid" Style="{StaticResource EntityView.Detail.GridControl.Editable}">
+                        <dxg:GridControl.View>
+                            <dxg:TableView Style="{StaticResource EntityView.Detail.TableView}">
+                                <dxg:TableView.RowCellMenuCustomizations>
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.New}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Edit}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Delete}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Refresh}" />
+                                </dxg:TableView.RowCellMenuCustomizations>
+                            </dxg:TableView>
+                        </dxg:GridControl.View>
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn IsSmart="True" FieldName="Number" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ReleaseDate" />
+                            <dxg:GridColumn IsSmart="True" FieldName="PretaxValue" />
+                            <dxg:GridColumn IsSmart="True" FieldName="VatValue" />
+                            <dxg:GridColumn IsSmart="True" FieldName="IsActive" />
+                            <dxg:GridColumn IsSmart="True" FieldName="CreatedAt" />
+                            <dxg:GridColumn IsSmart="True" FieldName="CreatedBy" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ModifiedAt" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ModifiedBy" />
+                            <dxg:GridColumn FieldName="Contract.Name" Header="{x:Static localization:QLHDDbContextResources.PaymentPeriod_Contract}" ReadOnly="True" />
+                            <dxg:GridColumn FieldName="PaymentType.Name" Header="{x:Static localization:QLHDDbContextResources.PaymentPeriod_PaymentType}" ReadOnly="True" />
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.TotalSummary>
+                            <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />
+                        </dxg:GridControl.TotalSummary>
+                        <dxg:GridControl.GroupSummary>
+                            <dxg:GridSummaryItem SummaryType="Count" />
+                        </dxg:GridControl.GroupSummary>
+                    </dxg:GridControl>
+                </DockPanel>
+            </dxlc:LayoutGroup>
+        </dxlc:LayoutControl>
+    </DockPanel>
+</UserControl>
