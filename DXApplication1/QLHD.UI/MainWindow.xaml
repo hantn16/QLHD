@@ -4,7 +4,9 @@
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
         xmlns:views="clr-namespace:QLHD.UI.Views"
-        Title="MainWindow" Height="350" Width="525" Icon="{dx:DXImage Image=Colors_32x32.png}">
+        Title="Quản Lý Hợp Đồng" Height="600
+             " Width="800
+             " Icon="{dx:DXImage Image=Colors_32x32.png}">
     <Grid>
         <views:QLHDDbContextView></views:QLHDDbContextView>
     </Grid>

@@ -76,6 +76,10 @@
     <Compile Include="Migrations\201905210835311_AddPropertiesOfContract.Designer.cs">
       <DependentUpon>201905210835311_AddPropertiesOfContract.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906251531555_AddDbSetInvoice.cs" />
+    <Compile Include="Migrations\201906251531555_AddDbSetInvoice.Designer.cs">
+      <DependentUpon>201906251531555_AddDbSetInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractApendix.cs" />
@@ -108,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905210835311_AddPropertiesOfContract.resx">
       <DependentUpon>201905210835311_AddPropertiesOfContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906251531555_AddDbSetInvoice.resx">
+      <DependentUpon>201906251531555_AddDbSetInvoice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -33,6 +33,7 @@ namespace QLHD.Model
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
         public virtual DbSet<CostType> CostTypes { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
     }
 
     //public class MyEntity
