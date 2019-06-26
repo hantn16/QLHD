@@ -44,7 +44,7 @@
                 <dxb:BarStaticItem Style="{StaticResource CollectionView.Command.Count}" />
             </dxr:RibbonStatusBarControl.LeftItems>
         </dxr:RibbonStatusBarControl>
-        <dxg:GridControl x:Name="gridControl" Style="{StaticResource CollectionView.GridControl.Editable}">
+        <dxg:GridControl x:Name="gridControl" HorizontalContentAlignment="Stretch" Style="{StaticResource CollectionView.GridControl.Editable}">
             <dxg:GridControl.View>
                 <dxg:TableView Style="{StaticResource CollectionView.TableView}">
                     <dxmvvm:Interaction.Behaviors>
@@ -61,11 +61,11 @@
             <dxg:GridControl.Columns>
                 <dxg:GridColumn IsSmart="True" FieldName="Name" />
                 <dxg:GridColumn IsSmart="True" FieldName="Description" />
-                <dxg:GridColumn IsSmart="True" FieldName="IsActive" />
                 <dxg:GridColumn IsSmart="True" FieldName="CreatedAt" />
                 <dxg:GridColumn IsSmart="True" FieldName="CreatedBy" />
                 <dxg:GridColumn IsSmart="True" FieldName="ModifiedAt" />
                 <dxg:GridColumn IsSmart="True" FieldName="ModifiedBy" />
+                <dxg:GridColumn IsSmart="True" FieldName="IsActive" />
             </dxg:GridControl.Columns>
             <dxg:GridControl.TotalSummary>
                 <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />

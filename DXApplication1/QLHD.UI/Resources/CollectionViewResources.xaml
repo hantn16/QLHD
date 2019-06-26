@@ -133,7 +133,7 @@
         <Setter Property="AllowEditing" Value="False" />
         <Setter Property="ShowFixedTotalSummary" Value="True" />
         <Setter Property="AllowPerPixelScrolling" Value="True" />
-        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
     </Style>
           
     <!--#endregion GridControl-->

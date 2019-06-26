@@ -44,10 +44,10 @@
             <dxlc:DataLayoutItem x:Name="layoutItemName" Binding="{Binding Entity.Name, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemDescription" Binding="{Binding Entity.Description, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemIsActive" Binding="{Binding Entity.IsActive, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemCreatedAt" Binding="{Binding Entity.CreatedAt, UpdateSourceTrigger=PropertyChanged}" />
+            <!--<dxlc:DataLayoutItem x:Name="layoutItemCreatedAt" Binding="{Binding Entity.CreatedAt, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemCreatedBy" Binding="{Binding Entity.CreatedBy, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemModifiedAt" Binding="{Binding Entity.ModifiedAt, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemModifiedBy" Binding="{Binding Entity.ModifiedBy, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemModifiedBy" Binding="{Binding Entity.ModifiedBy, UpdateSourceTrigger=PropertyChanged}" />-->
             <dxlc:LayoutGroup x:Name="Tabs" View="Tabs" MinHeight="250">
                 <DockPanel Style="{StaticResource EntityView.Detail.Container}" DataContext="{Binding PaymentTypePaymentPeriodsDetails}" dxlc:LayoutControl.TabHeader="{x:Static localization:QLHDDbContextResources.PaymentPeriodPlural}">
                     <dxb:ToolBarControl DockPanel.Dock="Top">

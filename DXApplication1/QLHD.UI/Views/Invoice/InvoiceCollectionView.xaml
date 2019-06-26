@@ -63,12 +63,12 @@
                 <dxg:GridColumn IsSmart="True" FieldName="ReleaseDate" />
                 <dxg:GridColumn IsSmart="True" FieldName="PretaxValue" />
                 <dxg:GridColumn IsSmart="True" FieldName="VatValue" />
-                <dxg:GridColumn IsSmart="True" FieldName="IsActive" />
+                <dxg:GridColumn FieldName="PaymentPeriod.Name" Header="{x:Static localization:QLHDDbContextResources.Invoice_PaymentPeriod}" ReadOnly="True" />
                 <dxg:GridColumn IsSmart="True" FieldName="CreatedAt" />
                 <dxg:GridColumn IsSmart="True" FieldName="CreatedBy" />
                 <dxg:GridColumn IsSmart="True" FieldName="ModifiedAt" />
                 <dxg:GridColumn IsSmart="True" FieldName="ModifiedBy" />
-                <dxg:GridColumn FieldName="PaymentPeriod.Name" Header="{x:Static localization:QLHDDbContextResources.Invoice_PaymentPeriod}" ReadOnly="True" />
+                <dxg:GridColumn IsSmart="True" FieldName="IsActive" />
             </dxg:GridControl.Columns>
             <dxg:GridControl.TotalSummary>
                 <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />
