@@ -51,7 +51,9 @@
                 </dxg:LookUpEdit>
             </dxlc:DataLayoutItem>
             <dxlc:DataLayoutItem x:Name="layoutItemNumber" Binding="{Binding Entity.Number, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemReleaseDate" Binding="{Binding Entity.ReleaseDate, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemReleaseDate" Binding="{Binding Entity.ReleaseDate, UpdateSourceTrigger=PropertyChanged}" >
+                <dxe:DateEdit Mask="dd/MM/yyyy" MaskUseAsDisplayFormat="True"/>
+            </dxlc:DataLayoutItem>
             <dxlc:DataLayoutItem x:Name="layoutItemPretaxValue" Binding="{Binding Entity.PretaxValue, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemVatValue" Binding="{Binding Entity.VatValue, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemIsActive" Binding="{Binding Entity.IsActive, UpdateSourceTrigger=PropertyChanged}" />

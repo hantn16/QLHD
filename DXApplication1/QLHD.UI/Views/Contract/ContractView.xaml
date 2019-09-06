@@ -46,9 +46,12 @@
             <dxlc:DataLayoutItem x:Name="layoutItemContent" Binding="{Binding Entity.Content, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemContractor" Binding="{Binding Entity.Contractor, Mode=OneTime}">
                 <dxg:LookUpEdit Style="{StaticResource EntityView.LookUpEdit}" DataContext="{Binding ElementName=layoutControl, Path=DataContext}" EditValue="{Binding Entity.ContractorId, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" ItemsSource="{Binding LookUpContractors.Entities}" ValueMember="Id" DisplayMember="Name">
+                    <dxg:LookUpEdit.StyleSettings>
+                        <dxg:SearchLookUpEditStyleSettings/>
+                    </dxg:LookUpEdit.StyleSettings>
                     <dxg:LookUpEdit.PopupContentTemplate>
                         <ControlTemplate TargetType="ContentControl">
-                            <dxg:GridControl x:Name="PART_GridControl" ShowBorder="False" ShowLoadingPanel="{Binding LookUpContractors.IsLoading}" />
+                            <dxg:GridControl x:Name="PART_GridControl" ShowBorder="True" ShowLoadingPanel="{Binding LookUpContractors.IsLoading}" />
                         </ControlTemplate>
                     </dxg:LookUpEdit.PopupContentTemplate>
                 </dxg:LookUpEdit>
@@ -151,10 +154,16 @@
                             <dxg:GridColumn FieldName="Work.Name" Header="{x:Static localization:QLHDDbContextResources.Contract_Work}" ReadOnly="True" />
                         </dxg:GridControl.Columns>
                         <dxg:GridControl.TotalSummary>
-                            <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />
+                            <dxg:GridSummaryItem SummaryType="Count" FieldName="Name" DisplayFormat="Tổng cộng: {0:n0}" />
+                            <dxg:GridSummaryItem FieldName="ValueRequested" SummaryType="Sum" DisplayFormat=" {0:n0}"/>
+                            <dxg:GridSummaryItem FieldName="ValuePaid" SummaryType="Sum" DisplayFormat=" {0:n0}"/>
+                            <dxg:GridSummaryItem FieldName="ValueAccepted" SummaryType="Sum" DisplayFormat=" {0:n0}"/>
                         </dxg:GridControl.TotalSummary>
                         <dxg:GridControl.GroupSummary>
                             <dxg:GridSummaryItem SummaryType="Count" />
+                            <dxg:GridSummaryItem FieldName="ValueRequested" SummaryType="Sum" DisplayFormat="Tổng GTĐN: {0:n0}"/>
+                            <dxg:GridSummaryItem FieldName="ValuePaid" SummaryType="Sum" DisplayFormat="Tổng GTTT: {0:n0}"/>
+                            <dxg:GridSummaryItem FieldName="ValueAccepted" SummaryType="Sum" DisplayFormat="Tổng GTHT {0:n0}"/>
                         </dxg:GridControl.GroupSummary>
                     </dxg:GridControl>
                 </DockPanel>

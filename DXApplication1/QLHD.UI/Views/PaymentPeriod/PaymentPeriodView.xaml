@@ -105,8 +105,8 @@
                             <dxg:GridColumn IsSmart="True" FieldName="CreatedBy" />
                             <dxg:GridColumn IsSmart="True" FieldName="ModifiedAt" />
                             <dxg:GridColumn IsSmart="True" FieldName="ModifiedBy" />
-                            <dxg:GridColumn FieldName="Contract.Name" Header="{x:Static localization:QLHDDbContextResources.PaymentPeriod_Contract}" ReadOnly="True" />
-                            <dxg:GridColumn FieldName="PaymentType.Name" Header="{x:Static localization:QLHDDbContextResources.PaymentPeriod_PaymentType}" ReadOnly="True" />
+                            <!--<dxg:GridColumn FieldName="Contract.Name" Header="{x:Static localization:QLHDDbContextResources.PaymentPeriod_Contract}" ReadOnly="True" />
+                            <dxg:GridColumn FieldName="PaymentType.Name" Header="{x:Static localization:QLHDDbContextResources.PaymentPeriod_PaymentType}" ReadOnly="True" />-->
                         </dxg:GridControl.Columns>
                         <dxg:GridControl.TotalSummary>
                             <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />

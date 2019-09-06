@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace QLHD.Model.Models
 {
     [Table("Work")]
-    [CustomValidation(typeof(CostTypeValidationAttribute), "HasSameCostTypeWithParent")]
+    //[CustomValidation(typeof(CostTypeValidationAttribute), "HasSameCostTypeWithParent")]
     public class Work : Auditable
     {
         [Key]
@@ -30,7 +30,7 @@ namespace QLHD.Model.Models
         public virtual CostType CostType { get; set; }
 
         [Display(Name = "Mã Dự Án")]
-        [ProjectValidationAttribute]
+        //[ProjectValidationAttribute]
         public int ProjectId { get; set; }
 
         [Display(Name = "Dự Án")]
