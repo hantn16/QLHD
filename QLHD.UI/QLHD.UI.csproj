@@ -113,6 +113,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DXSplashScreen\LoadingSplashScreen.xaml.cs">
+      <DependentUpon>LoadingSplashScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\QLHDDbContextViewModel.cs" />
     <Compile Include="Views\CostType\CostTypeCollectionView.xaml.cs">
       <DependentUpon>CostTypeCollectionView.xaml</DependentUpon>
@@ -159,6 +162,10 @@
     <Compile Include="Views\Work\WorkView.xaml.cs">
       <DependentUpon>WorkView.xaml</DependentUpon>
     </Compile>
+    <Page Include="DXSplashScreen\LoadingSplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -368,6 +375,10 @@
       <Project>{526a2dec-8de1-4931-b779-24e5fcc07a37}</Project>
       <Name>QLHD.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DXSplashScreen\Image.png" />
+    <Resource Include="DXSplashScreen\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
