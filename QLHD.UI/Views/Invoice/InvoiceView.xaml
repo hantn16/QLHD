@@ -46,10 +46,6 @@
             <dxlc:DataLayoutItem x:Name="layoutItemPretaxValue" Binding="{Binding Entity.PretaxValue, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemVatValue" Binding="{Binding Entity.VatValue, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemIsActive" Binding="{Binding Entity.IsActive, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemCreatedAt" Binding="{Binding Entity.CreatedAt, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemCreatedBy" Binding="{Binding Entity.CreatedBy, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemModifiedAt" Binding="{Binding Entity.ModifiedAt, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemModifiedBy" Binding="{Binding Entity.ModifiedBy, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemPaymentPeriod" Binding="{Binding Entity.PaymentPeriod, Mode=OneTime}">
                 <dxg:LookUpEdit Style="{StaticResource EntityView.LookUpEdit}" DataContext="{Binding ElementName=layoutControl, Path=DataContext}" EditValue="{Binding Entity.PaymentPeriodId, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" ItemsSource="{Binding LookUpPaymentPeriods.Entities}" ValueMember="Id" DisplayMember="Name">
                     <dxg:LookUpEdit.PopupContentTemplate>

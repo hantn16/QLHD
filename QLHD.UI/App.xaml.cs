@@ -12,5 +12,6 @@ namespace QLHD.UI
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

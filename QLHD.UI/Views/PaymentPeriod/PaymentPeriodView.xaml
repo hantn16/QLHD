@@ -51,10 +51,6 @@
             <dxlc:DataLayoutItem x:Name="layoutItemValueAccepted" Binding="{Binding Entity.ValueAccepted, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemAcceptedDate" Binding="{Binding Entity.AcceptedDate, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemIsActive" Binding="{Binding Entity.IsActive, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemCreatedAt" Binding="{Binding Entity.CreatedAt, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemCreatedBy" Binding="{Binding Entity.CreatedBy, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemModifiedAt" Binding="{Binding Entity.ModifiedAt, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemModifiedBy" Binding="{Binding Entity.ModifiedBy, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemContract" Binding="{Binding Entity.Contract, Mode=OneTime}">
                 <dxg:LookUpEdit Style="{StaticResource EntityView.LookUpEdit}" DataContext="{Binding ElementName=layoutControl, Path=DataContext}" EditValue="{Binding Entity.ContractId, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" ItemsSource="{Binding LookUpContracts.Entities}" ValueMember="Id" DisplayMember="Name">
                     <dxg:LookUpEdit.PopupContentTemplate>

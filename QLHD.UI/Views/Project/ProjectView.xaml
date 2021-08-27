@@ -46,10 +46,6 @@
             <dxlc:DataLayoutItem x:Name="layoutItemStartDate" Binding="{Binding Entity.StartDate, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemEndDate" Binding="{Binding Entity.EndDate, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:DataLayoutItem x:Name="layoutItemIsActive" Binding="{Binding Entity.IsActive, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemCreatedAt" Binding="{Binding Entity.CreatedAt, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemCreatedBy" Binding="{Binding Entity.CreatedBy, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemModifiedAt" Binding="{Binding Entity.ModifiedAt, UpdateSourceTrigger=PropertyChanged}" />
-            <dxlc:DataLayoutItem x:Name="layoutItemModifiedBy" Binding="{Binding Entity.ModifiedBy, UpdateSourceTrigger=PropertyChanged}" />
             <dxlc:LayoutGroup x:Name="Tabs" View="Tabs" MinHeight="250">
                 <DockPanel Style="{StaticResource EntityView.Detail.Container}" DataContext="{Binding ProjectWorksDetails}" dxlc:LayoutControl.TabHeader="{x:Static localization:QLHDDbContextResources.WorkPlural}">
                     <dxb:ToolBarControl DockPanel.Dock="Top">
